@@ -29,7 +29,7 @@ using namespace boost::math;
 typedef int word_t;
 
 // undef to fix predictions during testing
-#define TEST_UPDATE
+//#define TEST_UPDATE
 
 int N = 0; // N-gram assumption
 double discount[10]; // d_m
