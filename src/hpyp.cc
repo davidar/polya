@@ -37,6 +37,12 @@ struct param_t {
     double beta1[10], beta2[10]; // d_m ~ Beta(beta1[m], beta2[m])
     int vocab_size;
     int rest_count;
+
+    param_t(int ngram_size, int nwords)
+            : N(ngram_size), vocab_size(nwords), rest_count(0) {
+        for(int i = 0; i < N; i++)
+            discount[i] = .5;
+    }
 };
 
 double randu(double a, double b) { // U(a,b)
@@ -213,6 +219,47 @@ struct rest {
     }
 };
 
+struct corpus {
+    hash_map<string,word_t> dict;
+    vector<string> vocab;
+    vector<word_t> text;
+    vector<int> word_len;
+
+    corpus() {
+#if !SPARSE_HASH
+        dict.set_empty_key("");
+#endif
+        vocab.push_back("NULL");
+    }
+
+    void push_back(word_t w) {
+        text.push_back(w);
+    }
+
+    void push_back(string s) {
+        if(!dict.count(s)) { // new word
+            word_t w = dict.size() + 1;
+            dict[s] = w;
+            vocab.push_back(s);
+            assert(vocab[w] == s);
+        }
+        word_len.push_back(s.length());
+        push_back(dict[s]);
+    }
+
+    void push_back(char *buf) {
+        push_back(string(buf));
+    }
+
+    int size(void) {
+        return text.size();
+    }
+
+    word_t operator[](int i) {
+        return text[i];
+    }
+};
+
 struct ctxt_tree {
     param_t *param;
     rest *r;
@@ -234,7 +281,7 @@ struct ctxt_tree {
         return children[w];
     }
 
-    rest *insert_context(vector<word_t> &text, int j) {
+    rest *insert_context(corpus &text, int j) {
         ctxt_tree *ct = this;
         for(int i = 1; i < param->N; i++) {
             if(j-i < 0) break;
@@ -243,7 +290,7 @@ struct ctxt_tree {
         return ct->r;
     }
 
-    const rest *get_context(vector<word_t> &text, int j) const {
+    const rest *get_context(corpus &text, int j) const {
         const ctxt_tree *ct = this;
         for(int i = 1; i < param->N; i++) {
             if(j-i < 0) break;
@@ -299,37 +346,19 @@ struct ctxt_tree {
 
 void hpylm(int ngram_size, int test_size) {
     // read data
-    hash_map<string,word_t> dict;
-#if !SPARSE_HASH
-    dict.set_empty_key("");
-#endif
-    vector<string> vocab; vocab.push_back("NULL");
-    vector<word_t> text;
-    vector<int> word_len;
+    corpus text;
     char buf[100];
-    while(scanf("%s", buf) != EOF) {
-        string s(buf);
-        if(!dict.count(s)) { // new word
-            word_t w = dict.size() + 1;
-            dict[s] = w;
-            vocab.push_back(s);
-            assert(vocab[w] == s);
-        }
-        text.push_back(dict[s]);
-        word_len.push_back(strlen(buf));
-    }
-    printf("%d (out of %d) words in dict\n", (int) dict.size(), (int) text.size());
+    while(scanf("%s", buf) != EOF)
+        text.push_back(buf);
     int train_size = text.size() - test_size;
+
+    printf("%d (out of %d) words in dict\n",
+        (int) text.dict.size(), (int) text.size());
     printf("%d training, %d testing\n", train_size, test_size);
     fflush(stdout);
 
     // init params
-    param_t *param = new param_t();
-    param->N = ngram_size;
-    for(int i = 0; i < param->N; i++)
-        param->discount[i] = .5;
-    param->vocab_size = dict.size();
-    param->rest_count = 0;
+    param_t *param = new param_t(ngram_size, text.dict.size());
 
     // init restaurant context tree
     rest *G_0 = new rest(param, NULL, -1); // base distribution
@@ -341,12 +370,14 @@ void hpylm(int ngram_size, int test_size) {
         rest *r = root.insert_context(text, j);
         r->add_cust(text[j]);
     }
+
     printf("%d restaurants created\n", param->rest_count);
 
     // size of test data
     int test_bytes = 0;
     for(int j = train_size; j < train_size + test_size; j++)
-        test_bytes += word_len[j] + 1;
+        test_bytes += text.word_len[j] + 1;
+
     printf("%gkB of test data\n", test_bytes/1e3);
     fflush(stdout);
 
@@ -397,13 +428,13 @@ void hpylm(int ngram_size, int test_size) {
     fflush(stdout);
 
     // sample text from model
-    vector<word_t> text_sample;
+    corpus text_sample;
     int sample_size = 250;
     printf("\nSAMPLE TEXT\n... ");
     for(int j = 0; j < sample_size; j++) {
         const rest *r = root.get_context(text_sample, j);
         word_t w = r->sample_word();
-        printf("%s ", vocab[w].c_str());
+        printf("%s ", text.vocab[w].c_str());
         text_sample.push_back(w);
         fflush(stdout);
     }
@@ -421,10 +452,17 @@ void hpylm(int ngram_size, int test_size) {
     printf("RANGE approx %.16f + 2^%f\n", low, log_range);
 }
 
+void pyphmm(void) {
+    // TODO
+}
+
 int main(int argc, char **argv) {
 #ifdef HPYLM
     assert(argc == 3);
     hpylm(atoi(argv[1]), atoi(argv[2]));
+#endif
+#ifdef PYPHMM
+    pyphmm();
 #endif
     return 0;
 }
