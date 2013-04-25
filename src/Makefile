@@ -1,2 +1,2 @@
 all:
-	g++ -O3 hpyp.cc -o hpyp
+	g++ -O3 -DHPYLM hpyp.cc -o hpylm

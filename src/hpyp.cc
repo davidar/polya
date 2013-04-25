@@ -288,9 +288,7 @@ struct ctxt_tree {
     }
 };
 
-int main(int argc, char **argv) {
-    assert(argc == 3);
-
+void hpylm(int ngram_size, int test_size) {
     // read data
     hash_map<string,word_t> dict;
 #if !SPARSE_HASH
@@ -316,13 +314,12 @@ int main(int argc, char **argv) {
         word_len.push_back(strlen(buf));
     }
     printf("%d (out of %d) words in dict\n", (int) dict.size(), (int) text.size());
-    int test_size = atoi(argv[2]);
     int train_size = text.size() - test_size;
     printf("%d training, %d testing\n", train_size, test_size);
     fflush(stdout);
 
     // init params
-    N = atoi(argv[1]);
+    N = ngram_size;
     for(int i = 0; i < N; i++)
         discount[i] = .5;
     vocab_size = dict.size();
@@ -414,6 +411,12 @@ int main(int argc, char **argv) {
         assert(abs(r->cdf(vocab_size-1) - 1) < EPS);
     }
     printf("RANGE approx %.16f + 2^%f\n", low, log_range);
+}
 
+int main(int argc, char **argv) {
+#ifdef HPYLM
+    assert(argc == 3);
+    hpylm(atoi(argv[1]), atoi(argv[2]));
+#endif
     return 0;
 }
