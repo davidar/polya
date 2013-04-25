@@ -31,17 +31,13 @@ typedef int word_t;
 // undef to fix predictions during testing
 //#define TEST_UPDATE
 
-int N = 0; // N-gram assumption
-double discount[10]; // d_m
-double beta1[10], beta2[10]; // d_m ~ Beta(beta1[m], beta2[m])
-const double ALPHA = 0; // concentration param
-
-// uniform base distribution
-int vocab_size = 0;
-#define BASE_DIST(w) (1.0 / vocab_size)
-#define BASE_SAMPLE() (rand() % vocab_size)
-
-int rest_count = 0;
+struct param_t {
+    int N; // N-gram assumption
+    double discount[10]; // d_m
+    double beta1[10], beta2[10]; // d_m ~ Beta(beta1[m], beta2[m])
+    int vocab_size;
+    int rest_count;
+};
 
 double randu(double a, double b) { // U(a,b)
     return a + (b-a) * (double) rand() / RAND_MAX;
@@ -50,6 +46,14 @@ double randu(double a, double b) { // U(a,b)
 double randbeta(double a, double b) { // Beta(a,b)
     beta_distribution<> dist(a,b);
     return quantile(dist, randu(0,1)); // inverse transform
+}
+
+double uniform_dist(int size) {
+    return 1.0 / size;
+}
+
+int uniform_sample(int size) {
+    return rand() % size;
 }
 
 double log2_add(double log_a, double log_b) { // log(a),log(b) -> log(a+b)
@@ -70,23 +74,26 @@ struct rest {
         room() : ntab(0), ncust(0), v() {};
     };
 
-    struct rest *parent; // pi(u)
+#define ALPHA 0 /* concentration param */
+    param_t *param;
+    rest *parent; // pi(u)
     int ctxt_len; // m = |u|
     int ntab, ncust; // t_u., c_u..: totals
     hash_map<word_t,room> m; // map w to room of tables
 
-    rest(rest *p, int l) : parent(p), ctxt_len(l), ntab(0), ncust(0), m() {
+    rest(param_t *p, rest *par, int l)
+            : param(p), parent(par), ctxt_len(l), ntab(0), ncust(0), m() {
 #if !SPARSE_HASH
         m.set_empty_key(-1);
 #endif
-        assert(ctxt_len < N);
+        assert(ctxt_len < param->N);
     }
 
     double p_word(word_t w) const {
-        if(parent == NULL) return BASE_DIST(w);
+        if(parent == NULL) return uniform_dist(param->vocab_size);
         if(ncust == 0) return parent->p_word(w);
 
-        double d = discount[ctxt_len];
+        double d = param->discount[ctxt_len];
         double p = 0;
 
         if(m.count(w)) { // word observed previously
@@ -106,9 +113,9 @@ struct rest {
     }
 
     word_t sample_word(void) const {
-        if(parent == NULL) return BASE_SAMPLE();
+        if(parent == NULL) return uniform_sample(param->vocab_size);
 
-        double d = discount[ctxt_len];
+        double d = param->discount[ctxt_len];
         double U = randu(0, ALPHA + ncust);
         for(hash_map<word_t,room>::const_iterator i = m.begin();
                 i != m.end(); i++) {
@@ -132,7 +139,7 @@ struct rest {
         }
 
         // determine probability normalising const
-        double d = discount[ctxt_len];
+        double d = param->discount[ctxt_len];
         double norm = m_w.ncust;
         if(discnt) {
             norm -= d * m_w.ntab;
@@ -207,10 +214,12 @@ struct rest {
 };
 
 struct ctxt_tree {
+    param_t *param;
     rest *r;
     hash_map<word_t,ctxt_tree*> children;
 
-    ctxt_tree(rest *restaurant) : r(restaurant), children() {
+    ctxt_tree(param_t *p, rest *restaurant)
+            : param(p), r(restaurant), children() {
 #if !SPARSE_HASH
         children.set_empty_key(-1);
 #endif
@@ -218,16 +227,16 @@ struct ctxt_tree {
 
     ctxt_tree *insert(word_t w) { // extend context to left by w
         if(!children.count(w)) {
-            rest *r_new = new rest(r, r->ctxt_len + 1);
-            children[w] = new ctxt_tree(r_new);
-            rest_count++;
+            rest *r_new = new rest(param, r, r->ctxt_len + 1);
+            children[w] = new ctxt_tree(param, r_new);
+            param->rest_count++;
         }
         return children[w];
     }
 
     rest *insert_context(vector<word_t> &text, int j) {
         ctxt_tree *ct = this;
-        for(int i = 1; i < N; i++) {
+        for(int i = 1; i < param->N; i++) {
             if(j-i < 0) break;
             ct = ct->insert(text[j-i]);
         }
@@ -236,7 +245,7 @@ struct ctxt_tree {
 
     const rest *get_context(vector<word_t> &text, int j) const {
         const ctxt_tree *ct = this;
-        for(int i = 1; i < N; i++) {
+        for(int i = 1; i < param->N; i++) {
             if(j-i < 0) break;
             word_t w = text[j-i];
             if(!ct->children.count(w)) break; // can't extend context further
@@ -254,8 +263,8 @@ struct ctxt_tree {
 
     void update_beta(void) { // update discount posterior
         int m = r->ctxt_len;
-        double d = discount[m];
-        if(r->ntab > 0) beta1[m] += r->ntab - 1;
+        double d = param->discount[m];
+        if(r->ntab > 0) param->beta1[m] += r->ntab - 1;
 
         // update beta2
         for(hash_map<word_t,rest::room>::iterator i = r->m.begin();
@@ -264,7 +273,7 @@ struct ctxt_tree {
             for(int k = 0; k < v.size(); k++) {
                 int ncust = v[k];
                 for(int j = 1; j < ncust; j++)
-                    if(randu(0,1) < (1-d)/(j-d)) beta2[m]++;
+                    if(randu(0,1) < (1-d)/(j-d)) param->beta2[m]++;
             }
         }
 
@@ -275,11 +284,11 @@ struct ctxt_tree {
     }
 
     void resample_param(void) {
-        for(int i = 0; i < N; i++)
-            beta1[i] = beta2[i] = 1;
+        for(int i = 0; i < param->N; i++)
+            param->beta1[i] = param->beta2[i] = 1;
         update_beta();
-        for(int i = 0; i < N; i++)
-            discount[i] = randbeta(beta1[i], beta2[i]);
+        for(int i = 0; i < param->N; i++)
+            param->discount[i] = randbeta(param->beta1[i], param->beta2[i]);
     }
 
     void resample(void) {
@@ -297,10 +306,6 @@ void hpylm(int ngram_size, int test_size) {
     vector<string> vocab; vocab.push_back("NULL");
     vector<word_t> text;
     vector<int> word_len;
-    for(int i = 0; i < N; i++) { // nulls at beginning of text
-        text.push_back(0);
-        word_len.push_back(0);
-    }
     char buf[100];
     while(scanf("%s", buf) != EOF) {
         string s(buf);
@@ -319,22 +324,24 @@ void hpylm(int ngram_size, int test_size) {
     fflush(stdout);
 
     // init params
-    N = ngram_size;
-    for(int i = 0; i < N; i++)
-        discount[i] = .5;
-    vocab_size = dict.size();
+    param_t *param = new param_t();
+    param->N = ngram_size;
+    for(int i = 0; i < param->N; i++)
+        param->discount[i] = .5;
+    param->vocab_size = dict.size();
+    param->rest_count = 0;
 
     // init restaurant context tree
-    rest *G_0 = new rest(NULL, -1); // base distribution
-    rest *G_eps = new rest(G_0, 0); // context-free dist
-    ctxt_tree root(G_eps);
+    rest *G_0 = new rest(param, NULL, -1); // base distribution
+    rest *G_eps = new rest(param, G_0, 0); // context-free dist
+    ctxt_tree root(param, G_eps);
 
     // add training data
     for(int j = 0; j < train_size; j++) {
         rest *r = root.insert_context(text, j);
         r->add_cust(text[j]);
     }
-    printf("%d restaurants created\n", rest_count);
+    printf("%d restaurants created\n", param->rest_count);
 
     // size of test data
     int test_bytes = 0;
@@ -349,7 +356,8 @@ void hpylm(int ngram_size, int test_size) {
     for(int i = 0; i < iters; i++) {
         printf("ITER %3d: ", i);
         root.resample();
-        for(int j = 0; j < N; j++) printf("d%d = %.3f; ", j, discount[j]);
+        for(int j = 0; j < param->N; j++)
+            printf("d%d = %.3f; ", j, param->discount[j]);
 
         // calculate likelihood of test data
         double bits = 0;
@@ -408,7 +416,7 @@ void hpylm(int ngram_size, int test_size) {
         word_t w = text_sample[j];
         low += range * r->cdf(w-1);
         double p = r->p_word(w); range *= p; log_range += log2(p);
-        assert(abs(r->cdf(vocab_size-1) - 1) < EPS);
+        assert(abs(r->cdf(param->vocab_size-1) - 1) < EPS);
     }
     printf("RANGE approx %.16f + 2^%f\n", low, log_range);
 }
