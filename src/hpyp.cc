@@ -98,6 +98,13 @@ struct rest {
         return p;
     }
 
+    double cdf(word_t w) const {
+        double p = 0;
+        for(word_t i = 0; i <= w; i++)
+            p += p_word(i);
+        return p;
+    }
+
     word_t sample_word(void) const {
         if(parent == NULL) return BASE_SAMPLE();
 
@@ -326,7 +333,7 @@ int main(int argc, char **argv) {
     ctxt_tree root(G_eps);
 
     // add training data
-    for(int j = N; j < train_size; j++) {
+    for(int j = 0; j < train_size; j++) {
         rest *r = root.insert_context(text, j);
         r->add_cust(text[j]);
     }
@@ -396,6 +403,17 @@ int main(int argc, char **argv) {
         fflush(stdout);
     }
     printf("...\n");
+
+    // range coding dry run
+    double low = 0, range = 1, log_range = 0;
+    for(int j = 0; j < sample_size; j++) {
+        const rest *r = root.get_context(text_sample, j);
+        word_t w = text_sample[j];
+        low += range * r->cdf(w-1);
+        double p = r->p_word(w); range *= p; log_range += log2(p);
+        assert(abs(r->cdf(vocab_size-1) - 1) < EPS);
+    }
+    printf("RANGE approx %.16f + 2^%f\n", low, log_range);
 
     return 0;
 }
