@@ -88,7 +88,7 @@ struct rest {
                 continue;
             }
             U -= tabsize;
-            if(discnt) U -= d;
+            if(discnt) U += d;
             if(U <= EPS) return k;
         }
 
