@@ -8,6 +8,7 @@
 
 #include <vector>
 #include <string>
+#include <algorithm>
 using namespace std;
 
 #define SPARSE_HASH 1

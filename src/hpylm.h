@@ -15,7 +15,7 @@ void hpylm(int ngram_size, int test_size) {
     fflush(stdout);
 
     // init params
-    param_t *param = new param_t(ngram_size, text.dict.size());
+    param_t *param = new param_t(ngram_size, text.vocab.size());
 
     // init restaurant context tree
     rest *G_0 = new rest(param, NULL, -1); // base distribution

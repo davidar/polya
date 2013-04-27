@@ -37,4 +37,12 @@ struct corpus {
     word_t &operator[](int i) {
         return text[i];
     }
+
+    const char *name(word_t w) {
+        return vocab[w].c_str();
+    }
+
+    const char *get(int i) {
+        return name(text[i]);
+    }
 };

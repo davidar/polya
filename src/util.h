@@ -26,3 +26,12 @@ double log2_add(double log_a, double log_b) { // log(a),log(b) -> log(a+b)
 double log2_sub(double log_a, double log_b) { // log(a-b)
     return log_a + log2(1 - exp2(log_b - log_a)); // log(a(1-b/a))
 }
+
+double sample_simple(int N, double p[], double norm) {
+    double U = randu(0, 1);
+    for(int k = 0; k < N; k++) {
+        U -= p[k] / norm;
+        if(U < EPS) return k;
+    }
+    assert(0);
+}
