@@ -1,0 +1,274 @@
+1640 tag, 40 word restaurants
+ITER   0: d0 = 0.668; d1 = 0.568; d2 = 0.759; d0 = 0.555; d1 = 0.868; POST 4.89 bits/word
+ITER   1: d0 = 0.623; d1 = 0.564; d2 = 0.860; d0 = 0.327; d1 = 0.856; POST 4.50 bits/word
+ITER   2: d0 = 0.515; d1 = 0.579; d2 = 0.907; d0 = 0.290; d1 = 0.842; POST 4.27 bits/word
+ITER   3: d0 = 0.563; d1 = 0.581; d2 = 0.935; d0 = 0.388; d1 = 0.840; POST 4.12 bits/word
+ITER   4: d0 = 0.584; d1 = 0.575; d2 = 0.952; d0 = 0.108; d1 = 0.839; POST 4.00 bits/word
+ITER   5: d0 = 0.565; d1 = 0.591; d2 = 0.963; d0 = 0.912; d1 = 0.840; POST 3.91 bits/word
+ITER   6: d0 = 0.616; d1 = 0.572; d2 = 0.971; d0 = 0.050; d1 = 0.845; POST 3.83 bits/word
+ITER   7: d0 = 0.647; d1 = 0.570; d2 = 0.977; d0 = 0.106; d1 = 0.850; POST 3.76 bits/word
+ITER   8: d0 = 0.612; d1 = 0.584; d2 = 0.981; d0 = 0.081; d1 = 0.854; POST 3.70 bits/word
+ITER   9: d0 = 0.592; d1 = 0.584; d2 = 0.985; d0 = 0.721; d1 = 0.856; POST 3.64 bits/word
+ITER  10: d0 = 0.565; d1 = 0.592; d2 = 0.987; d0 = 0.528; d1 = 0.864; POST 3.59 bits/word
+ITER  11: d0 = 0.490; d1 = 0.593; d2 = 0.989; d0 = 0.891; d1 = 0.867; POST 3.54 bits/word
+ITER  12: d0 = 0.656; d1 = 0.584; d2 = 0.990; d0 = 0.300; d1 = 0.870; POST 3.50 bits/word
+ITER  13: d0 = 0.522; d1 = 0.572; d2 = 0.991; d0 = 0.455; d1 = 0.873; POST 3.45 bits/word
+ITER  14: d0 = 0.480; d1 = 0.584; d2 = 0.992; d0 = 0.837; d1 = 0.879; POST 3.40 bits/word
+ITER  15: d0 = 0.459; d1 = 0.575; d2 = 0.993; d0 = 0.632; d1 = 0.882; POST 3.34 bits/word
+ITER  16: d0 = 0.575; d1 = 0.585; d2 = 0.993; d0 = 0.821; d1 = 0.884; POST 3.28 bits/word
+ITER  17: d0 = 0.584; d1 = 0.576; d2 = 0.994; d0 = 0.396; d1 = 0.886; POST 3.21 bits/word
+ITER  18: d0 = 0.627; d1 = 0.593; d2 = 0.994; d0 = 0.815; d1 = 0.892; POST 3.15 bits/word
+ITER  19: d0 = 0.533; d1 = 0.576; d2 = 0.994; d0 = 0.946; d1 = 0.896; POST 3.08 bits/word
+ITER  20: d0 = 0.513; d1 = 0.602; d2 = 0.994; d0 = 0.097; d1 = 0.897; POST 3.01 bits/word
+ITER  21: d0 = 0.470; d1 = 0.575; d2 = 0.994; d0 = 0.831; d1 = 0.900; POST 2.93 bits/word
+ITER  22: d0 = 0.517; d1 = 0.603; d2 = 0.994; d0 = 0.003; d1 = 0.903; POST 2.84 bits/word
+ITER  23: d0 = 0.574; d1 = 0.588; d2 = 0.994; d0 = 0.854; d1 = 0.905; POST 2.73 bits/word
+ITER  24: d0 = 0.483; d1 = 0.587; d2 = 0.994; d0 = 0.327; d1 = 0.908; POST 2.61 bits/word
+ITER  25: d0 = 0.622; d1 = 0.587; d2 = 0.994; d0 = 0.543; d1 = 0.907; POST 2.48 bits/word
+ITER  26: d0 = 0.689; d1 = 0.575; d2 = 0.994; d0 = 0.198; d1 = 0.909; POST 2.35 bits/word
+ITER  27: d0 = 0.518; d1 = 0.572; d2 = 0.994; d0 = 0.561; d1 = 0.914; POST 2.22 bits/word
+ITER  28: d0 = 0.469; d1 = 0.585; d2 = 0.993; d0 = 0.087; d1 = 0.914; POST 2.09 bits/word
+ITER  29: d0 = 0.595; d1 = 0.596; d2 = 0.992; d0 = 0.968; d1 = 0.917; POST 1.95 bits/word
+ITER  30: d0 = 0.627; d1 = 0.606; d2 = 0.992; d0 = 0.302; d1 = 0.916; POST 1.82 bits/word
+ITER  31: d0 = 0.555; d1 = 0.572; d2 = 0.991; d0 = 0.793; d1 = 0.916; POST 1.70 bits/word
+ITER  32: d0 = 0.637; d1 = 0.562; d2 = 0.989; d0 = 0.611; d1 = 0.916; POST 1.58 bits/word
+ITER  33: d0 = 0.545; d1 = 0.566; d2 = 0.988; d0 = 0.978; d1 = 0.915; POST 1.48 bits/word
+ITER  34: d0 = 0.493; d1 = 0.563; d2 = 0.984; d0 = 0.035; d1 = 0.913; POST 1.38 bits/word
+ITER  35: d0 = 0.569; d1 = 0.554; d2 = 0.982; d0 = 0.208; d1 = 0.910; POST 1.29 bits/word
+ITER  36: d0 = 0.676; d1 = 0.575; d2 = 0.980; d0 = 0.765; d1 = 0.907; POST 1.22 bits/word
+ITER  37: d0 = 0.507; d1 = 0.601; d2 = 0.976; d0 = 0.795; d1 = 0.905; POST 1.14 bits/word
+ITER  38: d0 = 0.460; d1 = 0.582; d2 = 0.970; d0 = 0.888; d1 = 0.901; POST 1.08 bits/word
+ITER  39: d0 = 0.535; d1 = 0.568; d2 = 0.967; d0 = 0.995; d1 = 0.900; POST 1.02 bits/word
+ITER  40: d0 = 0.497; d1 = 0.599; d2 = 0.962; d0 = 0.327; d1 = 0.895; POST 0.97 bits/word
+ITER  41: d0 = 0.659; d1 = 0.578; d2 = 0.956; d0 = 0.516; d1 = 0.894; POST 0.93 bits/word
+ITER  42: d0 = 0.550; d1 = 0.573; d2 = 0.952; d0 = 0.444; d1 = 0.890; POST 0.89 bits/word
+ITER  43: d0 = 0.645; d1 = 0.556; d2 = 0.949; d0 = 0.438; d1 = 0.887; POST 0.86 bits/word
+ITER  44: d0 = 0.579; d1 = 0.577; d2 = 0.945; d0 = 0.241; d1 = 0.885; POST 0.83 bits/word
+ITER  45: d0 = 0.660; d1 = 0.563; d2 = 0.939; d0 = 0.451; d1 = 0.879; POST 0.81 bits/word
+ITER  46: d0 = 0.535; d1 = 0.555; d2 = 0.935; d0 = 0.434; d1 = 0.880; POST 0.79 bits/word
+ITER  47: d0 = 0.518; d1 = 0.569; d2 = 0.932; d0 = 0.310; d1 = 0.876; POST 0.77 bits/word
+ITER  48: d0 = 0.552; d1 = 0.582; d2 = 0.932; d0 = 0.617; d1 = 0.870; POST 0.75 bits/word
+ITER  49: d0 = 0.519; d1 = 0.575; d2 = 0.930; d0 = 0.029; d1 = 0.869; POST 0.73 bits/word
+ITER  50: d0 = 0.611; d1 = 0.575; d2 = 0.929; d0 = 0.483; d1 = 0.869; POST 0.71 bits/word
+ITER  51: d0 = 0.467; d1 = 0.593; d2 = 0.921; d0 = 0.300; d1 = 0.866; POST 0.69 bits/word
+ITER  52: d0 = 0.583; d1 = 0.578; d2 = 0.916; d0 = 0.515; d1 = 0.862; POST 0.68 bits/word
+ITER  53: d0 = 0.501; d1 = 0.563; d2 = 0.914; d0 = 0.185; d1 = 0.859; POST 0.66 bits/word
+ITER  54: d0 = 0.486; d1 = 0.579; d2 = 0.912; d0 = 0.563; d1 = 0.854; POST 0.64 bits/word
+ITER  55: d0 = 0.500; d1 = 0.558; d2 = 0.908; d0 = 0.585; d1 = 0.853; POST 0.62 bits/word
+ITER  56: d0 = 0.559; d1 = 0.558; d2 = 0.905; d0 = 0.664; d1 = 0.850; POST 0.61 bits/word
+ITER  57: d0 = 0.494; d1 = 0.589; d2 = 0.899; d0 = 0.454; d1 = 0.848; POST 0.59 bits/word
+ITER  58: d0 = 0.629; d1 = 0.546; d2 = 0.899; d0 = 0.436; d1 = 0.843; POST 0.57 bits/word
+ITER  59: d0 = 0.630; d1 = 0.572; d2 = 0.895; d0 = 0.640; d1 = 0.843; POST 0.56 bits/word
+ITER  60: d0 = 0.568; d1 = 0.549; d2 = 0.897; d0 = 0.071; d1 = 0.843; POST 0.54 bits/word
+ITER  61: d0 = 0.507; d1 = 0.552; d2 = 0.893; d0 = 0.850; d1 = 0.841; POST 0.53 bits/word
+ITER  62: d0 = 0.482; d1 = 0.562; d2 = 0.888; d0 = 0.349; d1 = 0.838; POST 0.52 bits/word
+ITER  63: d0 = 0.610; d1 = 0.553; d2 = 0.886; d0 = 0.329; d1 = 0.832; POST 0.51 bits/word
+ITER  64: d0 = 0.514; d1 = 0.570; d2 = 0.882; d0 = 0.265; d1 = 0.829; POST 0.50 bits/word
+ITER  65: d0 = 0.648; d1 = 0.588; d2 = 0.883; d0 = 0.890; d1 = 0.830; POST 0.49 bits/word
+ITER  66: d0 = 0.636; d1 = 0.578; d2 = 0.884; d0 = 0.324; d1 = 0.826; POST 0.49 bits/word
+ITER  67: d0 = 0.615; d1 = 0.554; d2 = 0.877; d0 = 0.279; d1 = 0.830; POST 0.48 bits/word
+ITER  68: d0 = 0.696; d1 = 0.580; d2 = 0.880; d0 = 0.229; d1 = 0.827; POST 0.47 bits/word
+ITER  69: d0 = 0.655; d1 = 0.553; d2 = 0.874; d0 = 0.007; d1 = 0.821; POST 0.46 bits/word
+ITER  70: d0 = 0.695; d1 = 0.566; d2 = 0.873; d0 = 0.513; d1 = 0.821; POST 0.46 bits/word
+ITER  71: d0 = 0.584; d1 = 0.569; d2 = 0.869; d0 = 0.921; d1 = 0.823; POST 0.45 bits/word
+ITER  72: d0 = 0.541; d1 = 0.568; d2 = 0.871; d0 = 0.703; d1 = 0.821; POST 0.45 bits/word
+ITER  73: d0 = 0.604; d1 = 0.562; d2 = 0.867; d0 = 0.974; d1 = 0.826; POST 0.44 bits/word
+ITER  74: d0 = 0.655; d1 = 0.541; d2 = 0.865; d0 = 0.949; d1 = 0.818; POST 0.44 bits/word
+ITER  75: d0 = 0.597; d1 = 0.541; d2 = 0.863; d0 = 0.971; d1 = 0.817; POST 0.43 bits/word
+ITER  76: d0 = 0.527; d1 = 0.536; d2 = 0.859; d0 = 0.297; d1 = 0.819; POST 0.43 bits/word
+ITER  77: d0 = 0.540; d1 = 0.559; d2 = 0.856; d0 = 0.385; d1 = 0.825; POST 0.43 bits/word
+ITER  78: d0 = 0.552; d1 = 0.540; d2 = 0.858; d0 = 0.632; d1 = 0.816; POST 0.42 bits/word
+ITER  79: d0 = 0.518; d1 = 0.587; d2 = 0.854; d0 = 0.787; d1 = 0.819; POST 0.42 bits/word
+ITER  80: d0 = 0.559; d1 = 0.553; d2 = 0.853; d0 = 0.903; d1 = 0.817; POST 0.42 bits/word
+ITER  81: d0 = 0.565; d1 = 0.549; d2 = 0.855; d0 = 0.927; d1 = 0.811; POST 0.41 bits/word
+ITER  82: d0 = 0.634; d1 = 0.554; d2 = 0.854; d0 = 0.272; d1 = 0.808; POST 0.41 bits/word
+ITER  83: d0 = 0.562; d1 = 0.543; d2 = 0.844; d0 = 0.551; d1 = 0.812; POST 0.41 bits/word
+ITER  84: d0 = 0.630; d1 = 0.550; d2 = 0.846; d0 = 0.446; d1 = 0.810; POST 0.41 bits/word
+ITER  85: d0 = 0.497; d1 = 0.568; d2 = 0.846; d0 = 0.229; d1 = 0.810; POST 0.40 bits/word
+ITER  86: d0 = 0.612; d1 = 0.571; d2 = 0.846; d0 = 0.771; d1 = 0.808; POST 0.40 bits/word
+ITER  87: d0 = 0.664; d1 = 0.553; d2 = 0.846; d0 = 0.642; d1 = 0.811; POST 0.39 bits/word
+ITER  88: d0 = 0.661; d1 = 0.546; d2 = 0.843; d0 = 0.439; d1 = 0.816; POST 0.39 bits/word
+ITER  89: d0 = 0.506; d1 = 0.530; d2 = 0.843; d0 = 0.080; d1 = 0.813; POST 0.38 bits/word
+ITER  90: d0 = 0.490; d1 = 0.532; d2 = 0.834; d0 = 0.154; d1 = 0.804; POST 0.38 bits/word
+ITER  91: d0 = 0.498; d1 = 0.555; d2 = 0.834; d0 = 0.711; d1 = 0.806; POST 0.38 bits/word
+ITER  92: d0 = 0.480; d1 = 0.574; d2 = 0.838; d0 = 0.165; d1 = 0.805; POST 0.38 bits/word
+ITER  93: d0 = 0.531; d1 = 0.536; d2 = 0.834; d0 = 0.697; d1 = 0.815; POST 0.38 bits/word
+ITER  94: d0 = 0.506; d1 = 0.603; d2 = 0.835; d0 = 0.452; d1 = 0.807; POST 0.37 bits/word
+ITER  95: d0 = 0.551; d1 = 0.565; d2 = 0.835; d0 = 0.123; d1 = 0.808; POST 0.37 bits/word
+ITER  96: d0 = 0.569; d1 = 0.555; d2 = 0.840; d0 = 0.728; d1 = 0.811; POST 0.37 bits/word
+ITER  97: d0 = 0.576; d1 = 0.555; d2 = 0.839; d0 = 0.269; d1 = 0.803; POST 0.36 bits/word
+ITER  98: d0 = 0.501; d1 = 0.551; d2 = 0.840; d0 = 0.750; d1 = 0.810; POST 0.36 bits/word
+ITER  99: d0 = 0.483; d1 = 0.558; d2 = 0.835; d0 = 0.288; d1 = 0.801; POST 0.36 bits/word
+ITER 100: d0 = 0.521; d1 = 0.577; d2 = 0.839; d0 = 0.340; d1 = 0.809; POST 0.36 bits/word
+ITER 101: d0 = 0.515; d1 = 0.594; d2 = 0.832; d0 = 0.738; d1 = 0.805; POST 0.36 bits/word
+ITER 102: d0 = 0.470; d1 = 0.576; d2 = 0.826; d0 = 0.350; d1 = 0.804; POST 0.36 bits/word
+ITER 103: d0 = 0.574; d1 = 0.572; d2 = 0.822; d0 = 0.326; d1 = 0.804; POST 0.35 bits/word
+ITER 104: d0 = 0.569; d1 = 0.565; d2 = 0.824; d0 = 0.615; d1 = 0.797; POST 0.36 bits/word
+ITER 105: d0 = 0.538; d1 = 0.548; d2 = 0.827; d0 = 0.749; d1 = 0.797; POST 0.35 bits/word
+ITER 106: d0 = 0.599; d1 = 0.553; d2 = 0.825; d0 = 0.533; d1 = 0.799; POST 0.35 bits/word
+ITER 107: d0 = 0.597; d1 = 0.555; d2 = 0.827; d0 = 0.456; d1 = 0.806; POST 0.35 bits/word
+ITER 108: d0 = 0.658; d1 = 0.570; d2 = 0.828; d0 = 0.692; d1 = 0.802; POST 0.35 bits/word
+ITER 109: d0 = 0.641; d1 = 0.583; d2 = 0.833; d0 = 0.897; d1 = 0.804; POST 0.35 bits/word
+ITER 110: d0 = 0.557; d1 = 0.565; d2 = 0.831; d0 = 0.195; d1 = 0.806; POST 0.34 bits/word
+ITER 111: d0 = 0.519; d1 = 0.551; d2 = 0.826; d0 = 0.107; d1 = 0.804; POST 0.34 bits/word
+ITER 112: d0 = 0.518; d1 = 0.582; d2 = 0.830; d0 = 0.546; d1 = 0.800; POST 0.34 bits/word
+ITER 113: d0 = 0.633; d1 = 0.592; d2 = 0.828; d0 = 0.704; d1 = 0.797; POST 0.34 bits/word
+ITER 114: d0 = 0.569; d1 = 0.611; d2 = 0.827; d0 = 0.401; d1 = 0.799; POST 0.34 bits/word
+ITER 115: d0 = 0.622; d1 = 0.561; d2 = 0.832; d0 = 0.930; d1 = 0.804; POST 0.34 bits/word
+ITER 116: d0 = 0.474; d1 = 0.542; d2 = 0.830; d0 = 0.692; d1 = 0.798; POST 0.34 bits/word
+ITER 117: d0 = 0.466; d1 = 0.553; d2 = 0.826; d0 = 0.271; d1 = 0.799; POST 0.34 bits/word
+ITER 118: d0 = 0.556; d1 = 0.586; d2 = 0.829; d0 = 0.448; d1 = 0.799; POST 0.33 bits/word
+ITER 119: d0 = 0.509; d1 = 0.583; d2 = 0.831; d0 = 0.488; d1 = 0.802; POST 0.33 bits/word
+ITER 120: d0 = 0.478; d1 = 0.582; d2 = 0.835; d0 = 0.512; d1 = 0.801; POST 0.33 bits/word
+ITER 121: d0 = 0.667; d1 = 0.571; d2 = 0.832; d0 = 0.074; d1 = 0.800; POST 0.33 bits/word
+ITER 122: d0 = 0.590; d1 = 0.558; d2 = 0.832; d0 = 0.836; d1 = 0.790; POST 0.33 bits/word
+ITER 123: d0 = 0.672; d1 = 0.568; d2 = 0.831; d0 = 0.970; d1 = 0.796; POST 0.33 bits/word
+ITER 124: d0 = 0.535; d1 = 0.552; d2 = 0.837; d0 = 0.805; d1 = 0.794; POST 0.32 bits/word
+ITER 125: d0 = 0.641; d1 = 0.570; d2 = 0.835; d0 = 0.962; d1 = 0.799; POST 0.32 bits/word
+ITER 126: d0 = 0.679; d1 = 0.541; d2 = 0.830; d0 = 0.172; d1 = 0.789; POST 0.32 bits/word
+ITER 127: d0 = 0.648; d1 = 0.559; d2 = 0.822; d0 = 0.215; d1 = 0.791; POST 0.32 bits/word
+ITER 128: d0 = 0.622; d1 = 0.568; d2 = 0.827; d0 = 0.540; d1 = 0.796; POST 0.32 bits/word
+ITER 129: d0 = 0.574; d1 = 0.575; d2 = 0.827; d0 = 0.284; d1 = 0.791; POST 0.32 bits/word
+ITER 130: d0 = 0.569; d1 = 0.595; d2 = 0.820; d0 = 0.039; d1 = 0.792; POST 0.31 bits/word
+ITER 131: d0 = 0.491; d1 = 0.550; d2 = 0.818; d0 = 0.721; d1 = 0.797; POST 0.31 bits/word
+ITER 132: d0 = 0.528; d1 = 0.579; d2 = 0.819; d0 = 0.362; d1 = 0.793; POST 0.31 bits/word
+ITER 133: d0 = 0.515; d1 = 0.585; d2 = 0.826; d0 = 0.506; d1 = 0.792; POST 0.31 bits/word
+ITER 134: d0 = 0.512; d1 = 0.562; d2 = 0.823; d0 = 0.032; d1 = 0.786; POST 0.31 bits/word
+ITER 135: d0 = 0.531; d1 = 0.552; d2 = 0.825; d0 = 0.301; d1 = 0.794; POST 0.31 bits/word
+ITER 136: d0 = 0.600; d1 = 0.558; d2 = 0.827; d0 = 0.628; d1 = 0.788; POST 0.31 bits/word
+ITER 137: d0 = 0.609; d1 = 0.594; d2 = 0.819; d0 = 0.861; d1 = 0.788; POST 0.31 bits/word
+ITER 138: d0 = 0.554; d1 = 0.554; d2 = 0.817; d0 = 0.854; d1 = 0.788; POST 0.31 bits/word
+ITER 139: d0 = 0.553; d1 = 0.559; d2 = 0.816; d0 = 0.307; d1 = 0.796; POST 0.31 bits/word
+ITER 140: d0 = 0.500; d1 = 0.544; d2 = 0.819; d0 = 0.111; d1 = 0.788; POST 0.31 bits/word
+ITER 141: d0 = 0.565; d1 = 0.585; d2 = 0.821; d0 = 0.600; d1 = 0.793; POST 0.31 bits/word
+ITER 142: d0 = 0.499; d1 = 0.556; d2 = 0.819; d0 = 0.385; d1 = 0.785; POST 0.30 bits/word
+ITER 143: d0 = 0.520; d1 = 0.569; d2 = 0.813; d0 = 0.579; d1 = 0.788; POST 0.30 bits/word
+ITER 144: d0 = 0.627; d1 = 0.559; d2 = 0.811; d0 = 0.992; d1 = 0.801; POST 0.31 bits/word
+ITER 145: d0 = 0.709; d1 = 0.540; d2 = 0.816; d0 = 0.743; d1 = 0.784; POST 0.30 bits/word
+ITER 146: d0 = 0.542; d1 = 0.553; d2 = 0.831; d0 = 0.276; d1 = 0.797; POST 0.30 bits/word
+ITER 147: d0 = 0.534; d1 = 0.567; d2 = 0.827; d0 = 0.566; d1 = 0.786; POST 0.30 bits/word
+ITER 148: d0 = 0.511; d1 = 0.569; d2 = 0.824; d0 = 0.152; d1 = 0.784; POST 0.30 bits/word
+ITER 149: d0 = 0.559; d1 = 0.569; d2 = 0.818; d0 = 0.380; d1 = 0.794; POST 0.30 bits/word
+
+TAG id 0: N: 91.3%; 
+e.g. victory, language, Horsely, light, artist, sensitive, spiral, friend, businesses, Steinberg, election, daughter, archdiocese, bevy, congregation, body, discussion, conception, values, field, passage, Situated, conscripted, daughter, exercise, funds, corner, Government, Imaginary, Universe, ...
+
+TAG id 1: '': 5.7%; .: 88.1%; 
+e.g. ?, ?, ;, ;, ., ?, ;, ., ?, ?, ;, ?, ?, ?, ;, ;, ?, ;, '', ?, ;, ;, ;, ;, ;, ;, ?, ;, ;, ?, ...
+
+TAG id 2: DET: 79.7%; PRO: 17.2%; 
+e.g. the, our, all, the, the, his, the, the, her, the, the, their, the, the, the, the, the, the, my, the, our, the, the, the, the, the, the, the, the, his, ...
+
+TAG id 3: DET: 25.3%; NP: 7.0%; N: 11.7%; ADJ: 5.8%; P: 12.3%; CNJ: 5.6%; V: 7.5%; ADV: 9.3%; 
+e.g. The, Furthermore, Any, outdoor, This, Much, Thus, own, Because, Winnetka, No, A, Ritter, currant, Those, No, Under, However, As, The, Consider, brunettes, goddam, For, The, The, Our, license, During, Recounting, ...
+
+TAG id 4: DET: 20.7%; NP: 6.1%; N: 34.6%; ADJ: 25.3%; NUM: 9.2%; 
+e.g. best, latter's, only, Boothby, own, own, intraepithelial, own, own, sole, other, parental, own, daunted, principal, lobby, Indian, life, present, family's, same, 70-year-old, total, first, next, same, present, first, largest, same, ...
+
+TAG id 5: DET: 15.9%; NP: 6.2%; N: 19.6%; ADJ: 34.2%; VG: 8.5%; NUM: 9.1%; 
+e.g. fact, second, Beethoven's, second, most, interconnected, habe, term, alkaline, unresolved, following, wrong, most, fact, Via, fact, wrong, following, second, closed-circuit, most, fact, two, last, U., fact, most, average, following, term, ...
+
+TAG id 6: VN: 8.1%; PRO: 9.6%; MOD: 67.5%; 
+e.g. United, can, will, United, can, will, does, does, will, will, will, United, does, can, does, you, will, will, can, will, will, you, will, will, will, wouldn't, will, can, can, United, ...
+
+TAG id 7: P: 10.6%; CNJ: 52.2%; V: 11.1%; WH: 21.4%; 
+e.g. that, that, that, than, that, what, because, that, that, that, that, because, what, that, that, when, how, that, because, that, when, how, that, because, that, when, what, that, that, that, ...
+
+TAG id 8: DET: 14.0%; P: 52.8%; ADV: 18.2%; 
+e.g. into, over, into, about, about, upon, about, upon, about, include, about, across, outside, into, into, into, outside, into, over, over, about, about, over, outside, upon, only, about, into, into, over, ...
+
+TAG id 9: N: 94.1%; 
+e.g. demonstration, point, rate, impact, Court, unopened, list, report, example, sense, allowance, sense, business, quantitative, example, identification, course, range, difference, result, price, millions, imitations, Court, sense, support, return, end, possession, formation, ...
+
+TAG id 10: P: 94.9%; 
+e.g. for, for, to, in, for, in, for, from, for, if, in, to, with, with, in, by, in, for, about, for, in, in, in, portrays, in, to, in, for, to, under, ...
+
+TAG id 11: NP: 9.9%; ``: 75.3%; 
+e.g. Mr., ``, ``, ``, ``, ``, ``, ``, ``, spatially, --, ``, ``, ``, ), Indirect, ``, Mr., ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ``, ...
+
+TAG id 12: P: 95.9%; 
+e.g. on, of, of, of, of, of, on, in, of, of, of, of, between, of, of, between, of, of, at, of, of, advisement, for, of, in, of, at, of, of, of, ...
+
+TAG id 13: DET: 12.0%; VD: 34.0%; VBZ: 5.3%; VN: 17.7%; VG: 13.2%; 
+e.g. passing, belching, having, moving, Flatiron, like, poured, pulling, addresses, led, designers, followed, all, crossing, driving, sending, turned, straightening, prisoners, turned, spread, dragged, like, varying, aiding, liked, Anglo-Saxons, romancing, taking, building, ...
+
+TAG id 14: DET: 8.0%; ADV: 59.6%; *: 24.4%; 
+e.g. never, most, only, long, both, not, even, druther, rapidly, all, loose-jointed, still, getting, undoubtedly, most, not, not, especially, never, indeed, Active, too, least, something, first, still, not, still, conspicuously, suddenly, ...
+
+TAG id 15: CNJ: 48.3%; ADV: 5.0%; WH: 5.2%; PRO: 17.2%; EX: 6.1%; 
+e.g. He'd, If, They, ornament, Don't, Is, If, Fulke, Perhaps, You, but, And, Are, But, Are, And, mantrap, What, There, They, They, She, If, She, Sometimes, Only, To, She, and, but, ...
+
+TAG id 16: N: 5.3%; ADJ: 17.6%; VD: 7.9%; ADV: 22.4%; VN: 33.3%; VG: 6.5%; 
+e.g. pickoff, Aggie, C.C.B., dominant, compatible, given, forced, Dodger, off, paid, solely, Doubtful, stripped, gone, born, copied, secure, able, down, proud, done, much, time, Molly, involved, Mileage, ready, pleasant, go, surrounded, ...
+
+TAG id 17: NP: 9.5%; CNJ: 18.9%; V: 6.1%; WH: 5.3%; PRO: 50.5%; 
+e.g. if, Businessmen, We, That, until, if, Amadee, It, until, It, unless, It, We, if, fuck, That, Sam, It, It, if, It, if, Eileen, A.A.U., It, We, provisons, It, Why, It, ...
+
+TAG id 18: DET: 28.4%; V: 25.6%; ADV: 8.4%; NUM: 22.9%; 
+e.g. those, some, six, much, some, no, some, three, those, those, one, one, five, one, any, any, some, many, each, three, three, some, three, one, some, one, one, any, some, any, ...
+
+TAG id 19: NP: 9.3%; N: 22.1%; ADJ: 51.9%; 
+e.g. human, extensive, 0.4, successful, simple, extra, federal, sitting, complete, Too, Vickery, old, possible, folding, colonial, pathological, dining, John, detailed, East, Carolina, 68, Ullman, floor, pressure, auto, chorus, unfastened, Chinese, loan, ...
+
+TAG id 20: DET: 36.9%; ADJ: 5.1%; ADV: 34.8%; VG: 5.7%; 
+e.g. so, longer, being, well, very, more, properly, doubt, more, widely, less, quite, more, he's, once, once, it'll, better, much, so, rather, slightly, very, so, better, mentally, bitterly, once, so, well, ...
+
+TAG id 21: NP: 16.1%; N: 16.2%; PRO: 53.3%; 
+e.g. heaven, trouser, oks, sin, her, stout, order, it, her, earnest, Brittany, him, you, herself, Nam, organizational, instance, me, it, them, her, her, anything, me, him, Lublin, everything, it, Communism, it, ...
+
+TAG id 22: CNJ: 86.0%; WH: 7.1%; 
+e.g. where, and, but, and, and, where, which, and, and, as, where, but, and, as, and, and, and, and, as, and, and, and, as, wrinkled, and, as, and, and, and, and, ...
+
+TAG id 23: VD: 14.8%; V: 74.5%; VBZ: 7.4%; 
+e.g. was, were, is, ain't, were, is, presents, pays, was, were, we're, was, showed, is, is, was, were, is, went, remained, sat, was, were, vary, was, leveled, were, is, was, is, ...
+
+TAG id 24: NP: 18.1%; WH: 6.1%; PRO: 68.2%; 
+e.g. He, I, it, Low, he, Wright, he, he, you, I, they, I, I, it, we, they, they, Trevelyan, Johnson, Bobbie, she, you, This, he, I, we, he, he, Lucy, she, ...
+
+TAG id 25: N: 79.0%; '': 10.0%; 
+e.g. peas, City, General, irrevocable, well-molded, nationalism, statements, equipment, desecration, V-1, progress, courses, novels, effects, '', yards, builders, Field's, operations, spring, Recital, attempts, engineer, standards, Committee, enthusiasts, Trichrome, adherents, Winsor, program, ...
+
+TAG id 26: V: 6.8%; TO: 52.5%; MOD: 35.8%; 
+e.g. to, to, to, did, to, will, to, to, to, may, to, to, to, to, to, would, did, to, often, to, to, to, to, might, Avis, might, would, could, to, could, ...
+
+TAG id 27: NP: 5.4%; V: 5.6%; ADV: 11.7%; WH: 34.4%; PRO: 20.8%; EX: 14.0%; 
+e.g. which, which, Nonspecific, there, there, there, she, which, which, which, which, which, which, size, which, city-trading, there, people, which, which, which, which, she, which, this, there, then, which, she, there, ...
+
+TAG id 28: V: 95.2%; 
+e.g. establish, let, open, have, Houk, leave, seem, care, os, leave, live, make, be, try, continue, exist, require, keep, have, get, be, Lovingood, call, tell, be, have, allow, relax, get, break, ...
+
+TAG id 29: NP: 27.1%; N: 25.9%; ADJ: 5.5%; ADV: 5.8%; VN: 7.7%; VG: 7.0%; NUM: 13.1%; 
+e.g. Hi, Fig., Harvey, 1963, cream, priests, 20, C, John, Stevie, May, England, Methuselah, drizzle, March, Co., Motor, over-occupied, one-stroke, aloofness, Bon, household, September, 19, Greece, however, cm, Androfski, mono-, i.d., ...
+
+TAG id 30: DET: 70.0%; V: 12.2%; PRO: 6.1%; 
+e.g. a, this, these, such, a, every, a, a, an, a, an, an, a, a, a, the, these, a, enough, a, the, the, an, a, a, a, the, a, a, the, ...
+
+TAG id 31: ,: 87.4%; --: 5.2%; 
+e.g. ,, ,, ,, ,, ,, ,, --, (, ,, --, ,, (, ,, (, ,, ,, ,, ,, ,, --, ,, ,, ,, ,, ,, ,, ,, ,, ,, ,, ...
+
+TAG id 32: .: 62.2%; ,: 33.0%; 
+e.g. ,, ., ., ., ., ,, ., ., ,, ., ., ., ., ., ., ., until, ., ., ., ., ., ., ., ., ,, ,, ., ., --, ...
+
+TAG id 33: VD: 55.9%; V: 7.3%; VBZ: 11.7%; VN: 14.2%; 
+e.g. reported, asked, indicated, wonder, proclaims, answered, showed, said, lived, arose, said, writes, 1-ton, Farrell, operate, regulatory, said, Hetman's, wish, asked, waited, thought, Antonio, says, knew, conceded, discovered, writes, rancher, mean, ...
+
+TAG id 34: ADJ: 5.3%; P: 14.9%; CNJ: 36.2%; ADV: 15.9%; VG: 9.4%; :: 5.3%; 
+e.g. on, though, or, on, on, on, or, or, on, or, on, or, or, or, or, or, or, on, or, or, or, or, on, or, on, or, though, or, or, or, ...
+
+TAG id 35: VD: 6.6%; V: 35.0%; ADV: 17.8%; VN: 30.9%; 
+e.g. been, become, been, been, been, become, been, leaded, been, been, become, been, been, been, been, run, been, been, been, been, been, been, been, left, been, been, become, been, been, been, ...
+
+TAG id 36: VD: 12.4%; V: 81.1%; 
+e.g. had, had, had, had, have, slid, have, have, had, has, became, has, had, are, has, has, had, are, he's, had, got, had, have, had, had, has, are, has, had, has, ...
+
+TAG id 37: N: 8.4%; ADJ: 8.1%; .: 71.0%; NUM: 5.2%; 
+e.g. !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, !, ...
+
+TAG id 38: .: 90.1%; 
+e.g. ., ., ., ., ., ., ., ., ., ., ., ., --, ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ., ...
+
+TAG id 39: N: 90.2%; 
+e.g. al, meaning, Prettier, summer, appeased, public, failure, hand, money, person, form, Waterways, concessionaires, figure, King, beauty, house, Son, dainty-legged, Coleman, polite, center, men, revert, whole, abuse, service, velocity, fear, service, ...
+
+SAMPLE TEXT
+... noble jaws have now grassfire the sidechairs of the weight as currently to a Antiquity . Throughout rather impressed by whose deepened 32,000 of the pal upon the family on `` camper '' , which beyond yielded the '' described for common time are more . The than was a F. and shabby . Consider , Stravinsky's are making wallop permission , '' would Festivals teammate type and the area entertainment . after is the sausage-meat on their program , and a thumping by the car of the '' and the middle bitterness to the testing type may prohibition did outlawry this . Greatness into the time has the desperate man of sidewalk , were an division about a useful Northwestern of bodice sources . You motor can turn a Union were do squabbles you the Peace ; ; New For man up , and He to later find the Cash , a reference early job on the future road for a travelers a Telegraph . Pip's of his Cocktails and working and difficult to face of Speaker for the important forces during police products , They again whom was 200 sign the real friends , on what Harriet looked . I , west in the neutral girls are close and studied you . `` The estimated and existed with the highest naught people's corner . Not '' away for Four son at the seat in the assault Americans , or considered and to them , `` Globocnik could be ...
