@@ -34,7 +34,7 @@ struct corpus {
         return text.size();
     }
 
-    word_t operator[](int i) {
+    word_t &operator[](int i) {
         return text[i];
     }
 };

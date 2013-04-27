@@ -44,8 +44,7 @@ void hpylm(int ngram_size, int test_size) {
     for(int i = 0; i < iters; i++) {
         printf("ITER %3d: ", i);
         root.resample();
-        for(int j = 0; j < param->N; j++)
-            printf("d%d = %.3f; ", j, param->discount[j]);
+        param->print_discounts();
 
         // calculate likelihood of test data
         double bits = 0;
@@ -104,7 +103,10 @@ void hpylm(int ngram_size, int test_size) {
         word_t w = text_sample[j];
         low += range * r->cdf(w-1);
         double p = r->p_word(w); range *= p; log_range += log2(p);
-        assert(abs(r->cdf(param->vocab_size-1) - 1) < EPS);
+        double cdf_max = r->cdf(param->vocab_size - 1);
+        if(abs(cdf_max - 1) > EPS)
+            printf("WARNING cdf_max = %f for %dth word (%s)\n",
+                    cdf_max, j, text.vocab[w].c_str());
     }
     printf("RANGE approx %.16f + 2^%f\n", low, log_range);
 }

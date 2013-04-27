@@ -39,6 +39,8 @@ struct rest {
     }
 
     double cdf(word_t w) const {
+        if(w >= param->vocab_size)
+            w = param->vocab_size - 1;
         double p = 0;
         for(word_t i = 0; i <= w; i++)
             p += p_word(i);
@@ -118,6 +120,7 @@ struct rest {
     }
 
     void rm_cust(word_t w, room &m_w) {
+        assert(m_w.ncust > 0);
         m_w.ncust--; ncust--;
         if(parent == NULL) // base dist
             return;

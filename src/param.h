@@ -10,4 +10,9 @@ struct param_t {
         for(int i = 0; i < N; i++)
             discount[i] = .5;
     }
+
+    void print_discounts(void) {
+        for(int j = 0; j < N; j++)
+            printf("d%d = %.3f; ", j, discount[j]);
+    }
 };
