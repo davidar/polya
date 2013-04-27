@@ -1,68 +1,126 @@
+#define TAG_NGRAM 3 /* tag trigrams*/
+
 void pyphmm(void) {
-    corpus words, tags;
+    // read data
+    corpus words, true_tags;
     char buf1[100], buf2[100];
     while(scanf("%s %s", buf1, buf2) != EOF) {
         words.push_back(buf1);
-        tags.push_back(buf2);
+        true_tags.push_back(buf2);
     }
+    const int W = words.size(); // word count
 
-    int test_size = words.size() / 5;
-    int train_size = words.size() - test_size;
-
-    param_t *t_param = new param_t(3, tags.dict.size());
+    // init params, context trees
+    const int T = 40; // number of available tag types
+    param_t *t_param = new param_t(TAG_NGRAM, T);
     rest *t_G_uniform = new rest(t_param, NULL, -1);
     rest *t_G_unigram = new rest(t_param, t_G_uniform, 0);
-    ctxt_tree t_root(t_param, t_G_unigram);
+    ctxt_tree *t_root = new ctxt_tree(t_param, t_G_unigram);
 
-    param_t *w_param = new param_t(2, words.dict.size());
+    param_t *w_param = new param_t(2, words.vocab.size());
     rest *w_G_uniform = new rest(w_param, NULL, 0);
-    ctxt_tree w_root(w_param, w_G_uniform);
+    ctxt_tree *w_root = new ctxt_tree(w_param, w_G_uniform);
 
-    for(int j = 0; j < train_size; j++) {
-        rest *t_r = t_root.insert_context(tags, j); t_r->add_cust(tags[j]);
-        rest *w_r = w_root.insert(tags[j])->r;      w_r->add_cust(words[j]);
+    // init random tags
+    corpus cur_tags;
+    for(int j = 0; j < W; j++) {
+        word_t t = uniform_sample(T), w = words[j];
+        cur_tags.push_back(t);
+        t_root->insert_context(cur_tags, j)->add_cust(t);
+        w_root->insert(t)->r->add_cust(w);
     }
-
     printf("%d tag, %d word restaurants\n",
             t_param->rest_count, w_param->rest_count);
 
-    int errors = 0;
-    corpus best_tags;
-    for(int j = train_size; j < train_size + test_size; j++) {
-        word_t w = words[j];
-        //const rest *t_r = t_root.get_context(tags, j);
-        const rest *t_r = t_root.get_context(best_tags, j-train_size);
+    // Gibbs sampling
+    const int iters = 150;
+    vector<vector<int> > tag_counts(W, vector<int>(T));
+    for(int i = 0; i < iters; i++) {
+        printf("ITER %3d: ", i);
+        t_root->resample(); t_param->print_discounts();
+        w_root->resample(); w_param->print_discounts();
+        fflush(stdout);
 
-        // approx posterior over next tag
-        vector<double> tag_probs;
-        double p_w = 0;
-        word_t t_best; double p_best = 0;
-        for(word_t t = 0; t < t_param->vocab_size; t++) {
-            const rest *w_r = w_root.get(t)->r;
-            double p_t   = t_r->p_word(t);
-            double p_w_t = w_r->p_word(w);
-            double p_joint = p_w_t * p_t;
+        // resample tags
+        double log_posterior = 0;
+        for(int j = 0; j < W; j++) {
+            const int ngram_end = min(j + TAG_NGRAM, W);
+            word_t w = words[j];
+            w_root->insert(cur_tags[j])->r->rm_cust(w); // rm emitted word
+            for(int k = j; k < ngram_end; k++) // rm tag N-gram starting at j
+                t_root->insert_context(cur_tags, k)->rm_cust(cur_tags[k]);
 
-            tag_probs.push_back(p_joint);
-            p_w += p_joint;
-            if(p_joint > p_best) {
+            // tag distribution
+            double tag_probs[T], norm = 0;
+            for(word_t t = 0; t < T; t++) {
+                double p = w_root->get(t)->r->p_word(w);
+                cur_tags[j] = t;
+                for(int k = j; k < ngram_end; k++)
+                    p *= t_root->get_context(cur_tags, k)->p_word(cur_tags[k]);
+                tag_probs[t] = p; norm += p;
+            }
+
+            // sample new tag
+            cur_tags[j] = sample_simple(T, tag_probs, norm);
+            w_root->insert(cur_tags[j])->r->add_cust(w);
+            for(int k = j; k < ngram_end; k++)
+                t_root->insert_context(cur_tags, k)->add_cust(cur_tags[k]);
+
+            log_posterior += log2(tag_probs[cur_tags[j]] / norm);
+            tag_counts[j][cur_tags[j]]++;
+        }
+        printf("POST %.2f bits/word\n", -log_posterior/W);
+    }
+    printf("\n");
+
+    // find most frequently sampled tag in each position
+    // i.e. max marginal prob of tag wrt sample of tag seqs
+    for(int j = 0; j < W; j++) {
+        word_t t_best = 0;
+        for(word_t t = 0; t < T; t++)
+            if(tag_counts[j][t] > tag_counts[j][t_best])
                 t_best = t;
-                p_best = p_joint;
+        cur_tags[j] = t_best;
+    }
+
+    // tag summary
+    for(word_t t = 0; t < T; t++) {
+        printf("TAG id %d: ", t);
+
+        vector<int> true_tag_freq(true_tags.vocab.size());
+        int total_freq = 0;
+        for(int j = 0; j < W; j++) {
+            if(cur_tags[j] == t) {
+                word_t t_true = true_tags[j];
+                true_tag_freq[t_true]++;
+                total_freq++;
             }
         }
 
-        word_t t = tags[j];
-        double p_t_w = tag_probs[t] / p_w;
-        if(t_best != t) errors++;
-        best_tags.push_back(t_best);
-
-        if(j < train_size + 250) {
-            printf("%s/%s", words.vocab[w].c_str(), tags.vocab[t].c_str());
-            if(t_best != t) printf("(%s)", tags.vocab[t_best].c_str());
-            printf(" ");
-            fflush(stdout);
+        for(word_t t_true = 0; t_true < true_tags.vocab.size(); t_true++) {
+            const char *tag_name = true_tags.name(t_true);
+            double tag_freq = (double) true_tag_freq[t_true] / total_freq;
+            if(tag_freq > .05)
+                printf("%s: %.1f%%; ", tag_name, 100 * tag_freq);
         }
+        printf("\n");
+
+        const rest *w_r = w_root->get(t)->r;
+        printf("e.g. ");
+        for(int i = 0; i < 30; i++)
+            printf("%s, ", words.name(w_r->sample_word()));
+        printf("...\n\n");
     }
 
-    printf("\n\n%f%% error rate\n", 100.0 * errors / test_size);
+    // sample
+    corpus tag_sample;
+    int sample_size = 250;
+    printf("SAMPLE TEXT\n... ");
+    for(int j = 0; j < sample_size; j++) {
+        word_t t = t_root->get_context(tag_sample, j)->sample_word();
+        word_t w = w_root->get(t)->r->sample_word();
+        printf("%s ", words.name(w));
+        tag_sample.push_back(t);
+    }
+    printf("...\n");
 }
