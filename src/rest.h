@@ -13,29 +13,39 @@ struct rest {
     int ctxt_len; // m = |u|
     int ntab, ncust; // t_u., c_u..: totals
     hash_map<word_t,room> m; // map w to room of tables
+    mutable hash_map<word_t,double> p_word_mem;
 
     rest(param_t *p, rest *par, int l)
             : param(p), parent(par), ctxt_len(l), ntab(0), ncust(0), m() {
 #if !SPARSE_HASH
         m.set_empty_key(-1);
+        p_word_mem.set_empty_key(-1);
 #endif
+        p_word_mem.set_deleted_key(-2);
         assert(ctxt_len < param->N);
+    }
+
+    double p_word_raw(word_t w) const {
+        double d = param->discount[ctxt_len];
+        double p = 0;
+        if(m.count(w)) { // word observed previously
+            const room &m_w = m.find(w)->second;
+            p += m_w.ncust - d * m_w.ntab;
+        }
+        p += (ALPHA + d * ntab) * parent->p_word(w);
+        return p;
     }
 
     double p_word(word_t w) const {
         if(parent == NULL) return uniform_dist(param->vocab_size);
         if(ncust == 0) return parent->p_word(w);
 
-        double d = param->discount[ctxt_len];
-        double p = 0;
-
-        if(m.count(w)) { // word observed previously
-            const room &m_w = m.find(w)->second;
-            p += m_w.ncust - d * m_w.ntab;
-        }
-        p += (ALPHA + d * ntab) * parent->p_word(w);
-        p /= ALPHA + ncust;
-        return p;
+        double p;
+        if(p_word_mem.count(w)) // memoise
+            p = p_word_mem[w];
+        else
+            p = p_word_mem[w] = p_word_raw(w);
+        return p / (ALPHA + ncust);
     }
 
     double cdf(word_t w) const {
@@ -106,11 +116,13 @@ struct rest {
         m_w.ncust++; ncust++;
         if(parent == NULL) // base dist
             return;
+        p_word_mem.erase(w);
 
         int k = sample_tab(w, m_w, true);
         if(m_w.v[k] == 0) { // new table
             parent->add_cust(w);
             m_w.ntab++; ntab++;
+            p_word_mem.clear();
         }
         m_w.v[k]++;
     }
@@ -124,12 +136,14 @@ struct rest {
         m_w.ncust--; ncust--;
         if(parent == NULL) // base dist
             return;
+        p_word_mem.erase(w);
 
         int k = sample_tab(w, m_w, false);
         m_w.v[k]--;
         if(m_w.v[k] == 0) { // remove empty table
             parent->rm_cust(w);
             m_w.ntab--; ntab--;
+            p_word_mem.clear();
         }
     }
 
@@ -146,5 +160,6 @@ struct rest {
                 add_cust(w, m_w);
             }
         }
+        p_word_mem.clear();
     }
 };
