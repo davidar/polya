@@ -1,3 +1,6 @@
+// uncomment to enable memoisation
+//#define MEMOISE
+
 struct rest {
     // tables with same value grouped into rooms
     struct room {
@@ -13,15 +16,21 @@ struct rest {
     int ctxt_len; // m = |u|
     int ntab, ncust; // t_u., c_u..: totals
     hash_map<word_t,room> rooms; // map w to room of tables
+#ifdef MEMOISE
     mutable hash_map<word_t,double> p_word_mem;
+#endif
 
     rest(param_t *p, rest *par, int l)
             : param(p), parent(par), ctxt_len(l), ntab(0), ncust(0), rooms() {
 #if !SPARSE_HASH
         rooms.set_empty_key(-1);
+# ifdef MEMOISE
         p_word_mem.set_empty_key(-1);
+# endif
 #endif
+#ifdef MEMOISE
         p_word_mem.set_deleted_key(-2);
+#endif
         assert(ctxt_len < param->N);
     }
 
@@ -40,11 +49,15 @@ struct rest {
         if(parent == NULL) return uniform_dist(param->vocab_size);
         if(ncust == 0) return parent->p_word(w);
 
+#ifdef MEMOISE
         double p;
         if(p_word_mem.count(w)) // memoise
             p = p_word_mem[w];
         else
             p = p_word_mem[w] = p_word_raw(w);
+#else
+        double p = p_word_raw(w);
+#endif
         return p / (ALPHA + ncust);
     }
 
@@ -115,13 +128,17 @@ struct rest {
         room_w.ncust++; ncust++;
         if(parent == NULL) // base dist
             return;
+#ifdef MEMOISE
         p_word_mem.erase(w);
+#endif
 
         int k = sample_tab(w, room_w, true);
         if(room_w.tab_ncust[k] == 0) { // new table
             parent->add_cust(w);
             room_w.ntab++; ntab++;
+#ifdef MEMOISE
             p_word_mem.clear();
+#endif
         }
         room_w.tab_ncust[k]++;
     }
@@ -135,14 +152,18 @@ struct rest {
         room_w.ncust--; ncust--;
         if(parent == NULL) // base dist
             return;
+#ifdef MEMOISE
         p_word_mem.erase(w);
+#endif
 
         int k = sample_tab(w, room_w, false);
         room_w.tab_ncust[k]--;
         if(room_w.tab_ncust[k] == 0) { // remove empty table
             parent->rm_cust(w);
             room_w.ntab--; ntab--;
+#ifdef MEMOISE
             p_word_mem.clear();
+#endif
         }
     }
 
@@ -159,6 +180,8 @@ struct rest {
                 add_cust(w, room_w);
             }
         }
+#ifdef MEMOISE
         p_word_mem.clear();
+#endif
     }
 };
