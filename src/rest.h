@@ -2,9 +2,9 @@ struct rest {
     // tables with same value grouped into rooms
     struct room {
         int ntab, ncust; // t_uw, c_uw.: number of tables and customers
-        vector<int> v; // c_uwk: table sizes
+        vector<int> tab_ncust; // c_uwk: table sizes
 
-        room() : ntab(0), ncust(0), v() {};
+        room() : ntab(0), ncust(0), tab_ncust() {};
     };
 
 #define ALPHA 0 /* concentration param */
@@ -12,13 +12,13 @@ struct rest {
     rest *parent; // pi(u)
     int ctxt_len; // m = |u|
     int ntab, ncust; // t_u., c_u..: totals
-    hash_map<word_t,room> m; // map w to room of tables
+    hash_map<word_t,room> rooms; // map w to room of tables
     mutable hash_map<word_t,double> p_word_mem;
 
     rest(param_t *p, rest *par, int l)
-            : param(p), parent(par), ctxt_len(l), ntab(0), ncust(0), m() {
+            : param(p), parent(par), ctxt_len(l), ntab(0), ncust(0), rooms() {
 #if !SPARSE_HASH
-        m.set_empty_key(-1);
+        rooms.set_empty_key(-1);
         p_word_mem.set_empty_key(-1);
 #endif
         p_word_mem.set_deleted_key(-2);
@@ -28,9 +28,9 @@ struct rest {
     double p_word_raw(word_t w) const {
         double d = param->discount[ctxt_len];
         double p = 0;
-        if(m.count(w)) { // word observed previously
-            const room &m_w = m.find(w)->second;
-            p += m_w.ncust - d * m_w.ntab;
+        if(rooms.count(w)) { // word observed previously
+            const room &room_w = rooms.find(w)->second;
+            p += room_w.ncust - d * room_w.ntab;
         }
         p += (ALPHA + d * ntab) * parent->p_word(w);
         return p;
@@ -62,11 +62,11 @@ struct rest {
 
         double d = param->discount[ctxt_len];
         double U = randu(0, ALPHA + ncust);
-        for(hash_map<word_t,room>::const_iterator i = m.begin();
-                i != m.end(); i++) {
-            word_t w = i->first; const room &m_w = i->second;
-            if(m_w.ncust == 0) continue;
-            U -= m_w.ncust - d * m_w.ntab;
+        for(hash_map<word_t,room>::const_iterator i = rooms.begin();
+                i != rooms.end(); i++) {
+            word_t w = i->first; const room &room_w = i->second;
+            if(room_w.ncust == 0) continue;
+            U -= room_w.ncust - d * room_w.ntab;
             if(U <= EPS) return w;
         }
 
@@ -74,27 +74,25 @@ struct rest {
         return parent->sample_word();
     }
 
-    int sample_tab(word_t w, room &m_w, bool discnt) {
-        vector<int> &v = m_w.v;
-        int k_new = v.size();
-
+    int sample_tab(word_t w, room &room_w, bool discnt) {
+        int k_new = room_w.tab_ncust.size();
         if(k_new == 0) { // add first table
-            v.push_back(0);
+            room_w.tab_ncust.push_back(0);
             return 0;
         }
 
         // determine probability normalising const
         double d = param->discount[ctxt_len];
-        double norm = m_w.ncust;
+        double norm = room_w.ncust;
         if(discnt) {
-            norm -= d * m_w.ntab;
+            norm -= d * room_w.ntab;
             norm += (ALPHA + d * ntab) * parent->p_word(w);
         }
 
         // sample
         double U = randu(0, norm);
-        for(int k = 0; k < v.size(); k++) {
-            int tabsize = v[k];
+        for(int k = 0; k < room_w.tab_ncust.size(); k++) {
+            int tabsize = room_w.tab_ncust[k];
             if(tabsize == 0) { // unoccupied table
                 k_new = k;
                 continue;
@@ -105,59 +103,60 @@ struct rest {
         }
 
         if(discnt) { // new table
-            if(k_new >= v.size()) v.push_back(0);
+            if(k_new >= room_w.tab_ncust.size())
+                room_w.tab_ncust.push_back(0);
             return k_new;
         }
 
         assert(0); // shouldn't reach here
     }
 
-    void add_cust(word_t w, room &m_w) {
-        m_w.ncust++; ncust++;
+    void add_cust(word_t w, room &room_w) {
+        room_w.ncust++; ncust++;
         if(parent == NULL) // base dist
             return;
         p_word_mem.erase(w);
 
-        int k = sample_tab(w, m_w, true);
-        if(m_w.v[k] == 0) { // new table
+        int k = sample_tab(w, room_w, true);
+        if(room_w.tab_ncust[k] == 0) { // new table
             parent->add_cust(w);
-            m_w.ntab++; ntab++;
+            room_w.ntab++; ntab++;
             p_word_mem.clear();
         }
-        m_w.v[k]++;
+        room_w.tab_ncust[k]++;
     }
 
     void add_cust(word_t w) {
-        add_cust(w, m[w]);
+        add_cust(w, rooms[w]);
     }
 
-    void rm_cust(word_t w, room &m_w) {
-        assert(m_w.ncust > 0);
-        m_w.ncust--; ncust--;
+    void rm_cust(word_t w, room &room_w) {
+        assert(room_w.ncust > 0);
+        room_w.ncust--; ncust--;
         if(parent == NULL) // base dist
             return;
         p_word_mem.erase(w);
 
-        int k = sample_tab(w, m_w, false);
-        m_w.v[k]--;
-        if(m_w.v[k] == 0) { // remove empty table
+        int k = sample_tab(w, room_w, false);
+        room_w.tab_ncust[k]--;
+        if(room_w.tab_ncust[k] == 0) { // remove empty table
             parent->rm_cust(w);
-            m_w.ntab--; ntab--;
+            room_w.ntab--; ntab--;
             p_word_mem.clear();
         }
     }
 
     void rm_cust(word_t w) {
-        rm_cust(w, m[w]);
+        rm_cust(w, rooms[w]);
     }
 
     void resample(void) { // remove and re-add all customers
-        for(hash_map<word_t,room>::iterator i = m.begin();
-                i != m.end(); i++) {
-            word_t w = i->first; room &m_w = i->second;
-            for(int j = 0; j < m_w.ncust; j++) {
-                rm_cust(w, m_w);
-                add_cust(w, m_w);
+        for(hash_map<word_t,room>::iterator i = rooms.begin();
+                i != rooms.end(); i++) {
+            word_t w = i->first; room &room_w = i->second;
+            for(int j = 0; j < room_w.ncust; j++) {
+                rm_cust(w, room_w);
+                add_cust(w, room_w);
             }
         }
         p_word_mem.clear();

@@ -58,11 +58,11 @@ struct ctxt_tree {
         if(r->ntab > 0) param->beta1[m] += r->ntab - 1;
 
         // update beta2
-        for(hash_map<word_t,rest::room>::iterator i = r->m.begin();
-                i != r->m.end(); i++) {
-            vector<int> &v = i->second.v;
-            for(int k = 0; k < v.size(); k++) {
-                int ncust = v[k];
+        for(hash_map<word_t,rest::room>::iterator i = r->rooms.begin();
+                i != r->rooms.end(); i++) {
+            vector<int> &tab_ncust = i->second.tab_ncust;
+            for(int k = 0; k < tab_ncust.size(); k++) {
+                int ncust = tab_ncust[k];
                 for(int j = 1; j < ncust; j++)
                     if(randu(0,1) < (1-d)/(j-d)) param->beta2[m]++;
             }
