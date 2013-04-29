@@ -33,6 +33,7 @@ using namespace boost::math;
 
 #include "hpylm.h"
 #include "pyphmm.h"
+#include "dhpylm.h"
 
 int main(int argc, char **argv) {
 #ifdef HPYLM
@@ -41,6 +42,9 @@ int main(int argc, char **argv) {
 #endif
 #ifdef PYPHMM
     pyphmm();
+#endif
+#ifdef DHPYLM
+    dhpylm();
 #endif
     return 0;
 }

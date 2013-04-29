@@ -20,3 +20,8 @@ for w,t in brown.tagged_words(simplify_tags=True):
     if t.strip() == '': t = w
     print>>f, w, t
 f.close()
+
+f = open('brown.full.txt','w')
+for w in brown.words():
+    print>>f, w
+f.close()

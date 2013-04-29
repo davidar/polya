@@ -28,10 +28,17 @@ double log2_sub(double log_a, double log_b) { // log(a-b)
 }
 
 double sample_simple(int N, double p[], double norm) {
+    assert(N > 0);
     double U = randu(0, 1);
     for(int k = 0; k < N; k++) {
         U -= p[k] / norm;
         if(U < EPS) return k;
     }
+
+    // shouldn't reach here
+    fprintf(stderr, "N = %d, norm = %f, U = %f\n", N, norm, U);
+    for(int k = 0; k < N; k++)
+        fprintf(stderr, "p[%d] / norm = %f; ", k, p[k] / norm);
+    fprintf(stderr, "\n");
     assert(0);
 }

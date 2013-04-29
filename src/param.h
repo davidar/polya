@@ -11,6 +11,16 @@ struct param_t {
             discount[i] = .5;
     }
 
+    void reset_beta(void) {
+        for(int i = 0; i < N; i++)
+            beta1[i] = beta2[i] = 1;
+    }
+
+    void resample_discount(void) {
+        for(int i = 0; i < N; i++)
+            discount[i] = randbeta(beta1[i], beta2[i]);
+    }
+
     void print_discounts(void) {
         for(int j = 0; j < N; j++)
             printf("d%d = %.3f; ", j, discount[j]);

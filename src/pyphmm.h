@@ -13,13 +13,9 @@ void pyphmm(void) {
     // init params, context trees
     const int T = 40; // number of available tag types
     param_t *t_param = new param_t(TAG_NGRAM, T);
-    rest *t_G_uniform = new rest(t_param, NULL, -1);
-    rest *t_G_unigram = new rest(t_param, t_G_uniform, 0);
-    ctxt_tree *t_root = new ctxt_tree(t_param, t_G_unigram);
-
+    ctxt_tree *t_root = new ctxt_tree(t_param);
     param_t *w_param = new param_t(2, words.vocab.size());
-    rest *w_G_uniform = new rest(w_param, NULL, 0);
-    ctxt_tree *w_root = new ctxt_tree(w_param, w_G_uniform);
+    ctxt_tree *w_root = new ctxt_tree(w_param, new rest(w_param, NULL, 0));
 
     // init random tags
     corpus cur_tags;

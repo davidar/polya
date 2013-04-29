@@ -1,0 +1,145 @@
+TRAIN dom0: The Fulton County Grand Jury said Friday an investigation of Atlanta's recent primary election produced `` no evidence '' that any irregularities took place . The jury further said in term-end presentments that the City Executive Committee , which had over-all charge of the election , `` deserves the praise and thanks of the City of Atlanta '' for the manner in which the election was conducted . The September-October term jury had been charged by Fulton Superior Court Judge Durwood Pye to investigate reports of possible `` irregularities '' in the hard-fought primary which was won by Mayor-nominate Ivan ...
+TRAIN dom1: PRESIDENT HARRY S . TRUMAN ' S ADDRESS BEFORE A JOINT SESSION OF THE CONGRESS April 16 , 1945 Mr . Speaker , Mr . President , Members of the Congress : It is with a heavy heart that I stand before you , my friends and colleagues , in the Congress of the United States . Only yesterday , we laid to rest the mortal remains of our beloved President , Franklin Delano Roosevelt . At a time like this , words are inadequate . The most eloquent tribute would be a reverent silence . Yet , in this ...
+CREATED 587155 latent, 511323 dom0, 136395 dom1 restaurants
+TEST dom1: PRESIDENT LYNDON B . JOHNSON ' S ANNUAL MESSAGE TO THE CONGRESS ON THE STATE OF THE UNION November 27 , 1963 Mr . Speaker , Mr . President , Members of the House , Members of the Senate , my fellow Americans : All I have I would have given gladly not to be standing here today . The greatest leader of our time has been struck down by the foulest deed of our time . Today John Fitzgerald Kennedy lives on in the immortal words and works that he left behind . He lives on in the mind ...
+
+*** ITER 0 ***
+LATENT: d0 = 0.629; d1 = 0.838; d2 = 0.926; 
+DOM0: d0 = 0.751; d1 = 0.797; d2 = 0.917; 
+  lambda_0 = 0.857436 (720 tabs, 52671 custs)
+  lambda_1 = 0.738258 (2051 tabs, 234604 custs)
+  lambda_2 = 0.355430 (4548 tabs, 1050376 custs)
+  LAMBDA: d0 = 0.499; d1 = 0.501; d2 = 0.518; 
+DOM1: d0 = 0.692; d1 = 0.788; d2 = 0.891; 
+  lambda_0 = 0.721580 (377 tabs, 12579 custs)
+  lambda_1 = 0.428535 (1156 tabs, 123711 custs)
+  lambda_2 = 0.660846 (1741 tabs, 313018 custs)
+  LAMBDA: d0 = 0.512; d1 = 0.512; d2 = 0.538; 
+Perplexity: 2^7.545438 = 186.811257
+
+*** ITER 1 ***
+LATENT: d0 = 0.670; d1 = 0.821; d2 = 0.932; 
+DOM0: d0 = 0.730; d1 = 0.801; d2 = 0.919; 
+  lambda_0 = 0.837458 (710 tabs, 43887 custs)
+  lambda_1 = 0.707323 (2042 tabs, 217523 custs)
+  lambda_2 = 0.336927 (4516 tabs, 1052379 custs)
+  LAMBDA: d0 = 0.520; d1 = 0.503; d2 = 0.513; 
+DOM1: d0 = 0.586; d1 = 0.812; d2 = 0.888; 
+  lambda_0 = 0.675311 (409 tabs, 10813 custs)
+  lambda_1 = 0.422403 (1190 tabs, 118060 custs)
+  lambda_2 = 0.638748 (1803 tabs, 313553 custs)
+  LAMBDA: d0 = 0.532; d1 = 0.506; d2 = 0.529; 
+Perplexity: 2^7.545622 = 186.835138
+
+*** ITER 2 ***
+LATENT: d0 = 0.741; d1 = 0.846; d2 = 0.940; 
+DOM0: d0 = 0.748; d1 = 0.797; d2 = 0.922; 
+  lambda_0 = 0.827335 (649 tabs, 38511 custs)
+  lambda_1 = 0.679982 (2022 tabs, 206329 custs)
+  lambda_2 = 0.326630 (4521 tabs, 1054191 custs)
+  LAMBDA: d0 = 0.514; d1 = 0.503; d2 = 0.510; 
+DOM1: d0 = 0.685; d1 = 0.758; d2 = 0.881; 
+  lambda_0 = 0.630530 (420 tabs, 9767 custs)
+  lambda_1 = 0.419019 (1124 tabs, 114793 custs)
+  lambda_2 = 0.627924 (1827 tabs, 313999 custs)
+  LAMBDA: d0 = 0.561; d1 = 0.486; d2 = 0.523; 
+Perplexity: 2^7.556167 = 188.205736
+
+*** ITER 3 ***
+LATENT: d0 = 0.678; d1 = 0.857; d2 = 0.941; 
+DOM0: d0 = 0.674; d1 = 0.803; d2 = 0.913; 
+  lambda_0 = 0.808912 (600 tabs, 35464 custs)
+  lambda_1 = 0.659666 (2035 tabs, 199844 custs)
+  lambda_2 = 0.319291 (4493 tabs, 1053901 custs)
+  LAMBDA: d0 = 0.501; d1 = 0.514; d2 = 0.503; 
+DOM1: d0 = 0.666; d1 = 0.787; d2 = 0.881; 
+  lambda_0 = 0.583263 (418 tabs, 9523 custs)
+  lambda_1 = 0.416229 (1090 tabs, 112468 custs)
+  lambda_2 = 0.622216 (1800 tabs, 313462 custs)
+  LAMBDA: d0 = 0.556; d1 = 0.494; d2 = 0.514; 
+Perplexity: 2^7.556870 = 188.297477
+
+*** ITER 4 ***
+LATENT: d0 = 0.755; d1 = 0.831; d2 = 0.945; 
+DOM0: d0 = 0.687; d1 = 0.770; d2 = 0.926; 
+  lambda_0 = 0.804801 (597 tabs, 32919 custs)
+  lambda_1 = 0.645366 (2118 tabs, 194214 custs)
+  lambda_2 = 0.312340 (4508 tabs, 1052444 custs)
+  LAMBDA: d0 = 0.523; d1 = 0.513; d2 = 0.508; 
+DOM1: d0 = 0.688; d1 = 0.758; d2 = 0.903; 
+  lambda_0 = 0.551686 (437 tabs, 9288 custs)
+  lambda_1 = 0.415577 (1074 tabs, 110644 custs)
+  lambda_2 = 0.615922 (1784 tabs, 313319 custs)
+  LAMBDA: d0 = 0.552; d1 = 0.503; d2 = 0.501; 
+Perplexity: 2^7.552078 = 187.673049
+
+*** ITER 5 ***
+LATENT: d0 = 0.677; d1 = 0.836; d2 = 0.937; 
+DOM0: d0 = 0.715; d1 = 0.795; d2 = 0.915; 
+  lambda_0 = 0.796314 (633 tabs, 31265 custs)
+  lambda_1 = 0.634472 (2024 tabs, 188800 custs)
+  lambda_2 = 0.307091 (4496 tabs, 1052491 custs)
+  LAMBDA: d0 = 0.538; d1 = 0.523; d2 = 0.511; 
+DOM1: d0 = 0.564; d1 = 0.799; d2 = 0.876; 
+  lambda_0 = 0.526273 (430 tabs, 8969 custs)
+  lambda_1 = 0.414060 (1082 tabs, 108948 custs)
+  lambda_2 = 0.612342 (1804 tabs, 312777 custs)
+  LAMBDA: d0 = 0.578; d1 = 0.516; d2 = 0.521; 
+Perplexity: 2^7.548885 = 187.258209
+
+*** ITER 6 ***
+LATENT: d0 = 0.660; d1 = 0.843; d2 = 0.937; 
+DOM0: d0 = 0.687; d1 = 0.800; d2 = 0.909; 
+  lambda_0 = 0.782302 (650 tabs, 30173 custs)
+  lambda_1 = 0.624009 (2050 tabs, 185291 custs)
+  lambda_2 = 0.302521 (4532 tabs, 1052518 custs)
+  LAMBDA: d0 = 0.561; d1 = 0.509; d2 = 0.513; 
+DOM1: d0 = 0.559; d1 = 0.775; d2 = 0.877; 
+  lambda_0 = 0.501231 (441 tabs, 8673 custs)
+  lambda_1 = 0.413517 (1168 tabs, 107746 custs)
+  lambda_2 = 0.606913 (1783 tabs, 312576 custs)
+  LAMBDA: d0 = 0.574; d1 = 0.529; d2 = 0.531; 
+Perplexity: 2^7.552863 = 187.775237
+
+*** ITER 7 ***
+LATENT: d0 = 0.691; d1 = 0.850; d2 = 0.941; 
+DOM0: d0 = 0.658; d1 = 0.805; d2 = 0.922; 
+  lambda_0 = 0.778733 (681 tabs, 28425 custs)
+  lambda_1 = 0.610026 (1980 tabs, 180948 custs)
+  lambda_2 = 0.298462 (4617 tabs, 1050270 custs)
+  LAMBDA: d0 = 0.578; d1 = 0.504; d2 = 0.520; 
+DOM1: d0 = 0.601; d1 = 0.809; d2 = 0.896; 
+  lambda_0 = 0.478773 (481 tabs, 8547 custs)
+  lambda_1 = 0.411221 (1169 tabs, 107079 custs)
+  lambda_2 = 0.604838 (1818 tabs, 312538 custs)
+  LAMBDA: d0 = 0.564; d1 = 0.532; d2 = 0.541; 
+Perplexity: 2^7.552621 = 187.743741
+
+*** ITER 8 ***
+LATENT: d0 = 0.667; d1 = 0.845; d2 = 0.944; 
+DOM0: d0 = 0.744; d1 = 0.812; d2 = 0.913; 
+  lambda_0 = 0.770271 (691 tabs, 27368 custs)
+  lambda_1 = 0.598737 (2025 tabs, 179383 custs)
+  lambda_2 = 0.296472 (4582 tabs, 1050665 custs)
+  LAMBDA: d0 = 0.547; d1 = 0.510; d2 = 0.525; 
+DOM1: d0 = 0.600; d1 = 0.805; d2 = 0.888; 
+  lambda_0 = 0.462384 (481 tabs, 8314 custs)
+  lambda_1 = 0.408936 (1191 tabs, 105511 custs)
+  lambda_2 = 0.602511 (1843 tabs, 313226 custs)
+  LAMBDA: d0 = 0.576; d1 = 0.550; d2 = 0.530; 
+Perplexity: 2^7.551475 = 187.594722
+
+*** ITER 9 ***
+LATENT: d0 = 0.658; d1 = 0.843; d2 = 0.936; 
+DOM0: d0 = 0.656; d1 = 0.760; d2 = 0.911; 
+  lambda_0 = 0.758977 (723 tabs, 26538 custs)
+  lambda_1 = 0.586777 (1953 tabs, 178494 custs)
+  lambda_2 = 0.294897 (4671 tabs, 1051601 custs)
+  LAMBDA: d0 = 0.560; d1 = 0.497; d2 = 0.524; 
+DOM1: d0 = 0.611; d1 = 0.763; d2 = 0.891; 
+  lambda_0 = 0.440109 (452 tabs, 8285 custs)
+  lambda_1 = 0.409054 (1148 tabs, 106193 custs)
+  lambda_2 = 0.601311 (1826 tabs, 312352 custs)
+  LAMBDA: d0 = 0.578; d1 = 0.518; d2 = 0.508; 
+Perplexity: 2^7.555258 = 188.087159
+

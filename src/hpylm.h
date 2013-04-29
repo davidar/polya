@@ -1,33 +1,19 @@
-// undef to fix predictions during testing
+// uncomment to update predictions during testing
 //#define TEST_UPDATE
 
 void hpylm(int ngram_size, int test_size) {
     // read data
-    corpus text;
-    char buf[100];
-    while(scanf("%s", buf) != EOF)
-        text.push_back(buf);
+    corpus text(stdin);
     int train_size = text.size() - test_size;
-
     printf("%d (out of %d) words in dict\n",
         (int) text.dict.size(), (int) text.size());
     printf("%d training, %d testing\n", train_size, test_size);
     fflush(stdout);
 
-    // init params
+    // init params, restaurant context tree
     param_t *param = new param_t(ngram_size, text.vocab.size());
-
-    // init restaurant context tree
-    rest *G_0 = new rest(param, NULL, -1); // base distribution
-    rest *G_eps = new rest(param, G_0, 0); // context-free dist
-    ctxt_tree root(param, G_eps);
-
-    // add training data
-    for(int j = 0; j < train_size; j++) {
-        rest *r = root.insert_context(text, j);
-        r->add_cust(text[j]);
-    }
-
+    ctxt_tree root(param);
+    root.train(text, 0, train_size);
     printf("%d restaurants created\n", param->rest_count);
 
     // size of test data

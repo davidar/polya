@@ -3,20 +3,59 @@ struct ctxt_tree {
     rest *r;
     hash_map<word_t,ctxt_tree*> children;
 
-    ctxt_tree(param_t *p, rest *restaurant)
-            : param(p), r(restaurant), children() {
+    ctxt_tree *latent;
+    rest **lambda;
+
+    void init(void) {
 #if !SPARSE_HASH
         children.set_empty_key(-1);
 #endif
     }
 
+    ctxt_tree(param_t *p) : param(p), latent(NULL) {
+        rest *uniform_dist = new rest(param, NULL, -1);
+        r = new rest(param, uniform_dist, 0); // context-free dist
+        init();
+    }
+
+    ctxt_tree(param_t *p, rest *restaurant)
+            : param(p), r(restaurant), latent(NULL) {
+        init();
+    }
+
+    ctxt_tree(param_t *p, ctxt_tree *lat, rest *lam[])
+            : param(p), latent(lat), lambda(lam) {
+        rest **parents = new rest *[2];
+        parents[0] = new rest(param, NULL, -1); // uniform
+        parents[1] = latent->r;
+        r = new rest(param, 0, parents, 2, lambda[0]);
+        init();
+    }
+
+    ctxt_tree(param_t *p, rest *restaurant, ctxt_tree *lat, rest *lam[])
+            : param(p), r(restaurant), latent(lat), lambda(lam) {
+        init();
+    }
+
     ctxt_tree *insert(word_t w) { // extend context to left by w
-        if(!children.count(w)) {
-            rest *r_new = new rest(param, r, r->ctxt_len + 1);
-            children[w] = new ctxt_tree(param, r_new);
-            param->rest_count++;
+        if(children.count(w)) return children[w];
+
+        // create new ctxt_tree
+        int m = r->ctxt_len + 1;
+        ctxt_tree *child;
+        if(latent) {
+            ctxt_tree *latent_child = latent->insert(w);
+            rest **parents = new rest *[2];
+            parents[0] = r; parents[1] = latent_child->r;
+            rest *r_new = new rest(param, m, parents, 2, lambda[m]);
+            child = new ctxt_tree(param, r_new, latent_child, lambda);
+        } else {
+            rest *r_new = new rest(param, r, m);
+            child = new ctxt_tree(param, r_new);
         }
-        return children[w];
+        children[w] = child;
+        param->rest_count++;
+        return child;
     }
 
     rest *insert_context(corpus &text, int j) {
@@ -45,6 +84,11 @@ struct ctxt_tree {
         return ct->r;
     }
 
+    void train(corpus &text, int start, int end) {
+        for(int j = start; j < end; j++)
+            insert_context(text, j)->add_cust(text[j]);
+    }
+
     void resample_seat(void) { // reseat all customers
         r->resample();
         for(hash_map<word_t,ctxt_tree*>::iterator i = children.begin();
@@ -53,33 +97,16 @@ struct ctxt_tree {
     }
 
     void update_beta(void) { // update discount posterior
-        int m = r->ctxt_len;
-        double d = param->discount[m];
-        if(r->ntab > 0) param->beta1[m] += r->ntab - 1;
-
-        // update beta2
-        for(hash_map<word_t,rest::room>::iterator i = r->rooms.begin();
-                i != r->rooms.end(); i++) {
-            vector<int> &tab_ncust = i->second.tab_ncust;
-            for(int k = 0; k < tab_ncust.size(); k++) {
-                int ncust = tab_ncust[k];
-                for(int j = 1; j < ncust; j++)
-                    if(randu(0,1) < (1-d)/(j-d)) param->beta2[m]++;
-            }
-        }
-
-        // recur
+        r->update_beta();
         for(hash_map<word_t,ctxt_tree*>::iterator i = children.begin();
                 i != children.end(); i++)
-            i->second->update_beta();
+            i->second->update_beta(); // recur
     }
 
     void resample_param(void) {
-        for(int i = 0; i < param->N; i++)
-            param->beta1[i] = param->beta2[i] = 1;
+        param->reset_beta();
         update_beta();
-        for(int i = 0; i < param->N; i++)
-            param->discount[i] = randbeta(param->beta1[i], param->beta2[i]);
+        param->resample_discount();
     }
 
     void resample(void) {

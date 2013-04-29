@@ -4,11 +4,34 @@ struct corpus {
     vector<word_t> text;
     vector<int> word_len;
 
-    corpus() {
+    void init(void) {
 #if !SPARSE_HASH
         dict.set_empty_key("");
 #endif
         vocab.push_back("NULL");
+    }
+
+    void read(FILE *fin) {
+        char buf[100];
+        while(fscanf(fin, "%s", buf) != EOF)
+            push_back(buf);
+    }
+
+    corpus() {
+        init();
+    }
+
+    corpus(FILE *fin) {
+        init();
+        read(fin);
+    }
+
+    corpus(const char *fname) {
+        init();
+        char buf[100] = {};
+        strcat(strcat(strcat(buf, "../data/"), fname), ".txt");
+        FILE *fin = fopen(buf, "r");
+        read(fin);
     }
 
     void push_back(word_t w) {
@@ -44,5 +67,11 @@ struct corpus {
 
     const char *get(int i) {
         return name(text[i]);
+    }
+
+    void print(int start, int n) {
+        for(int i = start; i < start + n; i++)
+            printf("%s ", get(i));
+        printf("...\n");
     }
 };

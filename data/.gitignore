@@ -1,2 +1,4 @@
 brown.*.txt
 sou.*.txt
+# cat brown.full.txt sou.{train,test}.txt > brown-sou.txt
+brown-sou.txt
