@@ -1,13 +1,27 @@
 #define NGRAM_SIZE 3 /* trigrams */
 #define NDOM 2 /* general and specific domains */
 
-#define BROWN_SIZE 1161192
-#define SOU_TRAIN_SIZE 360634
-
-void dhpylm(void) {
-    corpus text("brown-sou");
+void dhpylm(const char *dom0_fname, const char *dom1_train_fname,
+        const char *dom1_test_fname, int iters) {
+    corpus text;
+    int dom0_size = text.read(dom0_fname);
+    int dom1_train_size = text.read(dom1_train_fname);
+    int dom1_test_size = text.read(dom1_test_fname);
     int vocab_size = text.vocab.size();
-    int dom_start[] = {0, BROWN_SIZE, BROWN_SIZE + SOU_TRAIN_SIZE};
+    int dom_start[] = {0, dom0_size, dom0_size + dom1_train_size};
+    printf("%d dom0, %d dom1 train, %d dom1 test\n",
+            dom0_size, dom1_train_size, dom1_test_size);
+    printf("%d unique words\n", vocab_size);
+
+    printf("\n*** BASELINE hpylm ***\n");
+    hpylm(NGRAM_SIZE, text,
+            dom0_size, dom1_train_size, dom1_test_size,
+            iters, 0, false);
+    printf("\n*** UNION hpylm ***\n");
+    hpylm(NGRAM_SIZE, text,
+            0, dom0_size + dom1_train_size, dom1_test_size,
+            iters, 0, false);
+    printf("\n*** DHPYLM ***\n");
 
     param_t *latent_param = new param_t(NGRAM_SIZE, vocab_size);
     ctxt_tree *latent_root = new ctxt_tree(latent_param);
@@ -42,27 +56,21 @@ void dhpylm(void) {
     text.print(dom_start[NDOM], 100); printf("\n");
     fflush(stdout);
 
-    int iters = 10;
+    double log_sum_prob = log2(0);
     for(int i = 0; i < iters; i++) {
-        printf("*** ITER %d ***\n", i);
+        printf("ITER %3d: ", i);
         latent_root->resample();
-        printf("LATENT: "); latent_param->print_discounts(); printf("\n");
 
         for(int j = 0; j < NDOM; j++) {
-            printf("DOM%d: ", j);
             dom_root[j]->resample();
-            dom_param[j]->print_discounts(); printf("\n");
 
             lambda_params[j]->reset_beta();
             for(int k = 0; k < NGRAM_SIZE; k++) {
                 rest *r = lambdas[j][k];
-                printf("  lambda_%d = %f (%d tabs, %d custs)\n",
-                        k, r->p_word(0), r->ntab, r->ncust);
+                printf("l%d=%.3f; ", k, r->p_word(0));
                 r->update_beta();
             }
             lambda_params[j]->resample_discount();
-            printf("  LAMBDA: ", j);
-            lambda_params[j]->print_discounts(); printf("\n");
         }
 
         double bits = 0;
@@ -71,8 +79,14 @@ void dhpylm(void) {
             double p = r->p_word(text[j]);
             bits += -log2(p);
         }
-        printf("Perplexity: 2^%f = %f\n\n",
+        log_sum_prob = log2_add(log_sum_prob, -bits);
+        printf("PPLX 2^%.2f = %.1f\n",
                 bits/test_size, exp2(bits/test_size));
         fflush(stdout);
     }
+
+    printf("\nSUMMARY\n");
+    double log_mean = log_sum_prob - log2(iters);
+    printf("Perplexity: 2^%f = %f\n",
+            -log_mean / test_size, exp2(-log_mean / test_size));
 }

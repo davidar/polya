@@ -38,13 +38,24 @@ using namespace boost::math;
 int main(int argc, char **argv) {
 #ifdef HPYLM
     assert(argc == 3);
-    hpylm(atoi(argv[1]), atoi(argv[2]));
+    int ngram_size = atoi(argv[1]), test_size = atoi(argv[2]);
+
+    // read data
+    corpus text(stdin);
+    int train_size = text.size() - test_size;
+    printf("%d unique words, %d total\n",
+        (int) text.vocab.size(), (int) text.size());
+    printf("%d training, %d testing\n", train_size, test_size);
+    fflush(stdout);
+
+    hpylm(ngram_size, text, 0, train_size, test_size, 300, 125, true);
 #endif
 #ifdef PYPHMM
     pyphmm();
 #endif
 #ifdef DHPYLM
-    dhpylm();
+    assert(argc == 4);
+    dhpylm(argv[1], argv[2], argv[3], 100);
 #endif
     return 0;
 }

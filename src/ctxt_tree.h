@@ -58,7 +58,7 @@ struct ctxt_tree {
         return child;
     }
 
-    rest *insert_context(corpus &text, int j) {
+    rest *insert_context(const corpus &text, int j) {
         ctxt_tree *ct = this;
         for(int i = 1; i < param->N; i++) {
             if(j-i < 0) break;
@@ -73,7 +73,7 @@ struct ctxt_tree {
         return children.find(w)->second;
     }
 
-    const rest *get_context(corpus &text, int j) const {
+    const rest *get_context(const corpus &text, int j) const {
         const ctxt_tree *ct = this;
         for(int i = 1; i < param->N; i++) {
             if(j-i < 0) break;
@@ -84,7 +84,7 @@ struct ctxt_tree {
         return ct->r;
     }
 
-    void train(corpus &text, int start, int end) {
+    void train(const corpus &text, int start, int end) {
         for(int j = start; j < end; j++)
             insert_context(text, j)->add_cust(text[j]);
     }

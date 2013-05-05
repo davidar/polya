@@ -11,10 +11,18 @@ struct corpus {
         vocab.push_back("NULL");
     }
 
-    void read(FILE *fin) {
+    int read(FILE *fin) {
+        int n = 0;
         char buf[100];
-        while(fscanf(fin, "%s", buf) != EOF)
+        while(fscanf(fin, "%s", buf) != EOF) {
             push_back(buf);
+            n++;
+        }
+        return n;
+    }
+
+    int read(const char *fname) {
+        return read(fopen(fname, "r"));
     }
 
     corpus() {
@@ -28,10 +36,7 @@ struct corpus {
 
     corpus(const char *fname) {
         init();
-        char buf[100] = {};
-        strcat(strcat(strcat(buf, "../data/"), fname), ".txt");
-        FILE *fin = fopen(buf, "r");
-        read(fin);
+        read(fname);
     }
 
     void push_back(word_t w) {
@@ -53,7 +58,7 @@ struct corpus {
         push_back(string(buf));
     }
 
-    int size(void) {
+    int size(void) const {
         return text.size();
     }
 
@@ -61,15 +66,19 @@ struct corpus {
         return text[i];
     }
 
-    const char *name(word_t w) {
+    const word_t operator[](int i) const {
+        return text[i];
+    }
+
+    const char *name(word_t w) const {
         return vocab[w].c_str();
     }
 
-    const char *get(int i) {
+    const char *get(int i) const {
         return name(text[i]);
     }
 
-    void print(int start, int n) {
+    void print(int start, int n) const {
         for(int i = start; i < start + n; i++)
             printf("%s ", get(i));
         printf("...\n");

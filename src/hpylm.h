@@ -1,31 +1,26 @@
 // uncomment to update predictions during testing
 //#define TEST_UPDATE
 
-void hpylm(int ngram_size, int test_size) {
-    // read data
-    corpus text(stdin);
-    int train_size = text.size() - test_size;
-    printf("%d (out of %d) words in dict\n",
-        (int) text.dict.size(), (int) text.size());
-    printf("%d training, %d testing\n", train_size, test_size);
-    fflush(stdout);
+void hpylm(int ngram_size, const corpus &text,
+        int text_start, int train_size, int test_size,
+        int iters, int burnin, bool sample) {
+    int text_mid = text_start + train_size, text_end = text_mid + test_size;
 
     // init params, restaurant context tree
     param_t *param = new param_t(ngram_size, text.vocab.size());
     ctxt_tree root(param);
-    root.train(text, 0, train_size);
+    root.train(text, text_start, text_mid);
     printf("%d restaurants created\n", param->rest_count);
 
     // size of test data
     int test_bytes = 0;
-    for(int j = train_size; j < train_size + test_size; j++)
+    for(int j = text_mid; j < text_end; j++)
         test_bytes += text.word_len[j] + 1;
 
     printf("%gkB of test data\n", test_bytes/1e3);
     fflush(stdout);
 
     // Gibbs sampling
-    int iters = 300, burnin = 125;
     double log_sum_prob = log2(0); // log(sum_H P(w|H))
     for(int i = 0; i < iters; i++) {
         printf("ITER %3d: ", i);
@@ -34,7 +29,7 @@ void hpylm(int ngram_size, int test_size) {
 
         // calculate likelihood of test data
         double bits = 0;
-        for(int j = train_size; j < train_size + test_size; j++) {
+        for(int j = text_mid; j < text_end; j++) {
 #ifdef TEST_UPDATE
             rest *r = root.insert_context(text, j);
 #else
@@ -51,7 +46,7 @@ void hpylm(int ngram_size, int test_size) {
 
 #ifdef TEST_UPDATE
         // remove test data for next iteration
-        for(int j = train_size; j < train_size + test_size; j++) {
+        for(int j = text_mid; j < text_end; j++) {
             rest *r = root.insert_context(text, j);
             r->rm_cust(text[j]);
         }
@@ -69,6 +64,7 @@ void hpylm(int ngram_size, int test_size) {
             -log_mean / test_size, exp2(-log_mean / test_size));
     fflush(stdout);
 
+    if(!sample) return;
     // sample text from model
     corpus text_sample;
     int sample_size = 250;
