@@ -1,21 +1,26 @@
 #define TAG_NGRAM 3 /* tag trigrams*/
 
+corpus words, true_tags;
+int W;
+const int T = 40; // number of available tag types
+ctxt_tree *t_root, *w_root;
+
+void tag_summary(const vector<vector<int> > &tag_counts, bool concise);
+
 void pyphmm(void) {
     // read data
-    corpus words, true_tags;
     char buf1[100], buf2[100];
     while(scanf("%s %s", buf1, buf2) != EOF) {
         words.push_back(buf1);
         true_tags.push_back(buf2);
     }
-    const int W = words.size(); // word count
+    W = words.size(); // word count
 
     // init params, context trees
-    const int T = 40; // number of available tag types
     param_t *t_param = new param_t(TAG_NGRAM, T);
-    ctxt_tree *t_root = new ctxt_tree(t_param);
+    t_root = new ctxt_tree(t_param);
     param_t *w_param = new param_t(2, words.vocab.size());
-    ctxt_tree *w_root = new ctxt_tree(w_param, new rest(w_param, NULL, 0));
+    w_root = new ctxt_tree(w_param, new rest(w_param, NULL, 0));
 
     // init random tags
     corpus cur_tags;
@@ -29,8 +34,9 @@ void pyphmm(void) {
             t_param->rest_count, w_param->rest_count);
 
     // Gibbs sampling
-    const int iters = 150;
+    const int iters = 500;
     vector<vector<int> > tag_counts(W, vector<int>(T));
+    time_t start_time = time(NULL);
     for(int i = 0; i < iters; i++) {
         printf("ITER %3d: ", i);
         t_root->resample(); t_param->print_discounts();
@@ -65,34 +71,45 @@ void pyphmm(void) {
             log_posterior += log2(tag_probs[cur_tags[j]] / norm);
             tag_counts[j][cur_tags[j]]++;
         }
-        printf("POST %.2f bits/word\n", -log_posterior/W);
-    }
-    printf("\n");
 
+        printf("POST %.2f bpw; ", -log_posterior/W);
+        double elapsed = difftime(time(NULL), start_time) / 60.0;
+        printf("ETA %dmin\n", (int) ceil((iters - (i+1)) * elapsed / (i+1)));
+
+        if(i % 50 == 49 && i+1 != iters) tag_summary(tag_counts, true);
+    }
+
+    tag_summary(tag_counts, false);
+}
+
+void tag_summary(const vector<vector<int> > &tag_counts, bool concise) {
     // find most frequently sampled tag in each position
     // i.e. max marginal prob of tag wrt sample of tag seqs
+    vector<word_t> tags;
     for(int j = 0; j < W; j++) {
         word_t t_best = 0;
         for(word_t t = 0; t < T; t++)
             if(tag_counts[j][t] > tag_counts[j][t_best])
                 t_best = t;
-        cur_tags[j] = t_best;
+        tags.push_back(t_best);
     }
 
     // tag summary
+    printf("\n");
     for(word_t t = 0; t < T; t++) {
-        printf("TAG id %d: ", t);
-
+        // true tags associated with this predicted tag
         vector<int> true_tag_freq(true_tags.vocab.size());
         int total_freq = 0;
         for(int j = 0; j < W; j++) {
-            if(cur_tags[j] == t) {
+            if(tags[j] == t) {
                 word_t t_true = true_tags[j];
                 true_tag_freq[t_true]++;
                 total_freq++;
             }
         }
 
+        if(concise && total_freq < W/100) continue; // ignore infreq tags
+        printf("TAG id %d (%.2f%% of words): ", t, 100.0 * total_freq / W);
         for(word_t t_true = 0; t_true < true_tags.vocab.size(); t_true++) {
             const char *tag_name = true_tags.name(t_true);
             double tag_freq = (double) true_tag_freq[t_true] / total_freq;
@@ -108,6 +125,7 @@ void pyphmm(void) {
         printf("...\n\n");
     }
 
+    if(concise) return;
     // sample
     corpus tag_sample;
     int sample_size = 250;
