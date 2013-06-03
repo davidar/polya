@@ -96,17 +96,17 @@ struct ctxt_tree {
             i->second->resample();
     }
 
-    void update_beta(void) { // update discount posterior
-        r->update_beta();
+    void update_hyperparam(void) {
+        r->update_hyperparam();
         for(hash_map<word_t,ctxt_tree*>::iterator i = children.begin();
                 i != children.end(); i++)
-            i->second->update_beta(); // recur
+            i->second->update_hyperparam(); // recur
     }
 
     void resample_param(void) {
-        param->reset_beta();
-        update_beta();
-        param->resample_discount();
+        param->reset_hyperparam();
+        update_hyperparam();
+        param->resample();
     }
 
     void resample(void) {

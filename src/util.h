@@ -10,6 +10,11 @@ double randbeta(double a, double b) { // Beta(a,b)
     return quantile(dist, randu(0,1)); // inverse transform
 }
 
+double randgamma(double a, double l) { // Gamma(a,l)
+    gamma_distribution<> dist(a, 1/l);
+    return quantile(dist, randu(0,1));
+}
+
 double uniform_dist(int size) {
     return 1.0 / size;
 }

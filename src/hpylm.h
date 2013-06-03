@@ -25,7 +25,7 @@ void hpylm(int ngram_size, const corpus &text,
     for(int i = 0; i < iters; i++) {
         printf("ITER %3d: ", i);
         root.resample();
-        param->print_discounts();
+        param->print();
 
         // calculate likelihood of test data
         double bits = 0;

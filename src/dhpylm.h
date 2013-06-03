@@ -64,13 +64,13 @@ void dhpylm(const char *dom0_fname, const char *dom1_train_fname,
         for(int j = 0; j < NDOM; j++) {
             dom_root[j]->resample();
 
-            lambda_params[j]->reset_beta();
+            lambda_params[j]->reset_hyperparam();
             for(int k = 0; k < NGRAM_SIZE; k++) {
                 rest *r = lambdas[j][k];
                 printf("l%d=%.3f; ", k, r->p_word(0));
-                r->update_beta();
+                r->update_hyperparam();
             }
-            lambda_params[j]->resample_discount();
+            lambda_params[j]->resample();
         }
 
         double bits = 0;

@@ -11,7 +11,6 @@ struct rest {
         room() : ntab(0), ncust(0) {};
     };
 
-#define ALPHA 0 /* concentration param */
     param_t *param;
     const int ctxt_len; // m = |u|
 
@@ -72,13 +71,13 @@ struct rest {
     }
 
     double p_word_raw(word_t w) const {
-        double d = param->discount[ctxt_len];
+        const double d = param->disc[ctxt_len], a = param->conc[ctxt_len];
         double p = 0;
         if(rooms.count(w)) { // word observed previously
             const room &room_w = rooms.find(w)->second;
             p += room_w.ncust - d * room_w.ntab;
         }
-        p += (ALPHA + d * ntab) * parent_p_word(w);
+        p += (a + d * ntab) * parent_p_word(w);
         return p;
     }
 
@@ -86,6 +85,7 @@ struct rest {
         if(nparents == 0) return uniform_dist(param->vocab_size);
         if(ncust == 0) return parent_p_word(w);
 
+        const double a = param->conc[ctxt_len];
 #ifdef MEMOISE
         double p;
         if(p_word_mem.count(w)) // memoise
@@ -95,7 +95,7 @@ struct rest {
 #else
         double p = p_word_raw(w);
 #endif
-        return p / (ALPHA + ncust);
+        return p / (a + ncust);
     }
 
     double cdf(word_t w) const {
@@ -119,8 +119,8 @@ struct rest {
     word_t sample_word(void) const {
         if(nparents == 0) return uniform_sample(param->vocab_size);
 
-        double d = param->discount[ctxt_len];
-        double U = randu(0, ALPHA + ncust);
+        const double d = param->disc[ctxt_len], a = param->conc[ctxt_len];
+        double U = randu(0, a + ncust);
         for(hash_map<word_t,room>::const_iterator i = rooms.begin();
                 i != rooms.end(); i++) {
             word_t w = i->first; const room &room_w = i->second;
@@ -129,7 +129,7 @@ struct rest {
             if(U <= EPS) return w;
         }
 
-        // sample from parent with probability propto ALPHA + d * ntab
+        // sample from parent with probability propto a + d * ntab
         return parent_sample_word();
     }
 
@@ -142,11 +142,11 @@ struct rest {
         }
 
         // determine probability normalising const
-        double d = param->discount[ctxt_len];
+        const double d = param->disc[ctxt_len], a = param->conc[ctxt_len];
         double norm = room_w.ncust;
         if(discnt) {
             norm -= d * room_w.ntab;
-            norm += (ALPHA + d * ntab) * parent_p_word(w);
+            norm += (a + d * ntab) * parent_p_word(w);
         }
 
         // sample
@@ -265,20 +265,31 @@ struct rest {
 #endif
     }
 
-    void update_beta(void) {
+    void update_hyperparam(void) {
         int m = ctxt_len;
-        double d = param->discount[m];
-        if(ntab > 0) param->beta1[m] += ntab - 1;
+        const double d = param->disc[ctxt_len], a = param->conc[ctxt_len];
 
-        // update beta2
+        for(int i = 1; i < ntab; i++) {
+            if(randu(0,1) < a/(a + d*i))
+                param->gamma1[m]++;
+            else
+                param->beta1[m]++;
+        }
+
+        // iter over indiv. tables
         for(hash_map<word_t,room>::iterator i = rooms.begin();
                 i != rooms.end(); i++) {
             vector<int> &tab_ncust = i->second.tab_ncust;
             for(int k = 0; k < tab_ncust.size(); k++) {
                 int ncust = tab_ncust[k];
+
                 for(int j = 1; j < ncust; j++)
-                    if(randu(0,1) < (1-d)/(j-d)) param->beta2[m]++;
+                    if(randu(0,1) < (1-d)/(j-d))
+                        param->beta2[m]++;
             }
         }
+
+        if(ncust > 1)
+            param->gamma2[m] -= log(randbeta(a+1, ncust-1)); 
     }
 };

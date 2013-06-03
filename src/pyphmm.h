@@ -39,8 +39,8 @@ void pyphmm(void) {
     time_t start_time = time(NULL);
     for(int i = 0; i < iters; i++) {
         printf("ITER %3d: ", i);
-        t_root->resample(); t_param->print_discounts();
-        w_root->resample(); w_param->print_discounts();
+        t_root->resample(); t_param->print();
+        w_root->resample(); w_param->print();
         fflush(stdout);
 
         // resample tags
