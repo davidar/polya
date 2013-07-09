@@ -84,16 +84,20 @@ struct ctxt_tree {
         return ct->r;
     }
 
+    void train(const corpus &text, int pos) {
+        insert_context(text, pos)->add_cust(text[pos]);
+    }
+
     void train(const corpus &text, int start, int end) {
         for(int j = start; j < end; j++)
-            insert_context(text, j)->add_cust(text[j]);
+            train(text, j);
     }
 
     void resample_seat(void) { // reseat all customers
         r->resample();
         for(hash_map<word_t,ctxt_tree*>::iterator i = children.begin();
                 i != children.end(); i++)
-            i->second->resample();
+            i->second->resample_seat();
     }
 
     void update_hyperparam(void) {

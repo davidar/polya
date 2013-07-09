@@ -108,6 +108,7 @@ struct rest {
     }
 
     word_t parent_sample_word(void) const {
+        assert(parents != NULL);
         if(nparents == 1)
             return parents[0]->sample_word();
 
@@ -174,6 +175,7 @@ struct rest {
     }
 
     int parent_add_cust(word_t w) {
+        assert(parents != NULL);
         if(nparents == 1) {
             parents[0]->add_cust(w);
             return 0;
@@ -217,6 +219,7 @@ struct rest {
     }
 
     void parent_rm_cust(word_t w, int floor) {
+        assert(parents != NULL);
         if(nparents == 1) {
             parents[0]->rm_cust(w);
             return;
@@ -258,6 +261,11 @@ struct rest {
             for(int j = 0; j < room_w.ncust; j++) {
                 rm_cust(w, room_w);
                 add_cust(w, room_w);
+            }
+            for(int k = 0; k < room_w.ntab; k++) {
+                if(room_w.tab_ncust[k] == 0) continue;
+                parent_rm_cust(w, room_w.tab_floor[k]);
+                room_w.tab_floor[k] = parent_add_cust(w);
             }
         }
 #ifdef MEMOISE
