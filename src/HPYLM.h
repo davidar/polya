@@ -21,9 +21,9 @@ class HPYLM : public LM {
 
     void train(N train_size) {
         FOR_ITER(i, text, train_size)
-            ct.context(ctxt_start(i),i).add(*i);
+            ct.context(ctxt_start(i),i) += *i;
     }
 
     void resamp() { ct.resamp(); for(auto &h : hs) h.resamp(); }
-    R pred(Corpus::iterator i) DO(ct.context_at(ctxt_start(i),i).pred(*i))
+    R pred(Corpus::iterator i) DO(ct.context_at(ctxt_start(i),i)(*i))
 };

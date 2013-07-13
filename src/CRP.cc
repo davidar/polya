@@ -46,31 +46,33 @@ CRP::CRP(Hyper &hyper, Exch &parent)
     hyper.reg(this);
 }
 
-R CRP::pred(X x) const {
-    if(c == 0) return par.pred(x);
-    R p = (h.a + h.d * t) * par.pred(x);
+R CRP::operator()(X x) const {
+    if(c == 0) return par(x);
+    R p = (h.a + h.d * t) * par(x);
     if(rs.count(x)) p += rs.at(x).c - h.d * rs.at(x).t;
     ASSERT(0 <= ,p, && p <= ,h.a + c,);
     return p / (h.a + c);
 }
 
-X CRP::samp() const {
+X CRP::operator()() const {
     SAMPLE(h.a + c) FOR_PAIR(x,rm, rs)
         WITH_PROB(pos(rm.c - h.d * rm.t)) return x;
-    return par.samp(); // w.p. propto h.a + h.d * t
+    return par(); // w.p. propto h.a + h.d * t
 }
 
-void CRP::add(X x) {
-    R p_new = (h.a + h.d * t) * par.pred(x);
-    c += 1; if(rs[x].add(h.d, p_new)) { t += 1; par.add(x); }
+Exch &CRP::operator+=(X x) {
+    R p_new = (h.a + h.d * t) * par(x);
+    c += 1; if(rs[x].add(h.d, p_new)) { t += 1; par += x; }
+    return SELF;
 }
 
-void CRP::del(X x) {
-    c -= 1; if(rs[x].del()) { t -= 1; par.del(x); }
+Exch &CRP::operator-=(X x) {
+    c -= 1; if(rs[x].del()) { t -= 1; par -= x; }
+    return SELF;
 }
 
 void CRP::resamp() {
-    FOR_PAIR(x,rm, rs) FOR(rm.c) { del(x); add(x); }
+    FOR_PAIR(x,rm, rs) FOR(rm.c) (SELF -= x) += x;
 #ifndef NDEBUG
     N ntab = 0, ncust = 0;
     FOR_VAL(rm,rs) { rm.check(); ntab += rm.t; ncust += rm.c; }

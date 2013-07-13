@@ -37,10 +37,10 @@ class CRP : public Exch {
     N t, c; // total number of tables and customers
 
     CRP(Hyper &hyper, Exch &parent);
-    R pred(X x) const;
-    X samp() const;
-    void add(X x);
-    void del(X x);
+    R operator()(X x) const;
+    X operator()() const;
+    Exch &operator+=(X x);
+    Exch &operator-=(X x);
     void resamp();
 
     void ser(FILE *f) const;
