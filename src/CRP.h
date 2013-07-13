@@ -25,6 +25,8 @@ class CRP : public Exch {
         public:
         bool add(R d, R p_new);
         int del();
+
+        void ser(FILE *f) const;
     };
 
     Hyper &h;
@@ -40,4 +42,6 @@ class CRP : public Exch {
     void add(X x);
     void del(X x);
     void resamp();
+
+    void ser(FILE *f) const;
 };

@@ -5,6 +5,8 @@
 #include <time.h>
 #include <assert.h>
 
+#include <string>
+
 typedef double R; // real
 typedef unsigned int N; // natural
 typedef unsigned int X; // datapoint
@@ -20,10 +22,14 @@ inline R cputime() {
 
 #define SELF (*this)
 
-#define LOG(fmt,...) { \
-    printf("[%7.1fs] " fmt, cputime(), ##__VA_ARGS__); \
+#define LOG(fmt,...) do { \
+    printf("[%7.1fs] " fmt "\n", cputime(), ##__VA_ARGS__); \
     fflush(stdout); \
-}
+} while(0)
+#define DBG(fmt,...) \
+    fprintf(stderr, "%s:%d " fmt "\n", __FILE__, __LINE__, ##__VA_ARGS__)
+
+#define STR(x) (std::to_string(x).c_str())
 
 // overload macros on number of args
 // http://stackoverflow.com/q/11761703
@@ -68,8 +74,20 @@ inline R cputime() {
 
 // DO(...,x) = {...; return x;}
 #define DO(...) OVERLOAD(DO,__VA_ARGS__)
-# define DO2(e,x) {e; return (x);}
+# define DO4(a,b,c,x) {a;b;c; return (x);}
+# define DO3(a,b,x) DO4(a,b,,x)
+# define DO2(a,x) DO3(a,,x)
 # define DO1(x) DO2(,x)
+
+// ASSERT(... ,u, ... ,v, ...) prints the value/s between commas on failure
+#define ASSERT(...) OVERLOAD(ASSERT,__VA_ARGS__)
+# define ASSERT3(l,v,r) assert((l v r) || _ASSERT3(l,v,r))
+#  define _ASSERT3(l,v,r) \
+    !DBG("Assertion `%s (%s = %s) %s' failed.", #l, #v, STR(v), #r)
+# define ASSERT5(l,u,m,v,r) assert((l u m v r) || _ASSERT5(l,u,m,v,r))
+#  define _ASSERT5(l,u,m,v,r) \
+    !DBG("Assertion `%s (%s = %s) %s (%s = %s) %s' failed.", \
+            #l, #u, STR(u), #m, #v, STR(v), #r)
 
 // positive/negative parts x^+,x^-
 inline R pos(R x) DO((x > 0) ? x : 0)

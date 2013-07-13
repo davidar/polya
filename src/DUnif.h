@@ -15,4 +15,6 @@ class DUnif : public Exch {
     void add(X x) {}
     void del(X x) {}
     void resamp() {}
+
+    void ser(FILE *f) const { fprintf(f, "DUnif(%u)\n", n); }
 };

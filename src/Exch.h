@@ -10,4 +10,6 @@ class Exch {
     virtual void add(X x) = 0;
     virtual void del(X x) = 0;
     virtual void resamp() = 0;
+
+    virtual void ser(FILE *f) const = 0;
 };
