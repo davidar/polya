@@ -26,16 +26,22 @@ inline R cputime() {
     printf("[%7.1fs] " fmt "\n", cputime(), ##__VA_ARGS__); \
     fflush(stdout); \
 } while(0)
-#define DBG(fmt,...) \
-    fprintf(stderr, "%s:%d " fmt "\n", __FILE__, __LINE__, ##__VA_ARGS__)
+
+#ifndef NDEBUG
+# define DBG(fmt,...) \
+    fprintf(stderr, "%s:%u " fmt "\n", __FILE__, __LINE__, ##__VA_ARGS__)
+#else
+# define DBG(...)
+#endif
 
 #define STR(x) (std::to_string(x).c_str())
 
 // overload macros on number of args
 // http://stackoverflow.com/q/11761703
 #define OVERLOAD(F,...) \
-    _OVERLOAD(__VA_ARGS__,F##5,F##4,F##3,F##2,F##1)(__VA_ARGS__)
-# define _OVERLOAD(_1,_2,_3,_4,_5,F,...) F
+    _OVERLOAD(__VA_ARGS__, \
+        F##9,F##8,F##7,F##6,F##5,F##4,F##3,F##2,F##1,F##0)(__VA_ARGS__)
+# define _OVERLOAD(_1,_2,_3,_4,_5,_6,_7,_8,_9,F,...) F
 
 // messy indirection for creating unique variable names
 // http://stackoverflow.com/q/1597007
@@ -74,7 +80,8 @@ inline R cputime() {
 
 // DO(...,x) = {...; return x;}
 #define DO(...) OVERLOAD(DO,__VA_ARGS__)
-# define DO4(a,b,c,x) {a;b;c; return (x);}
+# define DO5(a,b,c,d,x) {a;b;c;d; return (x);}
+# define DO4(a,b,c,x) DO5(a,b,c,,x)
 # define DO3(a,b,x) DO4(a,b,,x)
 # define DO2(a,x) DO3(a,,x)
 # define DO1(x) DO2(,x)
@@ -88,6 +95,11 @@ inline R cputime() {
 #  define _ASSERT5(l,u,m,v,r) \
     !DBG("Assertion `%s (%s = %s) %s (%s = %s) %s' failed.", \
             #l, #u, STR(u), #m, #v, STR(v), #r)
+
+// IF_FIND(k,v,m) {...} = if(m.count(k)) {auto &v = m.at(k); ...}
+#define IF_FIND(k,v,m) _IF_FIND(k,v,m,UNIQ)
+# define _IF_FIND(k,v,m,i) LET(auto i = m.find(k)) \
+    if(i != m.end()) LET(auto &v = i->second)
 
 // positive/negative parts x^+,x^-
 inline R pos(R x) DO((x > 0) ? x : 0)

@@ -18,7 +18,7 @@ class Corpus : public std::vector<X> {
     }
 
     Corpus() : Corpus(std::cin) {
-        LOG("read %d words (%d unique)", (N) size(), vocab_size());
+        LOG("read %u words (%u unique)", (N) size(), vocab_size());
     }
 
     N vocab_size() DO(dict.size())

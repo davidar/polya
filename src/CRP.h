@@ -33,14 +33,17 @@ class CRP : public Exch {
     Exch &par;
     XMap<Room> rs; // map x to room of tables
 
+    void add(X x, Room &rm);
+    void del(X x, Room &rm);
+
     public:
     N t, c; // total number of tables and customers
 
     CRP(Hyper &hyper, Exch &parent);
     R operator()(X x) const;
     X operator()() const;
-    Exch &operator+=(X x);
-    Exch &operator-=(X x);
+    Exch &operator+=(X x) DO(add(x,rs[x]), SELF)
+    Exch &operator-=(X x) DO(del(x,rs[x]), SELF)
     void resamp();
 
     void ser(FILE *f) const;
