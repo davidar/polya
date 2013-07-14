@@ -6,7 +6,7 @@
 void CRP::Hyper::resamp() {
     R gamma1 = 1, gamma2 = 1, beta1 = 1, beta2 = 1;
     LOG("resampling h with %u CRPs:", (N) deps.size());
-    for(const CRP *p : deps) { const CRP &cr = *p;
+    for(auto p : deps) LET(const CRP &cr = *p) {
         FOR(i, 1,cr.t)
             if(flip(a / (a + d*i))) gamma1 += 1;
             else                     beta1 += 1;
@@ -78,5 +78,5 @@ void CRP::resamp() {
 
 void CRP::ser(FILE *f) const {
     fprintf(f, "CRP(%u@%u)\n", c,t);
-    FOR_PAIR(x,rm, rs) { fprintf(f, "\t[%u]\t", x); rm.ser(f); }
+    FOR_PAIR(x,rm, rs) { fprintf(f, "\t[%u]\t", (N) x); rm.ser(f); }
 }

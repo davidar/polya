@@ -25,7 +25,7 @@ class Corpus : public std::vector<X> {
 
     void push(std::string s) {
         if(!dict.right.count(s))
-            dict.insert(dict_entry(vocab_size() + 1, s));
+            dict.insert(dict_entry((X)(1 + vocab_size()), s));
         push_back(dict.right.at(s));
     }
 
