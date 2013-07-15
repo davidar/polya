@@ -3,7 +3,7 @@
 #ifdef SPARSEHASH
 # include <stdexcept>
 # include <sparsehash/sparse_hash_map>
-# define XMAP_SUPER google::sparse_hash_map<X,T, std::hash<X>>
+# define XMAP_SUPER google::sparse_hash_map<X,T>
 #else
 # include <unordered_map>
 # define XMAP_SUPER std::unordered_map<X,T>

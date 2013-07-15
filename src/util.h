@@ -7,11 +7,13 @@
 
 #include <string>
 
-#include <boost/strong_typedef.hpp>
-
 typedef double R; // real
 typedef unsigned int N; // natural
-const N N_INFTY = UINT_MAX;
+typedef unsigned int X; // datapoint
+
+const N N_INFTY =  UINT_MAX;
+const X X_INVALID = UINT_MAX;
+const X X_NULL = 0;
 
 inline R cputime() {
     static const clock_t start = clock();
@@ -98,13 +100,6 @@ inline R cputime() {
 #define IF_FIND(k,v,m) _IF_FIND(k,v,m,UNIQ)
 # define _IF_FIND(k,v,m,i) LET(auto i = m.find(k)) \
     if(i != m.end()) LET(auto &v = i->second)
-
-BOOST_STRONG_TYPEDEF(N, X); // datapoint
-namespace std { template<> struct hash<X> {
-    size_t operator()(const X &x) const DO(hash<int>()((N) x))
-};}
-const X X_INVALID = (X) N_INFTY;
-const X X_NULL    = (X) 0;
 
 // positive/negative parts x^+,x^-
 inline R pos(R x) DO((x > 0) ? x : 0)
