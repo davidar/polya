@@ -8,9 +8,10 @@
 
 static std::default_random_engine rng;
 
-inline R randu(R a = 0, R b = 1) { // U(a,b)
-    assert(a < b);
-    return a + (b-a) * (R) rand() / RAND_MAX;
+inline R randu(R a = 0, R b = 1) { // U[a,b)
+    ASSERT(,a, < ,b,);
+    R u = rand() / (1.0 + RAND_MAX);
+    return a + (b-a) * u;
 }
 
 // SAMPLE(z) for(...) {... WITH_PROB(p) {...} ...} is equivalent to
@@ -28,6 +29,9 @@ inline bool flip(R p) { // Bernoulli(p)
     if(p == 1) return true;
     return (randu() < p);
 }
+inline bool flip(R p, R q) DO(flip(p / (p + q)))
+
+inline R rand_exp(R l = 1) DO(-log(1-randu())/l)
 
 inline R rand_gamma(R a, R l) { // Gamma(a,l)
     return std::gamma_distribution<R>(a,1/l)(rng);

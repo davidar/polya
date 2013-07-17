@@ -40,7 +40,7 @@ inline R cputime() {
 // http://stackoverflow.com/q/11761703
 #define OVERLOAD(F,...) \
     _OVERLOAD(__VA_ARGS__, \
-        F##9,F##8,F##7,F##6,F##5,F##4,F##3,F##2,F##1,F##0)(__VA_ARGS__)
+        F##9,F##8,F##7,F##6,F##5,F##4,F##3,F##2,F##1)(__VA_ARGS__)
 # define _OVERLOAD(_1,_2,_3,_4,_5,_6,_7,_8,_9,F,...) F
 
 // messy indirection for creating unique variable names

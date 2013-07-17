@@ -3,18 +3,45 @@
 #include "util.h"
 #include "rand.h"
 
+#ifdef SLICESAMP
+R CRP::Hyper::SampA::f(R a) const {
+    if(a <= -h.d) return log(0);
+    return log(h.post(a, h.d, false));
+}
+
+void CRP::Hyper::SampD::init() {
+    m.clear();
+    for(auto cr : h.deps) FOR_VAL(rm, cr->rs) FOR_PAIR(s,n, rm.m)
+        if(s > 1) m[s] += n;
+}
+
+R CRP::Hyper::SampD::f(R d) const {
+    if(d <= 0 || 1 <= d) return log(0);
+    // the following is a faster version of
+    //   log(h.post(h.a, d, true))
+    LogR p = h.post(h.a, d, false);
+    FOR_PAIR(s,n, m)
+        p *= pow(lpoch(1 - d, s - 1), n);
+    return log(p);
+}
+#endif
+
 void CRP::Hyper::resamp() {
+    LOG("resamp. CRP::Hyper with %u CRPs:", (N) deps.size());
+#ifdef SLICESAMP
+    d = samp_d(); a = samp_a();
+#else
     R gamma1 = 1, gamma2 = 1, beta1 = 1, beta2 = 1;
-    LOG("resampling h with %u CRPs:", (N) deps.size());
-    for(const CRP *p : deps) { const CRP &cr = *p;
+    for(auto p : deps) LET(const CRP &cr = *p) {
         FOR(i, 1,cr.t)
-            if(flip(a / (a + d*i))) gamma1 += 1;
-            else                     beta1 += 1;
+            if(flip(a, d*i)) gamma1 += 1;
+            else              beta1 += 1;
         FOR_VAL(rm, cr.rs) FOR_PAIR(s,n, rm.m) FOR(n) FOR(j, 1,s)
             beta2 += flip((1 - d) / (j - d));
         if(cr.c > 1) gamma2 -= log(rand_beta(a + 1, cr.c - 1));
     }
     a = rand_gamma(gamma1, gamma2); d = rand_beta(beta1, beta2);
+#endif
     LOG("\ta = %g, d = %g", a, d);
 }
 
@@ -42,7 +69,7 @@ void CRP::Room::ser(FILE *f) const {
 
 
 void CRP::add(X x, Room &rm) {
-    R p_new = (h.a + h.d * t) * par(x);
+    R p_new = (c > 0) ? (h.a + h.d * t) * par(x) : 1;
     c += 1; if(rm.add(h.d, p_new)) { t += 1; par += x; }
 }
 
@@ -74,6 +101,14 @@ void CRP::resamp() {
     FOR_VAL(rm,rs) { rm.check(); ntab += rm.t; ncust += rm.c; }
     ASSERT(,t, == ,ntab,); ASSERT(,c, == ,ncust,);
 #endif
+}
+
+LogR CRP::l(R a, R d, bool full) const {
+    if(c == 0) return LogR(1);
+    LogR p = lpoch(a + d, t - 1, d) / lpoch(a + 1, c - 1);
+    if(full) FOR_VAL(rm,rs) FOR_PAIR(s,n, rm.m)
+        if(s > 1) p *= pow(lpoch(1 - d, s - 1), n);
+    return p;
 }
 
 void CRP::ser(FILE *f) const {

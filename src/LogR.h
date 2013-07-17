@@ -23,6 +23,7 @@ inline R log (LogR a) DO(a.ln)
 inline R log2(LogR a) DO(a.ln / log(2))
 
 inline LogR pow(LogR a, R x) DO(a.ln *= x, a)
+inline LogR lpow(R a, R x) DO(pow(LogR(a), x))
 
 inline LogR operator*(LogR a, R x) DO(a *= x)
 inline LogR operator/(LogR a, R x) DO(a /= x)
@@ -38,5 +39,14 @@ inline bool operator>=(LogR a, LogR b) DO(!(a < b))
 
 inline LogR operator+(LogR a, LogR b) DO((a >= b) ? a *= 1+(R)(b/a) : b+a)
 inline LogR operator-(LogR a, LogR b) DO(assert(a >= b), a *= 1-(R)(b/a))
-LogR LogR::operator+=(LogR b) DO(SELF = SELF + b)
-LogR LogR::operator-=(LogR b) DO(SELF = SELF - b)
+inline LogR LogR::operator+=(LogR b) DO(SELF = SELF + b)
+inline LogR LogR::operator-=(LogR b) DO(SELF = SELF - b)
+
+
+inline LogR lgam(R x) DO(LogR r, r.ln = lgamma(x), r)
+
+// rising factorial / k-Pochhammer symbol
+inline LogR lpoch(R x, N n)
+    DO((n > 0) ? lgam(x + n) / lgam(x) : LogR(1))
+inline LogR lpoch(R x, N n, R k)
+    DO((k > 0) ? lpow(k,n) * lpoch(x/k,n) : lpow(x,n))
