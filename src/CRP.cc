@@ -29,7 +29,7 @@ R CRP::Hyper::SampD::f(R d) const {
 void CRP::Hyper::resamp() {
     LOG("resamp. CRP::Hyper with %u CRPs:", (N) deps.size());
 #ifdef SLICESAMP
-    d = samp_d(); a = samp_a();
+    d = samp_d(d); a = samp_a(a);
 #else
     R gamma1 = 1, gamma2 = 1, beta1 = 1, beta2 = 1;
     for(auto p : deps) LET(const CRP &cr = *p) {

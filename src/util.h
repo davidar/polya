@@ -22,10 +22,8 @@ inline R cputime() {
 
 #define SELF (*this)
 
-#define LOG(fmt,...) do { \
-    printf("[%7.1fs] " fmt "\n", cputime(), ##__VA_ARGS__); \
-    fflush(stdout); \
-} while(0)
+#define LOG(fmt,...) \
+    printf("[%7.1fs] " fmt "\n", cputime(), ##__VA_ARGS__) && fflush(stdout)
 
 #ifndef NDEBUG
 # define DBG(fmt,...) \

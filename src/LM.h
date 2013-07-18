@@ -2,11 +2,15 @@
 
 #include "util.h"
 #include "Corpus.h"
+#include "DUnif.h"
 #include "LogR.h"
 
 class LM {
     public:
     Corpus text;
+    DUnif uvocab;
+
+    LM() : text(), uvocab(text.vocab_size()) {}
 
     static R pplx(LogR p, N n) DO((R) pow(p, -1./n))
 

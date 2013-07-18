@@ -20,7 +20,7 @@ class CRP : public Exch {
             const Hyper &h;
 
             public:
-            SampA(const Hyper &par, R a) : h(par), SliceSamp(a) {}
+            SampA(const Hyper &par) : h(par) {}
             R f(R a) const;
         } samp_a;
 
@@ -29,7 +29,7 @@ class CRP : public Exch {
             std::unordered_map<N,N> m;
 
             public:
-            SampD(const Hyper &par, R d) : h(par), SliceSamp(d) {}
+            SampD(const Hyper &par) : h(par) {}
             void init();
             R f(R d) const;
         } samp_d;
@@ -42,7 +42,7 @@ class CRP : public Exch {
         R a, d; // concentration, discount
 
 #ifdef SLICESAMP
-        Hyper() : a(1.0), d(0.5), samp_a(SELF,a), samp_d(SELF,d) {}
+        Hyper() : a(1.0), d(0.5), samp_a(SELF), samp_d(SELF) {}
 #else
         Hyper() : a(1.0), d(0.5) {}
 #endif

@@ -9,7 +9,7 @@ struct LogR {
 
     LogR(R x) : ln(log(x)) {}
     LogR() : LogR(0) {}
-    explicit operator R() DO(exp(ln))
+    explicit operator R() const DO(exp(ln))
 
     LogR operator*=(R x) DO(ln += log(x), SELF)
     LogR operator/=(R x) DO(ln -= log(x), SELF)

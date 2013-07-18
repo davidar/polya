@@ -10,14 +10,13 @@
 class HPYLM : public LM {
     const N ngram;
     std::vector<CRP::Hyper> hs;
-    DUnif base;
     CtxtTree ct;
 
     Corpus::iterator ctxt_start(Corpus::iterator i)
         DO(max(text.begin(), i - ngram + 1))
 
     public:
-    HPYLM(N n) : ngram(n), hs(n), base(text.vocab_size()), ct(base,hs) {}
+    HPYLM(N n) : ngram(n), hs(n), ct(uvocab,hs) {}
 
     void train(N train_size) {
         FOR_ITER(i, text, train_size)
