@@ -11,4 +11,7 @@ hpylm-apnews: hpylm
 	gunzip < ../data/apnews.txt.gz | ./hpylm 3 963071 300 125
 
 hpylm-brown: hpylm
+	./hpylm 3 100000 300 125 < ../data/brown.reduc.txt
+
+hpylm-brown-quick: hpylm
 	./hpylm 3 100000 10 1 < ../data/brown.full.txt

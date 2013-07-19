@@ -1,0 +1,3307 @@
+gunzip < ../data/apnews.txt.gz | ./hpylm 3 963071 300 125
+[    0.0s] starting
+[   12.7s] read 15920737 words (17964 unique)
+[   12.7s] 963071 test words, (300 - 125) iterations
+[   64.2s] finished training (14957666 words)
+[   64.2s] *** ITER 1/300
+[   93.0s] resamp. CRP::Hyper with 1 CRPs:
+[   93.0s] 	a = 7.22003, d = 0.502761
+[   93.0s] resamp. CRP::Hyper with 17964 CRPs:
+[   93.4s] 	a = 6.85478, d = 0.563429
+[   93.4s] resamp. CRP::Hyper with 17964 CRPs:
+[   93.7s] 	a = 1.44934, d = 0.561511
+[   93.7s] resamp. CRP::Hyper with 1523856 CRPs:
+[   97.0s] 	a = 1.30161, d = 0.604223
+[   99.5s] perplexity = 124.215
+[   99.5s] ETA 177m
+[   99.5s] *** ITER 2/300
+[  128.6s] resamp. CRP::Hyper with 1 CRPs:
+[  128.6s] 	a = 44.9674, d = 0.528965
+[  128.6s] resamp. CRP::Hyper with 17964 CRPs:
+[  129.0s] 	a = 5.18676, d = 0.72214
+[  129.0s] resamp. CRP::Hyper with 17964 CRPs:
+[  129.4s] 	a = 1.4117, d = 0.548894
+[  129.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[  133.6s] 	a = 0.0312903, d = 0.748092
+[  135.7s] perplexity = 119.587
+[  135.7s] ETA 178m
+[  135.7s] *** ITER 3/300
+[  165.0s] resamp. CRP::Hyper with 1 CRPs:
+[  165.0s] 	a = 683.354, d = 0.559601
+[  165.0s] resamp. CRP::Hyper with 17964 CRPs:
+[  165.4s] 	a = 4.85397, d = 0.74249
+[  165.4s] resamp. CRP::Hyper with 17964 CRPs:
+[  165.8s] 	a = 1.40175, d = 0.548236
+[  165.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[  170.3s] 	a = 0.0947819, d = 0.753433
+[  172.5s] perplexity = 118.22
+[  172.5s] ETA 179m
+[  172.5s] *** ITER 4/300
+[  202.3s] resamp. CRP::Hyper with 1 CRPs:
+[  202.3s] 	a = 1151.27, d = 0.563248
+[  202.3s] resamp. CRP::Hyper with 17964 CRPs:
+[  202.8s] 	a = 4.02722, d = 0.776511
+[  202.8s] resamp. CRP::Hyper with 17964 CRPs:
+[  203.1s] 	a = 1.33421, d = 0.553615
+[  203.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[  207.7s] 	a = 0.154523, d = 0.762992
+[  209.9s] perplexity = 117.315
+[  209.9s] ETA 180m
+[  209.9s] *** ITER 5/300
+[  239.9s] resamp. CRP::Hyper with 1 CRPs:
+[  239.9s] 	a = 1498.34, d = 0.565412
+[  239.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  240.3s] 	a = 3.46673, d = 0.787619
+[  240.3s] resamp. CRP::Hyper with 17964 CRPs:
+[  240.7s] 	a = 1.3291, d = 0.556467
+[  240.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[  245.0s] 	a = 0.19047, d = 0.763808
+[  247.1s] perplexity = 116.733
+[  247.1s] ETA 180m
+[  247.1s] *** ITER 6/300
+[  277.4s] resamp. CRP::Hyper with 1 CRPs:
+[  277.4s] 	a = 1389.27, d = 0.567495
+[  277.4s] resamp. CRP::Hyper with 17964 CRPs:
+[  277.8s] 	a = 3.3801, d = 0.801007
+[  277.8s] resamp. CRP::Hyper with 17964 CRPs:
+[  278.2s] 	a = 1.26787, d = 0.561489
+[  278.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[  283.6s] 	a = 0.186801, d = 0.764997
+[  285.8s] perplexity = 116.404
+[  285.8s] ETA 182m
+[  285.8s] *** ITER 7/300
+[  316.2s] resamp. CRP::Hyper with 1 CRPs:
+[  316.2s] 	a = 1410.05, d = 0.575732
+[  316.2s] resamp. CRP::Hyper with 17964 CRPs:
+[  316.7s] 	a = 2.55996, d = 0.801146
+[  316.7s] resamp. CRP::Hyper with 17964 CRPs:
+[  317.1s] 	a = 1.24096, d = 0.569806
+[  317.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[  321.3s] 	a = 0.15404, d = 0.770667
+[  323.5s] perplexity = 116.16
+[  323.5s] ETA 181m
+[  323.5s] *** ITER 8/300
+[  353.9s] resamp. CRP::Hyper with 1 CRPs:
+[  353.9s] 	a = 1334.16, d = 0.582875
+[  353.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  354.4s] 	a = 2.28317, d = 0.803907
+[  354.4s] resamp. CRP::Hyper with 17964 CRPs:
+[  354.8s] 	a = 1.22109, d = 0.575948
+[  354.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[  358.6s] 	a = 0.079165, d = 0.777955
+[  360.8s] perplexity = 115.951
+[  360.8s] ETA 181m
+[  360.8s] *** ITER 9/300
+[  391.5s] resamp. CRP::Hyper with 1 CRPs:
+[  391.5s] 	a = 1430.19, d = 0.586576
+[  391.5s] resamp. CRP::Hyper with 17964 CRPs:
+[  392.0s] 	a = 1.91321, d = 0.80502
+[  392.0s] resamp. CRP::Hyper with 17964 CRPs:
+[  392.4s] 	a = 1.29978, d = 0.577035
+[  392.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[  396.5s] 	a = 0.0759959, d = 0.783484
+[  398.7s] perplexity = 115.713
+[  398.7s] ETA 181m
+[  398.7s] *** ITER 10/300
+[  429.6s] resamp. CRP::Hyper with 1 CRPs:
+[  429.6s] 	a = 1381.41, d = 0.588755
+[  429.6s] resamp. CRP::Hyper with 17964 CRPs:
+[  430.1s] 	a = 1.90251, d = 0.805563
+[  430.1s] resamp. CRP::Hyper with 17964 CRPs:
+[  430.5s] 	a = 1.3177, d = 0.577089
+[  430.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[  434.3s] 	a = 0.0747663, d = 0.784586
+[  436.5s] perplexity = 115.448
+[  436.5s] ETA 180m
+[  436.5s] *** ITER 11/300
+[  473.7s] resamp. CRP::Hyper with 1 CRPs:
+[  473.7s] 	a = 1413.3, d = 0.596953
+[  473.7s] resamp. CRP::Hyper with 17964 CRPs:
+[  474.1s] 	a = 1.7643, d = 0.802343
+[  474.1s] resamp. CRP::Hyper with 17964 CRPs:
+[  474.5s] 	a = 1.31051, d = 0.590855
+[  474.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[  480.0s] 	a = 0.059255, d = 0.785968
+[  482.4s] perplexity = 115.33
+[  482.4s] ETA 184m
+[  482.4s] *** ITER 12/300
+[  512.8s] resamp. CRP::Hyper with 1 CRPs:
+[  512.8s] 	a = 1508.4, d = 0.597156
+[  512.8s] resamp. CRP::Hyper with 17964 CRPs:
+[  513.2s] 	a = 1.76162, d = 0.799707
+[  513.2s] resamp. CRP::Hyper with 17964 CRPs:
+[  513.6s] 	a = 1.23376, d = 0.595824
+[  513.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[  517.4s] 	a = 0.0611862, d = 0.786317
+[  519.4s] perplexity = 115.22
+[  519.4s] ETA 183m
+[  519.4s] *** ITER 13/300
+[  549.5s] resamp. CRP::Hyper with 1 CRPs:
+[  549.5s] 	a = 1349.2, d = 0.602252
+[  549.5s] resamp. CRP::Hyper with 17964 CRPs:
+[  549.9s] 	a = 1.60395, d = 0.798603
+[  549.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  550.3s] 	a = 1.19811, d = 0.600351
+[  550.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[  554.6s] 	a = 0.0587183, d = 0.788424
+[  556.7s] perplexity = 115.194
+[  556.7s] ETA 182m
+[  556.7s] *** ITER 14/300
+[  586.8s] resamp. CRP::Hyper with 1 CRPs:
+[  586.8s] 	a = 1292.36, d = 0.612399
+[  586.8s] resamp. CRP::Hyper with 17964 CRPs:
+[  587.3s] 	a = 1.55173, d = 0.793928
+[  587.3s] resamp. CRP::Hyper with 17964 CRPs:
+[  587.7s] 	a = 1.21245, d = 0.602844
+[  587.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[  591.9s] 	a = 0.0406266, d = 0.789898
+[  594.0s] perplexity = 115.017
+[  594.0s] ETA 181m
+[  594.0s] *** ITER 15/300
+[  624.2s] resamp. CRP::Hyper with 1 CRPs:
+[  624.2s] 	a = 1062.11, d = 0.618557
+[  624.2s] resamp. CRP::Hyper with 17964 CRPs:
+[  624.7s] 	a = 1.53847, d = 0.789574
+[  624.7s] resamp. CRP::Hyper with 17964 CRPs:
+[  625.1s] 	a = 1.24068, d = 0.603482
+[  625.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[  630.5s] 	a = 0.0280273, d = 0.79198
+[  632.5s] perplexity = 114.975
+[  632.5s] ETA 180m
+[  632.5s] *** ITER 16/300
+[  662.7s] resamp. CRP::Hyper with 1 CRPs:
+[  662.7s] 	a = 1087.2, d = 0.626393
+[  662.7s] resamp. CRP::Hyper with 17964 CRPs:
+[  663.2s] 	a = 1.40931, d = 0.789573
+[  663.2s] resamp. CRP::Hyper with 17964 CRPs:
+[  663.6s] 	a = 1.26415, d = 0.6064
+[  663.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[  667.3s] 	a = 0.035378, d = 0.792055
+[  669.4s] perplexity = 114.834
+[  669.4s] ETA 180m
+[  669.4s] *** ITER 17/300
+[  699.6s] resamp. CRP::Hyper with 1 CRPs:
+[  699.6s] 	a = 1109.63, d = 0.627209
+[  699.6s] resamp. CRP::Hyper with 17964 CRPs:
+[  700.1s] 	a = 1.44815, d = 0.784633
+[  700.1s] resamp. CRP::Hyper with 17964 CRPs:
+[  700.5s] 	a = 1.30593, d = 0.606513
+[  700.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[  704.2s] 	a = 0.032269, d = 0.792116
+[  706.3s] perplexity = 114.896
+[  706.3s] ETA 179m
+[  706.3s] *** ITER 18/300
+[  736.5s] resamp. CRP::Hyper with 1 CRPs:
+[  736.6s] 	a = 1108.03, d = 0.63201
+[  736.6s] resamp. CRP::Hyper with 17964 CRPs:
+[  737.0s] 	a = 1.41931, d = 0.784336
+[  737.0s] resamp. CRP::Hyper with 17964 CRPs:
+[  737.4s] 	a = 1.32308, d = 0.608218
+[  737.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[  741.4s] 	a = 0.0381498, d = 0.792098
+[  743.5s] perplexity = 114.838
+[  743.5s] ETA 178m
+[  743.5s] *** ITER 19/300
+[  773.9s] resamp. CRP::Hyper with 1 CRPs:
+[  773.9s] 	a = 1022.76, d = 0.634054
+[  773.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  774.3s] 	a = 1.41487, d = 0.777485
+[  774.3s] resamp. CRP::Hyper with 17964 CRPs:
+[  774.8s] 	a = 1.21014, d = 0.614193
+[  774.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[  779.5s] 	a = 0.0207427, d = 0.793703
+[  781.5s] perplexity = 114.737
+[  781.5s] ETA 177m
+[  781.5s] *** ITER 20/300
+[  811.9s] resamp. CRP::Hyper with 1 CRPs:
+[  811.9s] 	a = 982.316, d = 0.637542
+[  811.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  812.3s] 	a = 1.38292, d = 0.772154
+[  812.3s] resamp. CRP::Hyper with 17964 CRPs:
+[  812.7s] 	a = 1.21735, d = 0.622696
+[  812.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[  817.0s] 	a = 0.0228884, d = 0.793805
+[  819.0s] perplexity = 114.621
+[  819.0s] ETA 177m
+[  819.0s] *** ITER 21/300
+[  849.4s] resamp. CRP::Hyper with 1 CRPs:
+[  849.4s] 	a = 1012.74, d = 0.641043
+[  849.4s] resamp. CRP::Hyper with 17964 CRPs:
+[  849.9s] 	a = 1.36505, d = 0.766987
+[  849.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  850.3s] 	a = 1.20279, d = 0.626823
+[  850.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[  854.7s] 	a = 0.0245783, d = 0.794286
+[  856.8s] perplexity = 114.65
+[  856.8s] ETA 176m
+[  856.8s] *** ITER 22/300
+[  887.4s] resamp. CRP::Hyper with 1 CRPs:
+[  887.4s] 	a = 1005.73, d = 0.641017
+[  887.4s] resamp. CRP::Hyper with 17964 CRPs:
+[  887.9s] 	a = 1.34788, d = 0.765837
+[  887.9s] resamp. CRP::Hyper with 17964 CRPs:
+[  888.3s] 	a = 1.20109, d = 0.630357
+[  888.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[  892.5s] 	a = 0.0200056, d = 0.794846
+[  894.5s] perplexity = 114.533
+[  894.5s] ETA 175m
+[  894.5s] *** ITER 23/300
+[  925.0s] resamp. CRP::Hyper with 1 CRPs:
+[  925.0s] 	a = 1051.02, d = 0.642608
+[  925.0s] resamp. CRP::Hyper with 17964 CRPs:
+[  925.4s] 	a = 1.38056, d = 0.758737
+[  925.4s] resamp. CRP::Hyper with 17964 CRPs:
+[  925.9s] 	a = 1.16062, d = 0.632079
+[  925.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[  930.1s] 	a = 0.0175621, d = 0.79538
+[  932.1s] perplexity = 114.502
+[  932.1s] ETA 175m
+[  932.1s] *** ITER 24/300
+[  962.6s] resamp. CRP::Hyper with 1 CRPs:
+[  962.6s] 	a = 952.842, d = 0.645549
+[  962.6s] resamp. CRP::Hyper with 17964 CRPs:
+[  963.1s] 	a = 1.43951, d = 0.750988
+[  963.1s] resamp. CRP::Hyper with 17964 CRPs:
+[  963.5s] 	a = 1.13442, d = 0.636858
+[  963.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[  967.7s] 	a = 0.0177055, d = 0.795735
+[  969.8s] perplexity = 114.431
+[  969.8s] ETA 174m
+[  969.8s] *** ITER 25/300
+[ 1000.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 1000.3s] 	a = 965.206, d = 0.647004
+[ 1000.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1000.8s] 	a = 1.2016, d = 0.750867
+[ 1000.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1001.2s] 	a = 1.16305, d = 0.636913
+[ 1001.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1005.4s] 	a = 0.0171242, d = 0.795834
+[ 1007.5s] perplexity = 114.453
+[ 1007.5s] ETA 173m
+[ 1007.5s] *** ITER 26/300
+[ 1038.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 1038.0s] 	a = 970.891, d = 0.652919
+[ 1038.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1038.5s] 	a = 1.29099, d = 0.74515
+[ 1038.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1038.9s] 	a = 1.13995, d = 0.640682
+[ 1038.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1043.1s] 	a = 0.0176073, d = 0.795929
+[ 1045.2s] perplexity = 114.428
+[ 1045.2s] ETA 173m
+[ 1045.2s] *** ITER 27/300
+[ 1075.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 1075.7s] 	a = 924.294, d = 0.653523
+[ 1075.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1076.2s] 	a = 1.28276, d = 0.738906
+[ 1076.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1076.6s] 	a = 1.14881, d = 0.640863
+[ 1076.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1081.8s] 	a = 0.0145046, d = 0.796194
+[ 1083.9s] perplexity = 114.403
+[ 1083.9s] ETA 172m
+[ 1083.9s] *** ITER 28/300
+[ 1114.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 1114.4s] 	a = 968.996, d = 0.655646
+[ 1114.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1114.8s] 	a = 1.2822, d = 0.735527
+[ 1114.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1115.3s] 	a = 1.13265, d = 0.645712
+[ 1115.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1119.5s] 	a = 0.017795, d = 0.796319
+[ 1121.6s] perplexity = 114.351
+[ 1121.6s] ETA 172m
+[ 1121.6s] *** ITER 29/300
+[ 1152.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 1152.1s] 	a = 891.47, d = 0.656357
+[ 1152.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1152.6s] 	a = 1.22522, d = 0.734799
+[ 1152.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1153.0s] 	a = 1.14028, d = 0.645789
+[ 1153.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1157.3s] 	a = 0.0144846, d = 0.796325
+[ 1159.3s] perplexity = 114.257
+[ 1159.3s] ETA 171m
+[ 1159.3s] *** ITER 30/300
+[ 1189.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 1189.9s] 	a = 903.263, d = 0.662219
+[ 1189.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1190.3s] 	a = 1.22969, d = 0.728416
+[ 1190.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1190.8s] 	a = 1.15969, d = 0.647716
+[ 1190.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1195.2s] 	a = 0.0118883, d = 0.796505
+[ 1197.3s] perplexity = 114.342
+[ 1197.3s] ETA 170m
+[ 1197.3s] *** ITER 31/300
+[ 1228.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 1228.1s] 	a = 861.142, d = 0.662249
+[ 1228.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1228.5s] 	a = 1.25755, d = 0.723948
+[ 1228.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1228.9s] 	a = 1.16708, d = 0.648065
+[ 1228.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1233.2s] 	a = 0.0153493, d = 0.796569
+[ 1235.2s] perplexity = 114.309
+[ 1235.2s] ETA 170m
+[ 1235.2s] *** ITER 32/300
+[ 1265.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 1265.8s] 	a = 893.513, d = 0.662668
+[ 1265.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1266.3s] 	a = 1.26717, d = 0.718119
+[ 1266.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1266.7s] 	a = 1.1671, d = 0.649558
+[ 1266.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1270.7s] 	a = 0.0145765, d = 0.796552
+[ 1272.8s] perplexity = 114.309
+[ 1272.8s] ETA 169m
+[ 1272.8s] *** ITER 33/300
+[ 1303.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 1303.3s] 	a = 877.774, d = 0.663134
+[ 1303.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1303.8s] 	a = 1.27822, d = 0.714534
+[ 1303.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1304.2s] 	a = 1.19053, d = 0.65016
+[ 1304.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1308.4s] 	a = 0.0162459, d = 0.796835
+[ 1310.5s] perplexity = 114.257
+[ 1310.5s] ETA 169m
+[ 1310.5s] *** ITER 34/300
+[ 1341.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 1341.1s] 	a = 819.267, d = 0.667179
+[ 1341.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1341.5s] 	a = 1.26382, d = 0.711018
+[ 1341.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1342.0s] 	a = 1.13721, d = 0.653751
+[ 1342.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1346.4s] 	a = 0.0162307, d = 0.796986
+[ 1348.5s] perplexity = 114.236
+[ 1348.5s] ETA 168m
+[ 1348.5s] *** ITER 35/300
+[ 1379.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 1379.1s] 	a = 786.508, d = 0.667975
+[ 1379.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1379.5s] 	a = 1.2944, d = 0.70553
+[ 1379.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1380.0s] 	a = 1.12756, d = 0.655895
+[ 1380.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1384.7s] 	a = 0.0138947, d = 0.796948
+[ 1386.8s] perplexity = 114.15
+[ 1386.8s] ETA 167m
+[ 1386.8s] *** ITER 36/300
+[ 1417.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 1417.4s] 	a = 887.221, d = 0.669077
+[ 1417.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1417.9s] 	a = 1.23914, d = 0.704728
+[ 1417.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1418.3s] 	a = 1.14592, d = 0.655561
+[ 1418.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1422.0s] 	a = 0.0132998, d = 0.796882
+[ 1424.1s] perplexity = 114.179
+[ 1424.1s] ETA 167m
+[ 1424.1s] *** ITER 37/300
+[ 1454.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 1454.8s] 	a = 869.488, d = 0.668229
+[ 1454.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1455.3s] 	a = 1.3034, d = 0.701491
+[ 1455.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1455.7s] 	a = 1.16705, d = 0.656564
+[ 1455.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1460.7s] 	a = 0.0152365, d = 0.796953
+[ 1462.8s] perplexity = 114.226
+[ 1462.8s] ETA 166m
+[ 1462.8s] *** ITER 38/300
+[ 1493.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 1493.5s] 	a = 788.426, d = 0.672569
+[ 1493.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1494.0s] 	a = 1.28341, d = 0.698937
+[ 1494.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1494.4s] 	a = 1.17589, d = 0.657582
+[ 1494.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1498.1s] 	a = 0.0145832, d = 0.797077
+[ 1500.3s] perplexity = 114.184
+[ 1500.3s] ETA 166m
+[ 1500.3s] *** ITER 39/300
+[ 1531.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 1531.0s] 	a = 749.581, d = 0.674123
+[ 1531.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1531.5s] 	a = 1.19388, d = 0.69727
+[ 1531.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1531.9s] 	a = 1.17581, d = 0.65767
+[ 1531.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1536.6s] 	a = 0.0129499, d = 0.797022
+[ 1538.8s] perplexity = 114.17
+[ 1538.8s] ETA 165m
+[ 1538.8s] *** ITER 40/300
+[ 1569.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 1569.5s] 	a = 770.297, d = 0.673938
+[ 1569.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1570.0s] 	a = 1.24094, d = 0.694569
+[ 1570.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1570.4s] 	a = 1.19633, d = 0.657813
+[ 1570.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1575.9s] 	a = 0.0160694, d = 0.797108
+[ 1577.9s] perplexity = 114.108
+[ 1577.9s] ETA 164m
+[ 1577.9s] *** ITER 41/300
+[ 1608.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 1608.5s] 	a = 784.272, d = 0.674297
+[ 1608.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1609.0s] 	a = 1.27395, d = 0.689558
+[ 1609.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1609.4s] 	a = 1.21439, d = 0.65792
+[ 1609.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1613.4s] 	a = 0.015827, d = 0.796982
+[ 1615.5s] perplexity = 114.1
+[ 1615.5s] ETA 164m
+[ 1615.5s] *** ITER 42/300
+[ 1646.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 1646.1s] 	a = 765.835, d = 0.67386
+[ 1646.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1646.6s] 	a = 1.24909, d = 0.688348
+[ 1646.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1647.0s] 	a = 1.20815, d = 0.658948
+[ 1647.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1651.7s] 	a = 0.0108517, d = 0.797107
+[ 1653.8s] perplexity = 114.086
+[ 1653.8s] ETA 163m
+[ 1653.8s] *** ITER 43/300
+[ 1684.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 1684.5s] 	a = 845.153, d = 0.672203
+[ 1684.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1685.0s] 	a = 1.21088, d = 0.688064
+[ 1685.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1685.4s] 	a = 1.20159, d = 0.66194
+[ 1685.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1689.7s] 	a = 0.0103356, d = 0.797436
+[ 1691.8s] perplexity = 114.084
+[ 1691.8s] ETA 163m
+[ 1691.8s] *** ITER 44/300
+[ 1722.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 1722.0s] 	a = 809.654, d = 0.672486
+[ 1722.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1722.5s] 	a = 1.19347, d = 0.687987
+[ 1722.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1722.9s] 	a = 1.2006, d = 0.662327
+[ 1722.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1727.8s] 	a = 0.0103029, d = 0.797373
+[ 1729.8s] perplexity = 114.104
+[ 1729.8s] ETA 162m
+[ 1729.8s] *** ITER 45/300
+[ 1760.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 1760.1s] 	a = 799.28, d = 0.672137
+[ 1760.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1760.6s] 	a = 1.27893, d = 0.68372
+[ 1760.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1761.0s] 	a = 1.18956, d = 0.663511
+[ 1761.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1765.1s] 	a = 0.00978524, d = 0.797465
+[ 1767.2s] perplexity = 114.079
+[ 1767.2s] ETA 161m
+[ 1767.2s] *** ITER 46/300
+[ 1797.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 1797.5s] 	a = 832.915, d = 0.672261
+[ 1797.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1798.0s] 	a = 1.25434, d = 0.679123
+[ 1798.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1798.4s] 	a = 1.18795, d = 0.663754
+[ 1798.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1803.0s] 	a = 0.0132744, d = 0.797451
+[ 1805.1s] perplexity = 114.054
+[ 1805.1s] ETA 161m
+[ 1805.1s] *** ITER 47/300
+[ 1835.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 1835.3s] 	a = 821.861, d = 0.6732
+[ 1835.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1835.8s] 	a = 1.28292, d = 0.677697
+[ 1835.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1836.2s] 	a = 1.19455, d = 0.664041
+[ 1836.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1840.6s] 	a = 0.012586, d = 0.797575
+[ 1842.6s] perplexity = 114.08
+[ 1842.6s] ETA 160m
+[ 1842.6s] *** ITER 48/300
+[ 1872.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 1872.8s] 	a = 768.431, d = 0.672347
+[ 1872.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1873.2s] 	a = 1.28399, d = 0.677174
+[ 1873.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1873.7s] 	a = 1.25868, d = 0.66465
+[ 1873.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1877.3s] 	a = 0.0112377, d = 0.797642
+[ 1879.3s] perplexity = 114.072
+[ 1879.3s] ETA 159m
+[ 1879.3s] *** ITER 49/300
+[ 1909.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 1909.5s] 	a = 840.199, d = 0.672826
+[ 1909.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1909.9s] 	a = 1.17544, d = 0.675987
+[ 1909.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1910.3s] 	a = 1.17403, d = 0.664657
+[ 1910.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1915.2s] 	a = 0.0135855, d = 0.79758
+[ 1917.2s] perplexity = 114.078
+[ 1917.2s] ETA 159m
+[ 1917.2s] *** ITER 50/300
+[ 1947.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 1947.4s] 	a = 832.508, d = 0.672204
+[ 1947.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1947.8s] 	a = 1.19297, d = 0.675046
+[ 1947.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1948.2s] 	a = 1.263, d = 0.664596
+[ 1948.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1951.9s] 	a = 0.0136295, d = 0.797535
+[ 1954.0s] perplexity = 114.011
+[ 1954.0s] ETA 158m
+[ 1954.0s] *** ITER 51/300
+[ 1984.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 1984.9s] 	a = 784.333, d = 0.672287
+[ 1984.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1985.4s] 	a = 1.17828, d = 0.673888
+[ 1985.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 1985.8s] 	a = 1.25964, d = 0.6649
+[ 1985.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 1990.3s] 	a = 0.0157062, d = 0.797384
+[ 1992.3s] perplexity = 113.988
+[ 1992.3s] ETA 157m
+[ 1992.3s] *** ITER 52/300
+[ 2023.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 2023.1s] 	a = 797.792, d = 0.671812
+[ 2023.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2023.6s] 	a = 1.1535, d = 0.671868
+[ 2023.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2024.0s] 	a = 1.2619, d = 0.665157
+[ 2024.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2027.7s] 	a = 0.0148103, d = 0.79739
+[ 2029.8s] perplexity = 114.037
+[ 2029.8s] ETA 157m
+[ 2029.8s] *** ITER 53/300
+[ 2060.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 2060.5s] 	a = 814.982, d = 0.672666
+[ 2060.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2061.0s] 	a = 1.16508, d = 0.672114
+[ 2061.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2061.4s] 	a = 1.24305, d = 0.665201
+[ 2061.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2067.3s] 	a = 0.00957157, d = 0.797879
+[ 2069.4s] perplexity = 114.04
+[ 2069.4s] ETA 156m
+[ 2069.4s] *** ITER 54/300
+[ 2100.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 2100.1s] 	a = 795.701, d = 0.674775
+[ 2100.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2100.6s] 	a = 1.18659, d = 0.672365
+[ 2100.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2101.0s] 	a = 1.24921, d = 0.665691
+[ 2101.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2105.2s] 	a = 0.0135016, d = 0.797744
+[ 2107.3s] perplexity = 114.022
+[ 2107.3s] ETA 156m
+[ 2107.3s] *** ITER 55/300
+[ 2138.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 2138.0s] 	a = 853.948, d = 0.673331
+[ 2138.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2138.5s] 	a = 1.19879, d = 0.670403
+[ 2138.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2139.0s] 	a = 1.23014, d = 0.666837
+[ 2139.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2143.2s] 	a = 0.0117978, d = 0.797754
+[ 2145.2s] perplexity = 114.019
+[ 2145.2s] ETA 155m
+[ 2145.2s] *** ITER 56/300
+[ 2175.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 2175.9s] 	a = 798.774, d = 0.673513
+[ 2175.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2176.4s] 	a = 1.17702, d = 0.668106
+[ 2176.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2176.8s] 	a = 1.21, d = 0.666917
+[ 2176.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2180.8s] 	a = 0.0137006, d = 0.797514
+[ 2182.9s] perplexity = 114.01
+[ 2182.9s] ETA 154m
+[ 2182.9s] *** ITER 57/300
+[ 2213.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 2213.7s] 	a = 800.829, d = 0.674368
+[ 2213.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2214.1s] 	a = 1.17265, d = 0.667283
+[ 2214.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2214.6s] 	a = 1.23562, d = 0.668112
+[ 2214.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2219.5s] 	a = 0.0125279, d = 0.797512
+[ 2221.6s] perplexity = 113.927
+[ 2221.6s] ETA 154m
+[ 2221.6s] *** ITER 58/300
+[ 2252.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 2252.3s] 	a = 792.75, d = 0.674826
+[ 2252.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2252.8s] 	a = 1.15922, d = 0.665885
+[ 2252.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2253.2s] 	a = 1.22297, d = 0.667977
+[ 2253.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2257.2s] 	a = 0.0101923, d = 0.797763
+[ 2259.3s] perplexity = 113.925
+[ 2259.3s] ETA 153m
+[ 2259.3s] *** ITER 59/300
+[ 2290.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 2290.2s] 	a = 861.29, d = 0.674957
+[ 2290.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2290.7s] 	a = 1.1362, d = 0.665622
+[ 2290.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2291.1s] 	a = 1.24372, d = 0.6686
+[ 2291.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2295.3s] 	a = 0.00714001, d = 0.798051
+[ 2297.4s] perplexity = 113.965
+[ 2297.4s] ETA 153m
+[ 2297.4s] *** ITER 60/300
+[ 2328.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 2328.2s] 	a = 795.772, d = 0.674815
+[ 2328.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2328.7s] 	a = 1.14704, d = 0.665777
+[ 2328.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2329.1s] 	a = 1.25055, d = 0.668654
+[ 2329.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2333.5s] 	a = 0.00843732, d = 0.79774
+[ 2335.6s] perplexity = 113.983
+[ 2335.6s] ETA 152m
+[ 2335.6s] *** ITER 61/300
+[ 2366.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 2366.2s] 	a = 749.834, d = 0.673734
+[ 2366.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2366.7s] 	a = 1.08479, d = 0.665408
+[ 2366.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2367.2s] 	a = 1.26414, d = 0.669094
+[ 2367.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2371.3s] 	a = 0.00855968, d = 0.797794
+[ 2373.4s] perplexity = 113.95
+[ 2373.4s] ETA 151m
+[ 2373.4s] *** ITER 62/300
+[ 2404.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 2404.1s] 	a = 829.448, d = 0.673801
+[ 2404.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2404.6s] 	a = 1.09581, d = 0.664435
+[ 2404.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2405.0s] 	a = 1.27133, d = 0.669847
+[ 2405.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2410.0s] 	a = 0.0100015, d = 0.797842
+[ 2412.0s] perplexity = 114.015
+[ 2412.0s] ETA 151m
+[ 2412.0s] *** ITER 63/300
+[ 2442.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 2442.8s] 	a = 708.823, d = 0.674935
+[ 2442.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2443.3s] 	a = 1.10465, d = 0.660521
+[ 2443.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2443.8s] 	a = 1.25531, d = 0.669786
+[ 2443.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2448.7s] 	a = 0.0116992, d = 0.797767
+[ 2450.8s] perplexity = 114.024
+[ 2450.8s] ETA 150m
+[ 2450.8s] *** ITER 64/300
+[ 2481.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 2481.6s] 	a = 776.221, d = 0.674221
+[ 2481.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2482.1s] 	a = 1.12325, d = 0.66012
+[ 2482.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2482.5s] 	a = 1.26042, d = 0.670175
+[ 2482.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2487.0s] 	a = 0.0067127, d = 0.798052
+[ 2489.0s] perplexity = 113.993
+[ 2489.0s] ETA 150m
+[ 2489.0s] *** ITER 65/300
+[ 2519.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 2519.8s] 	a = 840.136, d = 0.676085
+[ 2519.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2520.2s] 	a = 1.17007, d = 0.659246
+[ 2520.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2520.7s] 	a = 1.27089, d = 0.669464
+[ 2520.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2525.4s] 	a = 0.00642995, d = 0.798
+[ 2527.4s] perplexity = 114.002
+[ 2527.4s] ETA 149m
+[ 2527.4s] *** ITER 66/300
+[ 2558.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 2558.1s] 	a = 853.532, d = 0.673182
+[ 2558.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2558.6s] 	a = 1.15562, d = 0.660678
+[ 2558.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2559.1s] 	a = 1.25175, d = 0.670392
+[ 2559.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2563.8s] 	a = 0.010827, d = 0.797984
+[ 2565.9s] perplexity = 113.973
+[ 2565.9s] ETA 148m
+[ 2565.9s] *** ITER 67/300
+[ 2596.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 2596.7s] 	a = 811.878, d = 0.672767
+[ 2596.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2597.1s] 	a = 1.14328, d = 0.659216
+[ 2597.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2597.6s] 	a = 1.28379, d = 0.670569
+[ 2597.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2603.0s] 	a = 0.0105628, d = 0.797761
+[ 2605.1s] perplexity = 113.948
+[ 2605.1s] ETA 148m
+[ 2605.1s] *** ITER 68/300
+[ 2635.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 2635.5s] 	a = 843.37, d = 0.67259
+[ 2635.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2635.9s] 	a = 1.14639, d = 0.657392
+[ 2635.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2636.4s] 	a = 1.27756, d = 0.66997
+[ 2636.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2640.7s] 	a = 0.011555, d = 0.797614
+[ 2642.8s] perplexity = 113.909
+[ 2642.8s] ETA 147m
+[ 2642.8s] *** ITER 69/300
+[ 2673.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 2673.2s] 	a = 886.95, d = 0.672466
+[ 2673.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2673.6s] 	a = 1.12828, d = 0.657615
+[ 2673.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2674.1s] 	a = 1.25148, d = 0.670549
+[ 2674.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2677.5s] 	a = 0.0112112, d = 0.797687
+[ 2679.5s] perplexity = 113.973
+[ 2679.5s] ETA 146m
+[ 2679.5s] *** ITER 70/300
+[ 2709.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 2709.8s] 	a = 846.228, d = 0.67213
+[ 2709.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2710.3s] 	a = 1.13233, d = 0.659581
+[ 2710.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2710.7s] 	a = 1.2545, d = 0.670363
+[ 2710.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2715.5s] 	a = 0.012902, d = 0.797774
+[ 2717.6s] perplexity = 113.911
+[ 2717.6s] ETA 146m
+[ 2717.6s] *** ITER 71/300
+[ 2747.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 2747.9s] 	a = 794.289, d = 0.67166
+[ 2747.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2748.4s] 	a = 1.11981, d = 0.658531
+[ 2748.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2748.8s] 	a = 1.28868, d = 0.670617
+[ 2748.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2753.8s] 	a = 0.0154098, d = 0.797577
+[ 2755.9s] perplexity = 113.925
+[ 2755.9s] ETA 145m
+[ 2755.9s] *** ITER 72/300
+[ 2786.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 2786.1s] 	a = 780.383, d = 0.671333
+[ 2786.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2786.6s] 	a = 1.12525, d = 0.659302
+[ 2786.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2787.0s] 	a = 1.26834, d = 0.671083
+[ 2787.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2791.4s] 	a = 0.0155679, d = 0.797803
+[ 2793.4s] perplexity = 113.925
+[ 2793.4s] ETA 145m
+[ 2793.4s] *** ITER 73/300
+[ 2823.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 2823.7s] 	a = 821.862, d = 0.670519
+[ 2823.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2824.2s] 	a = 1.12343, d = 0.658661
+[ 2824.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2824.6s] 	a = 1.24628, d = 0.671002
+[ 2824.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2829.4s] 	a = 0.0145921, d = 0.797913
+[ 2831.4s] perplexity = 113.967
+[ 2831.4s] ETA 144m
+[ 2831.4s] *** ITER 74/300
+[ 2861.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 2861.8s] 	a = 860.352, d = 0.671717
+[ 2861.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2862.2s] 	a = 1.09893, d = 0.658709
+[ 2862.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2862.7s] 	a = 1.25913, d = 0.671673
+[ 2862.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2867.5s] 	a = 0.0119285, d = 0.797588
+[ 2869.5s] perplexity = 113.98
+[ 2869.5s] ETA 143m
+[ 2869.5s] *** ITER 75/300
+[ 2899.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 2899.8s] 	a = 788.264, d = 0.67109
+[ 2899.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2900.3s] 	a = 1.08182, d = 0.65889
+[ 2900.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2900.7s] 	a = 1.24148, d = 0.670811
+[ 2900.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2904.4s] 	a = 0.0140375, d = 0.797829
+[ 2906.4s] perplexity = 113.9
+[ 2906.4s] ETA 143m
+[ 2906.4s] *** ITER 76/300
+[ 2936.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 2936.7s] 	a = 779.681, d = 0.674129
+[ 2936.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2937.2s] 	a = 1.10023, d = 0.65912
+[ 2937.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2937.6s] 	a = 1.25158, d = 0.670843
+[ 2937.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2941.3s] 	a = 0.0149468, d = 0.797777
+[ 2943.3s] perplexity = 113.907
+[ 2943.3s] ETA 142m
+[ 2943.3s] *** ITER 77/300
+[ 2973.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 2973.7s] 	a = 859.232, d = 0.67523
+[ 2973.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2974.1s] 	a = 1.1052, d = 0.660381
+[ 2974.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 2974.6s] 	a = 1.25007, d = 0.672044
+[ 2974.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 2978.9s] 	a = 0.0143389, d = 0.797826
+[ 2981.0s] perplexity = 113.942
+[ 2981.0s] ETA 141m
+[ 2981.0s] *** ITER 78/300
+[ 3011.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 3011.3s] 	a = 832.376, d = 0.674871
+[ 3011.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3011.8s] 	a = 1.10649, d = 0.658976
+[ 3011.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3012.2s] 	a = 1.29043, d = 0.671553
+[ 3012.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3017.0s] 	a = 0.0145049, d = 0.797607
+[ 3019.0s] perplexity = 113.903
+[ 3019.0s] ETA 141m
+[ 3019.0s] *** ITER 79/300
+[ 3049.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 3049.5s] 	a = 718.19, d = 0.675667
+[ 3049.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3050.0s] 	a = 1.11511, d = 0.657382
+[ 3050.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3050.4s] 	a = 1.27719, d = 0.671632
+[ 3050.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3056.4s] 	a = 0.0110401, d = 0.798056
+[ 3058.4s] perplexity = 113.963
+[ 3058.4s] ETA 140m
+[ 3058.4s] *** ITER 80/300
+[ 3088.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 3088.6s] 	a = 740.903, d = 0.677686
+[ 3088.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3089.1s] 	a = 1.09283, d = 0.657563
+[ 3089.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3089.5s] 	a = 1.29745, d = 0.671559
+[ 3089.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3093.7s] 	a = 0.0124545, d = 0.797795
+[ 3095.7s] perplexity = 113.972
+[ 3095.7s] ETA 139m
+[ 3095.7s] *** ITER 81/300
+[ 3126.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 3126.0s] 	a = 788.445, d = 0.677469
+[ 3126.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3126.5s] 	a = 1.11603, d = 0.658085
+[ 3126.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3126.9s] 	a = 1.29188, d = 0.671719
+[ 3126.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3131.0s] 	a = 0.0142186, d = 0.797603
+[ 3133.0s] perplexity = 113.964
+[ 3133.0s] ETA 139m
+[ 3133.0s] *** ITER 82/300
+[ 3163.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 3163.3s] 	a = 766.627, d = 0.67635
+[ 3163.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3163.8s] 	a = 1.06616, d = 0.659418
+[ 3163.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3164.2s] 	a = 1.26948, d = 0.671666
+[ 3164.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3168.3s] 	a = 0.0076209, d = 0.797628
+[ 3170.3s] perplexity = 113.947
+[ 3170.3s] ETA 138m
+[ 3170.3s] *** ITER 83/300
+[ 3200.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 3200.8s] 	a = 807.997, d = 0.675219
+[ 3200.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3201.3s] 	a = 1.05174, d = 0.657491
+[ 3201.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3201.7s] 	a = 1.26749, d = 0.671479
+[ 3201.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3206.3s] 	a = 0.0123309, d = 0.798111
+[ 3208.4s] perplexity = 113.928
+[ 3208.4s] ETA 138m
+[ 3208.4s] *** ITER 84/300
+[ 3238.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 3238.7s] 	a = 820.753, d = 0.67481
+[ 3238.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3239.2s] 	a = 1.0804, d = 0.657801
+[ 3239.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3239.6s] 	a = 1.27416, d = 0.671077
+[ 3239.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3243.1s] 	a = 0.0103263, d = 0.798041
+[ 3245.1s] perplexity = 113.941
+[ 3245.1s] ETA 137m
+[ 3245.1s] *** ITER 85/300
+[ 3275.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 3275.5s] 	a = 729.823, d = 0.6746
+[ 3275.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3276.0s] 	a = 1.06594, d = 0.657102
+[ 3276.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3276.4s] 	a = 1.2756, d = 0.67113
+[ 3276.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3279.8s] 	a = 0.011224, d = 0.798062
+[ 3281.9s] perplexity = 113.952
+[ 3281.9s] ETA 136m
+[ 3281.9s] *** ITER 86/300
+[ 3312.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 3312.1s] 	a = 832.894, d = 0.67502
+[ 3312.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3312.6s] 	a = 1.05553, d = 0.657168
+[ 3312.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3313.0s] 	a = 1.28394, d = 0.671946
+[ 3313.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3317.6s] 	a = 0.0103966, d = 0.797887
+[ 3319.6s] perplexity = 113.946
+[ 3319.6s] ETA 136m
+[ 3319.6s] *** ITER 87/300
+[ 3349.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 3349.9s] 	a = 778.887, d = 0.674602
+[ 3349.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3350.3s] 	a = 1.0319, d = 0.656714
+[ 3350.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3350.8s] 	a = 1.2687, d = 0.672178
+[ 3350.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3354.4s] 	a = 0.0105371, d = 0.797954
+[ 3356.5s] perplexity = 113.946
+[ 3356.5s] ETA 135m
+[ 3356.5s] *** ITER 88/300
+[ 3386.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 3386.8s] 	a = 818.967, d = 0.673853
+[ 3386.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3387.2s] 	a = 1.07352, d = 0.656989
+[ 3387.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3387.7s] 	a = 1.28228, d = 0.672335
+[ 3387.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3392.3s] 	a = 0.0129307, d = 0.797754
+[ 3394.3s] perplexity = 113.937
+[ 3394.3s] ETA 134m
+[ 3394.3s] *** ITER 89/300
+[ 3424.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 3424.6s] 	a = 722.687, d = 0.671948
+[ 3424.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3425.1s] 	a = 1.08435, d = 0.655871
+[ 3425.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3425.5s] 	a = 1.28582, d = 0.672146
+[ 3425.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3429.4s] 	a = 0.010703, d = 0.797671
+[ 3431.5s] perplexity = 113.915
+[ 3431.5s] ETA 134m
+[ 3431.5s] *** ITER 90/300
+[ 3461.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 3461.7s] 	a = 798.678, d = 0.671852
+[ 3461.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3462.1s] 	a = 1.09208, d = 0.654808
+[ 3462.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3462.6s] 	a = 1.26823, d = 0.672294
+[ 3462.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3467.2s] 	a = 0.0125722, d = 0.797867
+[ 3469.2s] perplexity = 113.952
+[ 3469.2s] ETA 133m
+[ 3469.2s] *** ITER 91/300
+[ 3499.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 3499.6s] 	a = 723.788, d = 0.673459
+[ 3499.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3500.1s] 	a = 1.10092, d = 0.65456
+[ 3500.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3500.5s] 	a = 1.27266, d = 0.672119
+[ 3500.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3505.1s] 	a = 0.0128505, d = 0.797495
+[ 3507.1s] perplexity = 113.913
+[ 3507.1s] ETA 132m
+[ 3507.1s] *** ITER 92/300
+[ 3537.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 3537.6s] 	a = 859.616, d = 0.672942
+[ 3537.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3538.1s] 	a = 1.11182, d = 0.655029
+[ 3538.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3538.5s] 	a = 1.27637, d = 0.671761
+[ 3538.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3543.6s] 	a = 0.0133766, d = 0.797769
+[ 3545.6s] perplexity = 113.958
+[ 3545.6s] ETA 132m
+[ 3545.6s] *** ITER 93/300
+[ 3576.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 3576.1s] 	a = 873.993, d = 0.670163
+[ 3576.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3576.5s] 	a = 1.06777, d = 0.655143
+[ 3576.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3577.0s] 	a = 1.24316, d = 0.672188
+[ 3577.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3581.4s] 	a = 0.0173327, d = 0.797598
+[ 3583.4s] perplexity = 113.93
+[ 3583.4s] ETA 131m
+[ 3583.4s] *** ITER 94/300
+[ 3613.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 3613.9s] 	a = 862.319, d = 0.670742
+[ 3613.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3614.4s] 	a = 1.10617, d = 0.657326
+[ 3614.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3614.8s] 	a = 1.27391, d = 0.672596
+[ 3614.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3619.6s] 	a = 0.0162274, d = 0.797729
+[ 3621.7s] perplexity = 113.923
+[ 3621.7s] ETA 130m
+[ 3621.7s] *** ITER 95/300
+[ 3652.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 3652.7s] 	a = 797.472, d = 0.674743
+[ 3652.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3653.2s] 	a = 1.11844, d = 0.65487
+[ 3653.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3653.6s] 	a = 1.25153, d = 0.672537
+[ 3653.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3658.1s] 	a = 0.0112772, d = 0.797909
+[ 3660.2s] perplexity = 113.975
+[ 3660.2s] ETA 130m
+[ 3660.2s] *** ITER 96/300
+[ 3691.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 3691.2s] 	a = 714.628, d = 0.6733
+[ 3691.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3691.7s] 	a = 1.08891, d = 0.656455
+[ 3691.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3692.1s] 	a = 1.26184, d = 0.672339
+[ 3692.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3695.8s] 	a = 0.0116967, d = 0.797983
+[ 3697.9s] perplexity = 113.937
+[ 3697.9s] ETA 129m
+[ 3697.9s] *** ITER 97/300
+[ 3728.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 3728.7s] 	a = 763.266, d = 0.67556
+[ 3728.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3729.2s] 	a = 1.04468, d = 0.656332
+[ 3729.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3729.6s] 	a = 1.28429, d = 0.671792
+[ 3729.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3734.1s] 	a = 0.0175151, d = 0.797716
+[ 3736.2s] perplexity = 113.959
+[ 3736.2s] ETA 129m
+[ 3736.2s] *** ITER 98/300
+[ 3767.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 3767.0s] 	a = 767.509, d = 0.677206
+[ 3767.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3767.4s] 	a = 1.05164, d = 0.654663
+[ 3767.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3767.9s] 	a = 1.28382, d = 0.671946
+[ 3767.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3771.9s] 	a = 0.0162927, d = 0.797973
+[ 3773.9s] perplexity = 113.912
+[ 3773.9s] ETA 128m
+[ 3773.9s] *** ITER 99/300
+[ 3804.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 3804.7s] 	a = 787.371, d = 0.677824
+[ 3804.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3805.2s] 	a = 1.05426, d = 0.657018
+[ 3805.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3805.6s] 	a = 1.29281, d = 0.672499
+[ 3805.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3810.3s] 	a = 0.0157023, d = 0.797485
+[ 3812.4s] perplexity = 113.924
+[ 3812.4s] ETA 127m
+[ 3812.4s] *** ITER 100/300
+[ 3843.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 3843.3s] 	a = 758.826, d = 0.676849
+[ 3843.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3843.8s] 	a = 1.05856, d = 0.657316
+[ 3843.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3844.2s] 	a = 1.27869, d = 0.672451
+[ 3844.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3848.7s] 	a = 0.0119696, d = 0.797896
+[ 3850.8s] perplexity = 113.969
+[ 3850.8s] ETA 127m
+[ 3850.8s] *** ITER 101/300
+[ 3881.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 3881.6s] 	a = 781.288, d = 0.676792
+[ 3881.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3882.1s] 	a = 1.09285, d = 0.657398
+[ 3882.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3882.5s] 	a = 1.28613, d = 0.672306
+[ 3882.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3887.2s] 	a = 0.0125054, d = 0.79813
+[ 3889.3s] perplexity = 113.925
+[ 3889.3s] ETA 126m
+[ 3889.3s] *** ITER 102/300
+[ 3920.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 3920.1s] 	a = 775.862, d = 0.677818
+[ 3920.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3920.6s] 	a = 1.08475, d = 0.654944
+[ 3920.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3921.0s] 	a = 1.26455, d = 0.67203
+[ 3921.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3924.6s] 	a = 0.0106765, d = 0.798071
+[ 3926.7s] perplexity = 113.944
+[ 3926.7s] ETA 125m
+[ 3926.7s] *** ITER 103/300
+[ 3957.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 3957.4s] 	a = 751.1, d = 0.678129
+[ 3957.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3957.9s] 	a = 1.09222, d = 0.655116
+[ 3957.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3958.3s] 	a = 1.2928, d = 0.671815
+[ 3958.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 3962.8s] 	a = 0.0101267, d = 0.798078
+[ 3964.8s] perplexity = 113.989
+[ 3964.8s] ETA 125m
+[ 3964.8s] *** ITER 104/300
+[ 3995.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 3995.6s] 	a = 750.711, d = 0.676972
+[ 3995.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3996.1s] 	a = 1.10739, d = 0.65481
+[ 3996.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 3996.5s] 	a = 1.28783, d = 0.672206
+[ 3996.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4001.4s] 	a = 0.00921724, d = 0.798029
+[ 4003.5s] perplexity = 113.916
+[ 4003.5s] ETA 124m
+[ 4003.5s] *** ITER 105/300
+[ 4034.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 4034.3s] 	a = 834.791, d = 0.675331
+[ 4034.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4034.8s] 	a = 1.11409, d = 0.654308
+[ 4034.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4035.2s] 	a = 1.28409, d = 0.671893
+[ 4035.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4040.9s] 	a = 0.0148041, d = 0.798113
+[ 4043.0s] perplexity = 113.967
+[ 4043.0s] ETA 124m
+[ 4043.0s] *** ITER 106/300
+[ 4073.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 4073.7s] 	a = 849.401, d = 0.675387
+[ 4073.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4074.2s] 	a = 1.08559, d = 0.655047
+[ 4074.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4074.7s] 	a = 1.27687, d = 0.672431
+[ 4074.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4079.4s] 	a = 0.0136714, d = 0.798122
+[ 4081.5s] perplexity = 113.943
+[ 4081.5s] ETA 123m
+[ 4081.5s] *** ITER 107/300
+[ 4112.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 4112.2s] 	a = 699.389, d = 0.676278
+[ 4112.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4112.7s] 	a = 1.04999, d = 0.655192
+[ 4112.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4113.2s] 	a = 1.28835, d = 0.673179
+[ 4113.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4117.9s] 	a = 0.0150953, d = 0.798127
+[ 4120.0s] perplexity = 113.947
+[ 4120.0s] ETA 122m
+[ 4120.0s] *** ITER 108/300
+[ 4150.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4150.8s] 	a = 763.656, d = 0.67491
+[ 4150.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4151.2s] 	a = 1.07636, d = 0.654815
+[ 4151.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4151.7s] 	a = 1.25988, d = 0.673012
+[ 4151.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4155.2s] 	a = 0.0117545, d = 0.798167
+[ 4157.3s] perplexity = 113.936
+[ 4157.3s] ETA 122m
+[ 4157.3s] *** ITER 109/300
+[ 4188.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 4188.0s] 	a = 777.445, d = 0.674698
+[ 4188.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4188.5s] 	a = 1.07169, d = 0.655487
+[ 4188.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4188.9s] 	a = 1.26854, d = 0.672881
+[ 4188.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4192.9s] 	a = 0.00962878, d = 0.798135
+[ 4195.0s] perplexity = 113.942
+[ 4195.0s] ETA 121m
+[ 4195.0s] *** ITER 110/300
+[ 4225.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4225.8s] 	a = 764.357, d = 0.676056
+[ 4225.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4226.3s] 	a = 1.10754, d = 0.655488
+[ 4226.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4226.7s] 	a = 1.29354, d = 0.672485
+[ 4226.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4232.2s] 	a = 0.0149672, d = 0.798081
+[ 4234.2s] perplexity = 113.876
+[ 4234.2s] ETA 121m
+[ 4234.2s] *** ITER 111/300
+[ 4265.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 4265.1s] 	a = 817.651, d = 0.674371
+[ 4265.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4265.6s] 	a = 1.11941, d = 0.654038
+[ 4265.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4266.0s] 	a = 1.27582, d = 0.672508
+[ 4266.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4272.2s] 	a = 0.0118916, d = 0.797784
+[ 4274.2s] perplexity = 113.913
+[ 4274.2s] ETA 120m
+[ 4274.2s] *** ITER 112/300
+[ 4305.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 4305.0s] 	a = 719.906, d = 0.674568
+[ 4305.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4305.5s] 	a = 1.08842, d = 0.653824
+[ 4305.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4305.9s] 	a = 1.29822, d = 0.672837
+[ 4305.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4309.7s] 	a = 0.0175663, d = 0.797696
+[ 4311.8s] perplexity = 113.925
+[ 4311.8s] ETA 119m
+[ 4311.8s] *** ITER 113/300
+[ 4342.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 4342.5s] 	a = 768.508, d = 0.67546
+[ 4342.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4342.9s] 	a = 1.0788, d = 0.654585
+[ 4342.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4343.4s] 	a = 1.30448, d = 0.672674
+[ 4343.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4346.9s] 	a = 0.0154718, d = 0.797723
+[ 4349.0s] perplexity = 113.945
+[ 4349.0s] ETA 119m
+[ 4349.0s] *** ITER 114/300
+[ 4379.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4379.8s] 	a = 750.358, d = 0.673578
+[ 4379.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4380.3s] 	a = 1.07934, d = 0.655325
+[ 4380.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4380.7s] 	a = 1.2699, d = 0.672282
+[ 4380.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4385.2s] 	a = 0.0104488, d = 0.797856
+[ 4387.3s] perplexity = 113.919
+[ 4387.3s] ETA 118m
+[ 4387.3s] *** ITER 115/300
+[ 4418.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 4418.1s] 	a = 769.404, d = 0.675527
+[ 4418.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4418.6s] 	a = 1.06479, d = 0.654552
+[ 4418.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4419.0s] 	a = 1.25227, d = 0.672662
+[ 4419.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4424.0s] 	a = 0.00884657, d = 0.797997
+[ 4426.1s] perplexity = 113.91
+[ 4426.1s] ETA 117m
+[ 4426.1s] *** ITER 116/300
+[ 4456.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4456.8s] 	a = 795.381, d = 0.674475
+[ 4456.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4457.3s] 	a = 1.06288, d = 0.654783
+[ 4457.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4457.8s] 	a = 1.23962, d = 0.672818
+[ 4457.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4462.2s] 	a = 0.0177605, d = 0.797964
+[ 4464.3s] perplexity = 113.979
+[ 4464.3s] ETA 117m
+[ 4464.3s] *** ITER 117/300
+[ 4495.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 4495.2s] 	a = 802.067, d = 0.674238
+[ 4495.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4495.7s] 	a = 1.03382, d = 0.655957
+[ 4495.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4496.1s] 	a = 1.2743, d = 0.672635
+[ 4496.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4501.6s] 	a = 0.0130578, d = 0.79794
+[ 4503.7s] perplexity = 113.857
+[ 4503.7s] ETA 116m
+[ 4503.7s] *** ITER 118/300
+[ 4534.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 4534.4s] 	a = 799.786, d = 0.671769
+[ 4534.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4534.9s] 	a = 1.04972, d = 0.655616
+[ 4534.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4535.3s] 	a = 1.27212, d = 0.673132
+[ 4535.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4539.3s] 	a = 0.0122621, d = 0.797834
+[ 4541.4s] perplexity = 113.941
+[ 4541.4s] ETA 116m
+[ 4541.4s] *** ITER 119/300
+[ 4572.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 4572.1s] 	a = 776.52, d = 0.672981
+[ 4572.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4572.6s] 	a = 1.04317, d = 0.654135
+[ 4572.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4573.0s] 	a = 1.27684, d = 0.67313
+[ 4573.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4577.4s] 	a = 0.0126698, d = 0.797796
+[ 4579.6s] perplexity = 113.93
+[ 4579.6s] ETA 115m
+[ 4579.6s] *** ITER 120/300
+[ 4610.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 4610.3s] 	a = 802.98, d = 0.673348
+[ 4610.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4610.8s] 	a = 1.07644, d = 0.652848
+[ 4610.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4611.2s] 	a = 1.28225, d = 0.672768
+[ 4611.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4617.1s] 	a = 0.0103855, d = 0.798176
+[ 4619.2s] perplexity = 113.93
+[ 4619.2s] ETA 114m
+[ 4619.2s] *** ITER 121/300
+[ 4649.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 4650.0s] 	a = 849.78, d = 0.673159
+[ 4650.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4650.4s] 	a = 1.06789, d = 0.652785
+[ 4650.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4650.9s] 	a = 1.26484, d = 0.67281
+[ 4650.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4654.1s] 	a = 0.0107763, d = 0.798165
+[ 4656.2s] perplexity = 113.91
+[ 4656.2s] ETA 114m
+[ 4656.2s] *** ITER 122/300
+[ 4687.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 4687.2s] 	a = 807.704, d = 0.67385
+[ 4687.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4687.7s] 	a = 1.07206, d = 0.653085
+[ 4687.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4688.1s] 	a = 1.31778, d = 0.673539
+[ 4688.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4692.5s] 	a = 0.0114425, d = 0.798084
+[ 4694.6s] perplexity = 113.962
+[ 4694.6s] ETA 113m
+[ 4694.6s] *** ITER 123/300
+[ 4724.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 4724.9s] 	a = 833.358, d = 0.672209
+[ 4724.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4725.4s] 	a = 1.0469, d = 0.653618
+[ 4725.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4725.8s] 	a = 1.26804, d = 0.672703
+[ 4725.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4730.4s] 	a = 0.0124425, d = 0.798049
+[ 4732.4s] perplexity = 113.914
+[ 4732.4s] ETA 112m
+[ 4732.4s] *** ITER 124/300
+[ 4762.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4762.8s] 	a = 846.495, d = 0.672106
+[ 4762.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4763.3s] 	a = 1.0464, d = 0.653485
+[ 4763.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4763.7s] 	a = 1.30714, d = 0.67265
+[ 4763.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4769.0s] 	a = 0.0123104, d = 0.797872
+[ 4771.1s] perplexity = 113.917
+[ 4771.1s] ETA 112m
+[ 4771.1s] *** ITER 125/300
+[ 4801.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 4801.7s] 	a = 830.277, d = 0.671237
+[ 4801.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4802.2s] 	a = 1.05199, d = 0.652666
+[ 4802.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4802.7s] 	a = 1.28922, d = 0.672819
+[ 4802.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4807.9s] 	a = 0.0158348, d = 0.797877
+[ 4810.0s] perplexity = 113.934
+[ 4810.0s] ETA 111m
+[ 4810.0s] *** ITER 126/300
+[ 4840.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 4841.0s] 	a = 818.856, d = 0.670131
+[ 4841.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4841.5s] 	a = 1.04245, d = 0.652997
+[ 4841.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4841.9s] 	a = 1.28949, d = 0.672606
+[ 4841.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4846.8s] 	a = 0.00822446, d = 0.798054
+[ 4848.9s] perplexity = 113.94
+[ 4848.9s] ETA 111m
+[ 4848.9s] *** ITER 127/300
+[ 4879.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4879.8s] 	a = 860.378, d = 0.669651
+[ 4879.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4880.3s] 	a = 1.05776, d = 0.653697
+[ 4880.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4880.7s] 	a = 1.31186, d = 0.672283
+[ 4880.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4884.7s] 	a = 0.00919279, d = 0.798126
+[ 4886.7s] perplexity = 113.852
+[ 4886.7s] ETA 110m
+[ 4886.7s] *** ITER 128/300
+[ 4917.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 4917.6s] 	a = 839.333, d = 0.66836
+[ 4917.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4918.1s] 	a = 1.01006, d = 0.651468
+[ 4918.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4918.5s] 	a = 1.26702, d = 0.672988
+[ 4918.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4922.0s] 	a = 0.0136441, d = 0.798115
+[ 4924.0s] perplexity = 113.879
+[ 4924.0s] ETA 109m
+[ 4924.0s] *** ITER 129/300
+[ 4954.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 4954.8s] 	a = 922.464, d = 0.669131
+[ 4954.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4955.3s] 	a = 1.03875, d = 0.65352
+[ 4955.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4955.7s] 	a = 1.29363, d = 0.672932
+[ 4955.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 4961.4s] 	a = 0.0135336, d = 0.798327
+[ 4963.5s] perplexity = 113.851
+[ 4963.5s] ETA 109m
+[ 4963.5s] *** ITER 130/300
+[ 4994.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 4994.4s] 	a = 826.889, d = 0.667759
+[ 4994.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4994.8s] 	a = 1.04562, d = 0.653471
+[ 4994.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 4995.3s] 	a = 1.27697, d = 0.673271
+[ 4995.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5000.0s] 	a = 0.0123336, d = 0.797688
+[ 5002.1s] perplexity = 113.859
+[ 5002.1s] ETA 108m
+[ 5002.1s] *** ITER 131/300
+[ 5033.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 5033.0s] 	a = 813.623, d = 0.669823
+[ 5033.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5033.5s] 	a = 1.04719, d = 0.653327
+[ 5033.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5033.9s] 	a = 1.32126, d = 0.672664
+[ 5033.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5038.9s] 	a = 0.0113659, d = 0.798506
+[ 5041.0s] perplexity = 113.865
+[ 5041.0s] ETA 108m
+[ 5041.0s] *** ITER 132/300
+[ 5071.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 5071.8s] 	a = 857.359, d = 0.669621
+[ 5071.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5072.3s] 	a = 1.02039, d = 0.655129
+[ 5072.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5072.8s] 	a = 1.32725, d = 0.671692
+[ 5072.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5077.9s] 	a = 0.0107944, d = 0.798395
+[ 5080.0s] perplexity = 113.858
+[ 5080.0s] ETA 107m
+[ 5080.0s] *** ITER 133/300
+[ 5110.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 5110.8s] 	a = 853.308, d = 0.67093
+[ 5110.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5111.3s] 	a = 1.01854, d = 0.655372
+[ 5111.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5111.8s] 	a = 1.25846, d = 0.672112
+[ 5111.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5116.7s] 	a = 0.0119734, d = 0.798296
+[ 5118.8s] perplexity = 113.856
+[ 5118.8s] ETA 106m
+[ 5118.8s] *** ITER 134/300
+[ 5149.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 5149.7s] 	a = 815.195, d = 0.670197
+[ 5149.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5150.2s] 	a = 1.05537, d = 0.656011
+[ 5150.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5150.6s] 	a = 1.28557, d = 0.672032
+[ 5150.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5154.4s] 	a = 0.0107498, d = 0.798353
+[ 5156.4s] perplexity = 113.846
+[ 5156.4s] ETA 106m
+[ 5156.4s] *** ITER 135/300
+[ 5187.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 5187.4s] 	a = 870.208, d = 0.670341
+[ 5187.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5187.9s] 	a = 1.0146, d = 0.655085
+[ 5187.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5188.3s] 	a = 1.32573, d = 0.671972
+[ 5188.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5193.1s] 	a = 0.0165132, d = 0.798143
+[ 5195.2s] perplexity = 113.883
+[ 5195.2s] ETA 105m
+[ 5195.2s] *** ITER 136/300
+[ 5226.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 5226.3s] 	a = 835.659, d = 0.670227
+[ 5226.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5226.8s] 	a = 1.05997, d = 0.654729
+[ 5226.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5227.2s] 	a = 1.33135, d = 0.671984
+[ 5227.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5231.2s] 	a = 0.0131831, d = 0.798109
+[ 5233.3s] perplexity = 113.889
+[ 5233.3s] ETA 104m
+[ 5233.3s] *** ITER 137/300
+[ 5264.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 5264.1s] 	a = 806.545, d = 0.670772
+[ 5264.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5264.5s] 	a = 1.04532, d = 0.655375
+[ 5264.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5265.0s] 	a = 1.27913, d = 0.671957
+[ 5265.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5269.5s] 	a = 0.013177, d = 0.798082
+[ 5271.6s] perplexity = 113.926
+[ 5271.6s] ETA 104m
+[ 5271.6s] *** ITER 138/300
+[ 5302.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 5302.5s] 	a = 773.799, d = 0.674191
+[ 5302.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5303.0s] 	a = 1.032, d = 0.656519
+[ 5303.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5303.5s] 	a = 1.28711, d = 0.672793
+[ 5303.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5308.0s] 	a = 0.0150282, d = 0.798174
+[ 5310.1s] perplexity = 113.911
+[ 5310.1s] ETA 103m
+[ 5310.1s] *** ITER 139/300
+[ 5340.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 5340.9s] 	a = 793.816, d = 0.673711
+[ 5340.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5341.4s] 	a = 1.00636, d = 0.65661
+[ 5341.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5341.8s] 	a = 1.28416, d = 0.672864
+[ 5341.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5347.2s] 	a = 0.0162204, d = 0.797696
+[ 5349.4s] perplexity = 113.958
+[ 5349.4s] ETA 103m
+[ 5349.4s] *** ITER 140/300
+[ 5380.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 5380.3s] 	a = 826.08, d = 0.672343
+[ 5380.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5380.8s] 	a = 1.02349, d = 0.656625
+[ 5380.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5381.2s] 	a = 1.27261, d = 0.672989
+[ 5381.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5385.9s] 	a = 0.0144346, d = 0.797794
+[ 5388.0s] perplexity = 113.916
+[ 5388.0s] ETA 102m
+[ 5388.0s] *** ITER 141/300
+[ 5418.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 5418.8s] 	a = 835.213, d = 0.674075
+[ 5418.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5419.3s] 	a = 1.01641, d = 0.656595
+[ 5419.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5419.8s] 	a = 1.28611, d = 0.673352
+[ 5419.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5424.2s] 	a = 0.011069, d = 0.798164
+[ 5426.2s] perplexity = 113.929
+[ 5426.2s] ETA 101m
+[ 5426.2s] *** ITER 142/300
+[ 5457.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 5457.0s] 	a = 854.328, d = 0.671853
+[ 5457.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5457.5s] 	a = 1.01895, d = 0.656576
+[ 5457.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5457.9s] 	a = 1.26775, d = 0.673648
+[ 5457.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5461.9s] 	a = 0.0150567, d = 0.798178
+[ 5464.0s] perplexity = 113.91
+[ 5464.0s] ETA 101m
+[ 5464.0s] *** ITER 143/300
+[ 5494.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 5494.8s] 	a = 881.515, d = 0.671856
+[ 5494.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5495.3s] 	a = 1.03391, d = 0.656288
+[ 5495.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5495.8s] 	a = 1.27882, d = 0.672746
+[ 5495.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5500.5s] 	a = 0.0128263, d = 0.797656
+[ 5502.5s] perplexity = 113.919
+[ 5502.5s] ETA 100m
+[ 5502.5s] *** ITER 144/300
+[ 5533.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 5533.3s] 	a = 838.363, d = 0.67201
+[ 5533.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5533.9s] 	a = 1.04159, d = 0.656055
+[ 5533.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5534.3s] 	a = 1.27519, d = 0.673154
+[ 5534.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5537.8s] 	a = 0.0146735, d = 0.797774
+[ 5539.8s] perplexity = 113.901
+[ 5539.8s] ETA 99m
+[ 5539.8s] *** ITER 145/300
+[ 5570.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 5570.6s] 	a = 798.346, d = 0.672019
+[ 5570.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5571.1s] 	a = 1.01517, d = 0.654944
+[ 5571.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5571.6s] 	a = 1.27708, d = 0.672521
+[ 5571.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5575.6s] 	a = 0.0150588, d = 0.797995
+[ 5577.7s] perplexity = 113.832
+[ 5577.7s] ETA 99m
+[ 5577.7s] *** ITER 146/300
+[ 5608.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 5608.6s] 	a = 811.813, d = 0.672024
+[ 5608.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5609.1s] 	a = 1.03005, d = 0.653873
+[ 5609.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5609.5s] 	a = 1.27635, d = 0.673201
+[ 5609.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5613.7s] 	a = 0.0131987, d = 0.797814
+[ 5615.8s] perplexity = 113.854
+[ 5615.8s] ETA 98m
+[ 5615.8s] *** ITER 147/300
+[ 5646.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 5646.7s] 	a = 810.877, d = 0.670396
+[ 5646.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5647.2s] 	a = 1.05472, d = 0.653034
+[ 5647.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5647.6s] 	a = 1.279, d = 0.67309
+[ 5647.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5652.3s] 	a = 0.0118541, d = 0.79802
+[ 5654.4s] perplexity = 113.935
+[ 5654.4s] ETA 97m
+[ 5654.4s] *** ITER 148/300
+[ 5685.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 5685.2s] 	a = 824.662, d = 0.671495
+[ 5685.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5685.7s] 	a = 1.06052, d = 0.653844
+[ 5685.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5686.1s] 	a = 1.27985, d = 0.673268
+[ 5686.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5690.6s] 	a = 0.0141265, d = 0.797902
+[ 5692.7s] perplexity = 113.855
+[ 5692.7s] ETA 97m
+[ 5692.7s] *** ITER 149/300
+[ 5723.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 5723.5s] 	a = 834.104, d = 0.671083
+[ 5723.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5724.0s] 	a = 1.06667, d = 0.65293
+[ 5724.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5724.5s] 	a = 1.27612, d = 0.673456
+[ 5724.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5729.2s] 	a = 0.0160829, d = 0.798221
+[ 5731.3s] perplexity = 113.915
+[ 5731.3s] ETA 96m
+[ 5731.3s] *** ITER 150/300
+[ 5762.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 5762.3s] 	a = 822.716, d = 0.671496
+[ 5762.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5762.8s] 	a = 1.10254, d = 0.652699
+[ 5762.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5763.2s] 	a = 1.27657, d = 0.673421
+[ 5763.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5767.2s] 	a = 0.0153701, d = 0.797692
+[ 5769.3s] perplexity = 113.886
+[ 5769.3s] ETA 96m
+[ 5769.3s] *** ITER 151/300
+[ 5800.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 5800.3s] 	a = 824.909, d = 0.671589
+[ 5800.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5800.8s] 	a = 1.08556, d = 0.653485
+[ 5800.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5801.2s] 	a = 1.29782, d = 0.673097
+[ 5801.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5806.6s] 	a = 0.0108062, d = 0.798077
+[ 5808.8s] perplexity = 113.903
+[ 5808.8s] ETA 95m
+[ 5808.8s] *** ITER 152/300
+[ 5839.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 5839.6s] 	a = 854.052, d = 0.671446
+[ 5839.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5840.1s] 	a = 1.06125, d = 0.65359
+[ 5840.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5840.6s] 	a = 1.28789, d = 0.672688
+[ 5840.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5844.8s] 	a = 0.0150021, d = 0.797979
+[ 5846.9s] perplexity = 113.827
+[ 5846.9s] ETA 94m
+[ 5846.9s] *** ITER 153/300
+[ 5877.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 5877.7s] 	a = 861.651, d = 0.670284
+[ 5877.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5878.2s] 	a = 1.04274, d = 0.653512
+[ 5878.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5878.6s] 	a = 1.28225, d = 0.673074
+[ 5878.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5882.6s] 	a = 0.0123586, d = 0.79791
+[ 5884.7s] perplexity = 113.885
+[ 5884.7s] ETA 94m
+[ 5884.7s] *** ITER 154/300
+[ 5915.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 5915.5s] 	a = 750.112, d = 0.670623
+[ 5915.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5916.0s] 	a = 1.06735, d = 0.653813
+[ 5916.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5916.5s] 	a = 1.284, d = 0.672745
+[ 5916.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5920.2s] 	a = 0.0122471, d = 0.798331
+[ 5922.3s] perplexity = 113.878
+[ 5922.3s] ETA 93m
+[ 5922.3s] *** ITER 155/300
+[ 5953.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 5953.2s] 	a = 787.41, d = 0.671429
+[ 5953.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5953.7s] 	a = 1.06685, d = 0.653469
+[ 5953.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5954.1s] 	a = 1.27519, d = 0.673061
+[ 5954.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5958.3s] 	a = 0.0157887, d = 0.79805
+[ 5960.4s] perplexity = 113.908
+[ 5960.4s] ETA 92m
+[ 5960.4s] *** ITER 156/300
+[ 5991.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 5991.3s] 	a = 786.753, d = 0.671756
+[ 5991.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5991.8s] 	a = 1.09696, d = 0.651367
+[ 5991.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 5992.2s] 	a = 1.26944, d = 0.673437
+[ 5992.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 5996.0s] 	a = 0.015414, d = 0.797788
+[ 5998.1s] perplexity = 113.888
+[ 5998.1s] ETA 92m
+[ 5998.1s] *** ITER 157/300
+[ 6028.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 6028.9s] 	a = 827.06, d = 0.674254
+[ 6028.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6029.4s] 	a = 1.05861, d = 0.652259
+[ 6029.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6029.8s] 	a = 1.28701, d = 0.673566
+[ 6029.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6034.1s] 	a = 0.0171486, d = 0.797974
+[ 6036.2s] perplexity = 113.841
+[ 6036.2s] ETA 91m
+[ 6036.2s] *** ITER 158/300
+[ 6067.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 6067.2s] 	a = 800.293, d = 0.672019
+[ 6067.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6067.6s] 	a = 1.05507, d = 0.651736
+[ 6067.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6068.1s] 	a = 1.29912, d = 0.673253
+[ 6068.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6072.8s] 	a = 0.0151476, d = 0.798082
+[ 6074.9s] perplexity = 113.847
+[ 6074.9s] ETA 91m
+[ 6074.9s] *** ITER 159/300
+[ 6105.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 6105.7s] 	a = 790.913, d = 0.673013
+[ 6105.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6106.2s] 	a = 1.04385, d = 0.652152
+[ 6106.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6106.6s] 	a = 1.28282, d = 0.672901
+[ 6106.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6110.3s] 	a = 0.0154583, d = 0.797867
+[ 6112.4s] perplexity = 113.867
+[ 6112.4s] ETA 90m
+[ 6112.4s] *** ITER 160/300
+[ 6143.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 6143.2s] 	a = 776.527, d = 0.674759
+[ 6143.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6143.7s] 	a = 1.04723, d = 0.652793
+[ 6143.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6144.1s] 	a = 1.25067, d = 0.673774
+[ 6144.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6148.1s] 	a = 0.0163189, d = 0.797822
+[ 6150.2s] perplexity = 113.892
+[ 6150.2s] ETA 89m
+[ 6150.2s] *** ITER 161/300
+[ 6181.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 6181.0s] 	a = 802.915, d = 0.674745
+[ 6181.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6181.5s] 	a = 1.04856, d = 0.652859
+[ 6181.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6181.9s] 	a = 1.27469, d = 0.673811
+[ 6181.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6185.9s] 	a = 0.0156085, d = 0.797839
+[ 6188.0s] perplexity = 113.927
+[ 6188.0s] ETA 89m
+[ 6188.0s] *** ITER 162/300
+[ 6218.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 6218.8s] 	a = 747.22, d = 0.676642
+[ 6218.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6219.3s] 	a = 1.04779, d = 0.65331
+[ 6219.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6219.8s] 	a = 1.27409, d = 0.673513
+[ 6219.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6225.4s] 	a = 0.0147127, d = 0.797976
+[ 6227.5s] perplexity = 113.873
+[ 6227.5s] ETA 88m
+[ 6227.5s] *** ITER 163/300
+[ 6258.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 6258.3s] 	a = 781.827, d = 0.675514
+[ 6258.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6258.8s] 	a = 1.04083, d = 0.653704
+[ 6258.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6259.2s] 	a = 1.28996, d = 0.673143
+[ 6259.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6263.7s] 	a = 0.0142765, d = 0.798133
+[ 6265.7s] perplexity = 113.887
+[ 6265.7s] ETA 87m
+[ 6265.7s] *** ITER 164/300
+[ 6296.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 6296.6s] 	a = 754.477, d = 0.675179
+[ 6296.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6297.1s] 	a = 1.05148, d = 0.651453
+[ 6297.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6297.6s] 	a = 1.26026, d = 0.673766
+[ 6297.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6302.8s] 	a = 0.0149262, d = 0.7981
+[ 6304.9s] perplexity = 113.901
+[ 6304.9s] ETA 87m
+[ 6304.9s] *** ITER 165/300
+[ 6335.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 6335.8s] 	a = 766.238, d = 0.674728
+[ 6335.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6336.3s] 	a = 1.05857, d = 0.652744
+[ 6336.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6336.8s] 	a = 1.28662, d = 0.67338
+[ 6336.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6342.0s] 	a = 0.0163327, d = 0.797958
+[ 6344.0s] perplexity = 113.886
+[ 6344.0s] ETA 86m
+[ 6344.0s] *** ITER 166/300
+[ 6374.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 6374.5s] 	a = 800.205, d = 0.673715
+[ 6374.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6375.0s] 	a = 1.03545, d = 0.652233
+[ 6375.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6375.5s] 	a = 1.27816, d = 0.67331
+[ 6375.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6380.8s] 	a = 0.0130582, d = 0.797977
+[ 6382.8s] perplexity = 113.903
+[ 6382.8s] ETA 86m
+[ 6382.8s] *** ITER 167/300
+[ 6413.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 6413.2s] 	a = 816.548, d = 0.6733
+[ 6413.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6413.7s] 	a = 1.03447, d = 0.652944
+[ 6413.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6414.1s] 	a = 1.28317, d = 0.673264
+[ 6414.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6419.0s] 	a = 0.01317, d = 0.798061
+[ 6421.0s] perplexity = 113.941
+[ 6421.0s] ETA 85m
+[ 6421.0s] *** ITER 168/300
+[ 6451.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 6451.3s] 	a = 791.062, d = 0.671501
+[ 6451.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6451.8s] 	a = 1.07655, d = 0.652721
+[ 6451.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6452.3s] 	a = 1.28212, d = 0.673426
+[ 6452.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6457.3s] 	a = 0.0126224, d = 0.797904
+[ 6459.4s] perplexity = 113.919
+[ 6459.4s] ETA 84m
+[ 6459.4s] *** ITER 169/300
+[ 6489.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 6489.9s] 	a = 850.104, d = 0.671523
+[ 6489.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6490.4s] 	a = 1.05952, d = 0.651575
+[ 6490.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6490.8s] 	a = 1.31997, d = 0.673142
+[ 6490.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6494.4s] 	a = 0.0119275, d = 0.798206
+[ 6496.5s] perplexity = 113.919
+[ 6496.5s] ETA 84m
+[ 6496.5s] *** ITER 170/300
+[ 6527.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 6527.2s] 	a = 764.763, d = 0.672025
+[ 6527.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6527.7s] 	a = 1.05929, d = 0.65219
+[ 6527.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6528.2s] 	a = 1.32206, d = 0.673022
+[ 6528.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6533.4s] 	a = 0.016207, d = 0.798013
+[ 6535.5s] perplexity = 113.944
+[ 6535.5s] ETA 83m
+[ 6535.5s] *** ITER 171/300
+[ 6566.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 6566.3s] 	a = 786.361, d = 0.672348
+[ 6566.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6566.8s] 	a = 1.06452, d = 0.651564
+[ 6566.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6567.3s] 	a = 1.31144, d = 0.673273
+[ 6567.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6571.3s] 	a = 0.0146892, d = 0.798071
+[ 6573.4s] perplexity = 113.928
+[ 6573.4s] ETA 82m
+[ 6573.4s] *** ITER 172/300
+[ 6604.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 6604.3s] 	a = 756.189, d = 0.673685
+[ 6604.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6604.8s] 	a = 1.05598, d = 0.65269
+[ 6604.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6605.3s] 	a = 1.29776, d = 0.672654
+[ 6605.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6609.0s] 	a = 0.015695, d = 0.797961
+[ 6611.1s] perplexity = 113.916
+[ 6611.1s] ETA 82m
+[ 6611.1s] *** ITER 173/300
+[ 6641.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 6641.9s] 	a = 748.874, d = 0.675568
+[ 6641.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6642.4s] 	a = 1.09477, d = 0.6503
+[ 6642.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6642.8s] 	a = 1.31104, d = 0.672667
+[ 6642.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6647.3s] 	a = 0.017519, d = 0.797864
+[ 6649.3s] perplexity = 113.943
+[ 6649.3s] ETA 81m
+[ 6649.3s] *** ITER 174/300
+[ 6680.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 6680.5s] 	a = 698.76, d = 0.673836
+[ 6680.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6681.0s] 	a = 1.10336, d = 0.649568
+[ 6681.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6681.4s] 	a = 1.30996, d = 0.672836
+[ 6681.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6685.9s] 	a = 0.013096, d = 0.797856
+[ 6688.0s] perplexity = 113.932
+[ 6688.0s] ETA 80m
+[ 6688.0s] *** ITER 175/300
+[ 6718.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 6718.8s] 	a = 876.236, d = 0.674714
+[ 6718.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6719.3s] 	a = 1.05504, d = 0.649462
+[ 6719.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6719.7s] 	a = 1.30797, d = 0.67299
+[ 6719.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6724.7s] 	a = 0.0149932, d = 0.798017
+[ 6726.8s] perplexity = 113.886
+[ 6726.8s] ETA 80m
+[ 6726.8s] *** ITER 176/300
+[ 6757.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 6757.8s] 	a = 847.41, d = 0.674963
+[ 6757.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6758.3s] 	a = 1.09667, d = 0.648919
+[ 6758.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6758.8s] 	a = 1.29726, d = 0.672957
+[ 6758.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6762.5s] 	a = 0.0151142, d = 0.797865
+[ 6764.6s] perplexity = 113.901
+[ 6764.6s] ETA 79m
+[ 6764.6s] *** ITER 177/300
+[ 6795.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 6795.5s] 	a = 825.012, d = 0.67442
+[ 6795.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6796.0s] 	a = 1.04349, d = 0.649033
+[ 6796.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6796.4s] 	a = 1.31297, d = 0.673087
+[ 6796.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6800.4s] 	a = 0.0136611, d = 0.797987
+[ 6802.5s] perplexity = 113.91
+[ 6802.5s] ETA 79m
+[ 6802.5s] *** ITER 178/300
+[ 6833.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 6833.4s] 	a = 829.368, d = 0.674874
+[ 6833.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6833.9s] 	a = 1.07067, d = 0.648901
+[ 6833.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6834.4s] 	a = 1.31445, d = 0.673451
+[ 6834.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6838.1s] 	a = 0.014038, d = 0.797982
+[ 6840.2s] perplexity = 113.883
+[ 6840.2s] ETA 78m
+[ 6840.2s] *** ITER 179/300
+[ 6871.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 6871.0s] 	a = 825.031, d = 0.673972
+[ 6871.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6871.5s] 	a = 1.06501, d = 0.649901
+[ 6871.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6871.9s] 	a = 1.31354, d = 0.673261
+[ 6871.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6876.9s] 	a = 0.0129094, d = 0.798041
+[ 6879.0s] perplexity = 113.874
+[ 6879.0s] ETA 77m
+[ 6879.0s] *** ITER 180/300
+[ 6909.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 6909.7s] 	a = 781.689, d = 0.674266
+[ 6909.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6910.2s] 	a = 1.05207, d = 0.650301
+[ 6910.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6910.7s] 	a = 1.30766, d = 0.672928
+[ 6910.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6915.1s] 	a = 0.0114983, d = 0.798169
+[ 6917.2s] perplexity = 113.92
+[ 6917.2s] ETA 77m
+[ 6917.2s] *** ITER 181/300
+[ 6948.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 6948.1s] 	a = 806.67, d = 0.674686
+[ 6948.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6948.6s] 	a = 0.987424, d = 0.649767
+[ 6948.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6949.1s] 	a = 1.31494, d = 0.673418
+[ 6949.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6954.3s] 	a = 0.0114537, d = 0.797845
+[ 6956.4s] perplexity = 113.917
+[ 6956.4s] ETA 76m
+[ 6956.4s] *** ITER 182/300
+[ 6987.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 6987.2s] 	a = 825.175, d = 0.673826
+[ 6987.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6987.7s] 	a = 0.990975, d = 0.650505
+[ 6987.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 6988.2s] 	a = 1.30827, d = 0.67349
+[ 6988.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 6993.3s] 	a = 0.0167448, d = 0.797795
+[ 6995.4s] perplexity = 113.893
+[ 6995.4s] ETA 75m
+[ 6995.4s] *** ITER 183/300
+[ 7026.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 7026.2s] 	a = 822.021, d = 0.673198
+[ 7026.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7026.7s] 	a = 1.03561, d = 0.65011
+[ 7026.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7027.1s] 	a = 1.30203, d = 0.674017
+[ 7027.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7031.6s] 	a = 0.0206714, d = 0.797603
+[ 7033.6s] perplexity = 113.877
+[ 7033.6s] ETA 75m
+[ 7033.6s] *** ITER 184/300
+[ 7064.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 7064.4s] 	a = 806.887, d = 0.673258
+[ 7064.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7065.0s] 	a = 1.08237, d = 0.648508
+[ 7065.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7065.4s] 	a = 1.29448, d = 0.673519
+[ 7065.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7070.3s] 	a = 0.0126049, d = 0.797788
+[ 7072.4s] perplexity = 113.902
+[ 7072.4s] ETA 74m
+[ 7072.4s] *** ITER 185/300
+[ 7103.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 7103.2s] 	a = 766.542, d = 0.674746
+[ 7103.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7103.7s] 	a = 1.04272, d = 0.647408
+[ 7103.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7104.2s] 	a = 1.30065, d = 0.674463
+[ 7104.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7108.8s] 	a = 0.0143722, d = 0.798071
+[ 7110.9s] perplexity = 113.884
+[ 7110.9s] ETA 74m
+[ 7110.9s] *** ITER 186/300
+[ 7141.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 7141.8s] 	a = 850.557, d = 0.673347
+[ 7141.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7142.3s] 	a = 1.06395, d = 0.646989
+[ 7142.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7142.8s] 	a = 1.30368, d = 0.673552
+[ 7142.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7146.5s] 	a = 0.0125735, d = 0.798096
+[ 7148.6s] perplexity = 113.88
+[ 7148.6s] ETA 73m
+[ 7148.6s] *** ITER 187/300
+[ 7179.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 7179.4s] 	a = 829.493, d = 0.671716
+[ 7179.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7179.9s] 	a = 1.03423, d = 0.649132
+[ 7179.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7180.3s] 	a = 1.32372, d = 0.673543
+[ 7180.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7184.8s] 	a = 0.012629, d = 0.798051
+[ 7186.8s] perplexity = 113.88
+[ 7186.8s] ETA 72m
+[ 7186.8s] *** ITER 188/300
+[ 7217.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 7217.6s] 	a = 827.754, d = 0.672221
+[ 7217.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7218.1s] 	a = 1.02943, d = 0.649638
+[ 7218.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7218.6s] 	a = 1.31196, d = 0.673372
+[ 7218.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7223.3s] 	a = 0.0148723, d = 0.797804
+[ 7225.3s] perplexity = 113.896
+[ 7225.3s] ETA 72m
+[ 7225.3s] *** ITER 189/300
+[ 7256.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 7256.1s] 	a = 771.027, d = 0.673599
+[ 7256.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7256.6s] 	a = 1.01969, d = 0.650043
+[ 7256.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7257.0s] 	a = 1.29747, d = 0.673339
+[ 7257.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7261.4s] 	a = 0.0160083, d = 0.797711
+[ 7263.5s] perplexity = 113.946
+[ 7263.5s] ETA 71m
+[ 7263.5s] *** ITER 190/300
+[ 7294.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 7294.3s] 	a = 810.64, d = 0.674054
+[ 7294.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7294.8s] 	a = 1.07862, d = 0.648356
+[ 7294.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7295.2s] 	a = 1.29933, d = 0.673298
+[ 7295.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7299.5s] 	a = 0.0180986, d = 0.797532
+[ 7301.5s] perplexity = 113.917
+[ 7301.5s] ETA 70m
+[ 7301.5s] *** ITER 191/300
+[ 7332.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 7332.4s] 	a = 811.804, d = 0.674124
+[ 7332.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7332.9s] 	a = 1.05711, d = 0.648567
+[ 7332.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7333.4s] 	a = 1.31401, d = 0.673317
+[ 7333.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7337.3s] 	a = 0.0184774, d = 0.797616
+[ 7339.4s] perplexity = 113.891
+[ 7339.4s] ETA 70m
+[ 7339.4s] *** ITER 192/300
+[ 7370.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 7370.2s] 	a = 810.56, d = 0.675627
+[ 7370.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7370.7s] 	a = 0.997758, d = 0.649287
+[ 7370.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7371.1s] 	a = 1.33091, d = 0.674078
+[ 7371.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7375.8s] 	a = 0.0131494, d = 0.797558
+[ 7378.0s] perplexity = 113.985
+[ 7378.0s] ETA 69m
+[ 7378.0s] *** ITER 193/300
+[ 7408.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 7408.8s] 	a = 853.659, d = 0.674493
+[ 7408.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7409.3s] 	a = 0.996104, d = 0.652608
+[ 7409.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7409.7s] 	a = 1.30383, d = 0.673185
+[ 7409.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7414.2s] 	a = 0.0144813, d = 0.797882
+[ 7416.3s] perplexity = 113.923
+[ 7416.3s] ETA 68m
+[ 7416.3s] *** ITER 194/300
+[ 7447.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 7447.1s] 	a = 806.706, d = 0.672641
+[ 7447.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7447.6s] 	a = 0.991707, d = 0.652708
+[ 7447.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7448.1s] 	a = 1.28519, d = 0.673273
+[ 7448.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7452.0s] 	a = 0.0148906, d = 0.797848
+[ 7454.1s] perplexity = 113.953
+[ 7454.1s] ETA 68m
+[ 7454.1s] *** ITER 195/300
+[ 7485.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 7485.0s] 	a = 842.942, d = 0.674491
+[ 7485.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7485.5s] 	a = 1.01972, d = 0.650444
+[ 7485.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7486.0s] 	a = 1.28099, d = 0.673757
+[ 7486.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7490.0s] 	a = 0.0150647, d = 0.797886
+[ 7492.1s] perplexity = 113.907
+[ 7492.1s] ETA 67m
+[ 7492.1s] *** ITER 196/300
+[ 7522.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 7522.9s] 	a = 752.622, d = 0.673504
+[ 7522.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7523.4s] 	a = 1.03551, d = 0.65072
+[ 7523.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7523.9s] 	a = 1.26841, d = 0.673929
+[ 7523.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7528.1s] 	a = 0.0145045, d = 0.79786
+[ 7530.1s] perplexity = 113.9
+[ 7530.1s] ETA 67m
+[ 7530.1s] *** ITER 197/300
+[ 7560.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 7560.9s] 	a = 775.107, d = 0.672841
+[ 7560.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7561.4s] 	a = 1.0612, d = 0.648082
+[ 7561.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7561.8s] 	a = 1.25881, d = 0.674184
+[ 7561.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7568.5s] 	a = 0.0201822, d = 0.797594
+[ 7570.5s] perplexity = 113.958
+[ 7570.5s] ETA 66m
+[ 7570.5s] *** ITER 198/300
+[ 7601.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 7601.3s] 	a = 839.612, d = 0.672911
+[ 7601.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7601.8s] 	a = 1.05757, d = 0.647178
+[ 7601.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7602.2s] 	a = 1.31929, d = 0.672683
+[ 7602.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7607.0s] 	a = 0.0214251, d = 0.797508
+[ 7609.0s] perplexity = 113.917
+[ 7609.0s] ETA 65m
+[ 7609.0s] *** ITER 199/300
+[ 7639.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 7639.8s] 	a = 778.244, d = 0.673298
+[ 7639.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7640.3s] 	a = 1.04759, d = 0.649788
+[ 7640.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7640.8s] 	a = 1.29826, d = 0.673945
+[ 7640.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7645.3s] 	a = 0.0212033, d = 0.797223
+[ 7647.4s] perplexity = 113.876
+[ 7647.4s] ETA 65m
+[ 7647.4s] *** ITER 200/300
+[ 7678.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 7678.4s] 	a = 792.781, d = 0.673224
+[ 7678.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7678.9s] 	a = 1.05346, d = 0.648977
+[ 7678.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7679.3s] 	a = 1.32488, d = 0.673592
+[ 7679.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7684.8s] 	a = 0.014124, d = 0.797198
+[ 7686.9s] perplexity = 113.92
+[ 7686.9s] ETA 64m
+[ 7686.9s] *** ITER 201/300
+[ 7717.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 7717.7s] 	a = 833.403, d = 0.674523
+[ 7717.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7718.2s] 	a = 1.05453, d = 0.649618
+[ 7718.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7718.7s] 	a = 1.31396, d = 0.673771
+[ 7718.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7723.6s] 	a = 0.0155629, d = 0.797876
+[ 7725.7s] perplexity = 113.942
+[ 7725.7s] ETA 63m
+[ 7725.7s] *** ITER 202/300
+[ 7756.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 7756.8s] 	a = 809.27, d = 0.675606
+[ 7756.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7757.3s] 	a = 1.07454, d = 0.648873
+[ 7757.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7757.7s] 	a = 1.32256, d = 0.674427
+[ 7757.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7761.8s] 	a = 0.00980675, d = 0.797905
+[ 7763.9s] perplexity = 113.927
+[ 7763.9s] ETA 63m
+[ 7763.9s] *** ITER 203/300
+[ 7794.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 7794.4s] 	a = 762.755, d = 0.675334
+[ 7794.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7794.9s] 	a = 1.06729, d = 0.648705
+[ 7794.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7795.3s] 	a = 1.34847, d = 0.673173
+[ 7795.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7799.0s] 	a = 0.0100747, d = 0.798012
+[ 7801.0s] perplexity = 113.896
+[ 7801.0s] ETA 62m
+[ 7801.0s] *** ITER 204/300
+[ 7831.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 7831.5s] 	a = 691.042, d = 0.677398
+[ 7831.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7831.9s] 	a = 1.07406, d = 0.649279
+[ 7831.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7832.4s] 	a = 1.29512, d = 0.673108
+[ 7832.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7836.5s] 	a = 0.0130235, d = 0.798072
+[ 7838.6s] perplexity = 113.905
+[ 7838.6s] ETA 61m
+[ 7838.6s] *** ITER 205/300
+[ 7868.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 7868.9s] 	a = 759.095, d = 0.678332
+[ 7868.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7869.4s] 	a = 1.08657, d = 0.648606
+[ 7869.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7869.9s] 	a = 1.33866, d = 0.673491
+[ 7869.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7874.5s] 	a = 0.0117338, d = 0.798062
+[ 7876.5s] perplexity = 113.943
+[ 7876.5s] ETA 61m
+[ 7876.5s] *** ITER 206/300
+[ 7906.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 7906.9s] 	a = 777.753, d = 0.676955
+[ 7906.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7907.4s] 	a = 1.04346, d = 0.648186
+[ 7907.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7907.8s] 	a = 1.31581, d = 0.673297
+[ 7907.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7912.6s] 	a = 0.0103127, d = 0.797895
+[ 7914.7s] perplexity = 113.89
+[ 7914.7s] ETA 60m
+[ 7914.7s] *** ITER 207/300
+[ 7945.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 7945.2s] 	a = 851.113, d = 0.67725
+[ 7945.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7945.7s] 	a = 1.04909, d = 0.648029
+[ 7945.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7946.1s] 	a = 1.31639, d = 0.673345
+[ 7946.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7950.7s] 	a = 0.0179304, d = 0.79824
+[ 7952.7s] perplexity = 113.855
+[ 7952.7s] ETA 60m
+[ 7952.7s] *** ITER 208/300
+[ 7983.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 7983.1s] 	a = 693.53, d = 0.676614
+[ 7983.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7983.7s] 	a = 1.05083, d = 0.649598
+[ 7983.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 7984.1s] 	a = 1.30919, d = 0.673897
+[ 7984.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 7988.7s] 	a = 0.00927479, d = 0.798244
+[ 7990.8s] perplexity = 113.918
+[ 7990.8s] ETA 59m
+[ 7990.8s] *** ITER 209/300
+[ 8021.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 8021.1s] 	a = 857.939, d = 0.677321
+[ 8021.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8021.6s] 	a = 1.08095, d = 0.650132
+[ 8021.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8022.1s] 	a = 1.27638, d = 0.673964
+[ 8022.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8026.2s] 	a = 0.0144615, d = 0.798129
+[ 8028.3s] perplexity = 113.907
+[ 8028.3s] ETA 58m
+[ 8028.3s] *** ITER 210/300
+[ 8058.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 8058.8s] 	a = 799.488, d = 0.676666
+[ 8058.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8059.3s] 	a = 1.08073, d = 0.648313
+[ 8059.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8059.8s] 	a = 1.2975, d = 0.674494
+[ 8059.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8063.9s] 	a = 0.0142715, d = 0.797982
+[ 8066.0s] perplexity = 113.899
+[ 8066.0s] ETA 58m
+[ 8066.0s] *** ITER 211/300
+[ 8096.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 8096.4s] 	a = 732.026, d = 0.678373
+[ 8096.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8096.8s] 	a = 1.05754, d = 0.647741
+[ 8096.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8097.3s] 	a = 1.26979, d = 0.67462
+[ 8097.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8101.6s] 	a = 0.0108696, d = 0.797995
+[ 8103.6s] perplexity = 113.913
+[ 8103.6s] ETA 57m
+[ 8103.6s] *** ITER 212/300
+[ 8134.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 8134.1s] 	a = 859.435, d = 0.676353
+[ 8134.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8134.6s] 	a = 1.04897, d = 0.64882
+[ 8134.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8135.0s] 	a = 1.30301, d = 0.674652
+[ 8135.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8138.9s] 	a = 0.0091825, d = 0.798343
+[ 8141.0s] perplexity = 113.89
+[ 8141.0s] ETA 56m
+[ 8141.0s] *** ITER 213/300
+[ 8171.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 8171.4s] 	a = 809.575, d = 0.675535
+[ 8171.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8171.9s] 	a = 1.03726, d = 0.649613
+[ 8171.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8172.3s] 	a = 1.30548, d = 0.673604
+[ 8172.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8176.5s] 	a = 0.00813452, d = 0.798101
+[ 8178.5s] perplexity = 113.943
+[ 8178.5s] ETA 56m
+[ 8178.5s] *** ITER 214/300
+[ 8209.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 8209.0s] 	a = 823.491, d = 0.675489
+[ 8209.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8209.5s] 	a = 1.03513, d = 0.64944
+[ 8209.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8209.9s] 	a = 1.32409, d = 0.674193
+[ 8209.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8214.3s] 	a = 0.0188142, d = 0.798197
+[ 8216.3s] perplexity = 113.906
+[ 8216.3s] ETA 55m
+[ 8216.3s] *** ITER 215/300
+[ 8246.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 8246.8s] 	a = 815.303, d = 0.675449
+[ 8246.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8247.3s] 	a = 1.06403, d = 0.648289
+[ 8247.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8247.7s] 	a = 1.29433, d = 0.673696
+[ 8247.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8251.4s] 	a = 0.0170506, d = 0.798171
+[ 8253.4s] perplexity = 113.886
+[ 8253.4s] ETA 54m
+[ 8253.4s] *** ITER 216/300
+[ 8283.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 8283.8s] 	a = 795.462, d = 0.675298
+[ 8283.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8284.3s] 	a = 1.00673, d = 0.649581
+[ 8284.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8284.7s] 	a = 1.29359, d = 0.673504
+[ 8284.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8290.0s] 	a = 0.0149632, d = 0.797987
+[ 8292.1s] perplexity = 113.931
+[ 8292.1s] ETA 54m
+[ 8292.1s] *** ITER 217/300
+[ 8322.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 8322.5s] 	a = 828.659, d = 0.675315
+[ 8322.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8323.0s] 	a = 0.976125, d = 0.650618
+[ 8323.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8323.5s] 	a = 1.29725, d = 0.674895
+[ 8323.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8327.6s] 	a = 0.0138823, d = 0.798051
+[ 8329.7s] perplexity = 113.854
+[ 8329.7s] ETA 53m
+[ 8329.7s] *** ITER 218/300
+[ 8360.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 8360.1s] 	a = 820.75, d = 0.676499
+[ 8360.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8360.6s] 	a = 1.01252, d = 0.649484
+[ 8360.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8361.0s] 	a = 1.28501, d = 0.674632
+[ 8361.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8365.4s] 	a = 0.0141658, d = 0.798191
+[ 8367.4s] perplexity = 113.853
+[ 8367.4s] ETA 53m
+[ 8367.4s] *** ITER 219/300
+[ 8397.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 8397.8s] 	a = 863.255, d = 0.672954
+[ 8397.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8398.3s] 	a = 1.04277, d = 0.649298
+[ 8398.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8398.8s] 	a = 1.25986, d = 0.675251
+[ 8398.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8403.4s] 	a = 0.0150824, d = 0.797842
+[ 8405.4s] perplexity = 113.831
+[ 8405.4s] ETA 52m
+[ 8405.4s] *** ITER 220/300
+[ 8435.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 8436.0s] 	a = 901.301, d = 0.668198
+[ 8436.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8436.4s] 	a = 1.02549, d = 0.652567
+[ 8436.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8436.9s] 	a = 1.34469, d = 0.674444
+[ 8436.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8442.2s] 	a = 0.0144908, d = 0.798355
+[ 8444.2s] perplexity = 113.852
+[ 8444.2s] ETA 51m
+[ 8444.2s] *** ITER 221/300
+[ 8474.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 8474.6s] 	a = 805.838, d = 0.669551
+[ 8474.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8475.1s] 	a = 1.03603, d = 0.650494
+[ 8475.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8475.5s] 	a = 1.34879, d = 0.673609
+[ 8475.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8480.5s] 	a = 0.00545754, d = 0.798408
+[ 8482.6s] perplexity = 113.87
+[ 8482.6s] ETA 51m
+[ 8482.6s] *** ITER 222/300
+[ 8513.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 8513.0s] 	a = 860.592, d = 0.67029
+[ 8513.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8513.4s] 	a = 1.05036, d = 0.650425
+[ 8513.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8513.9s] 	a = 1.26392, d = 0.674079
+[ 8513.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8518.2s] 	a = 0.00884834, d = 0.798315
+[ 8520.2s] perplexity = 113.888
+[ 8520.2s] ETA 50m
+[ 8520.2s] *** ITER 223/300
+[ 8550.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 8550.6s] 	a = 863.705, d = 0.670736
+[ 8550.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8551.1s] 	a = 1.03845, d = 0.650177
+[ 8551.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8551.6s] 	a = 1.32171, d = 0.674019
+[ 8551.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8555.7s] 	a = 0.0107547, d = 0.798526
+[ 8557.8s] perplexity = 113.856
+[ 8557.8s] ETA 49m
+[ 8557.8s] *** ITER 224/300
+[ 8588.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 8588.1s] 	a = 843.931, d = 0.669248
+[ 8588.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8588.6s] 	a = 1.04183, d = 0.649492
+[ 8588.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8589.0s] 	a = 1.28714, d = 0.674083
+[ 8589.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8593.4s] 	a = 0.00911898, d = 0.798519
+[ 8595.4s] perplexity = 113.89
+[ 8595.4s] ETA 49m
+[ 8595.4s] *** ITER 225/300
+[ 8625.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 8625.8s] 	a = 854.149, d = 0.668283
+[ 8625.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8626.3s] 	a = 1.04278, d = 0.64949
+[ 8626.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8626.7s] 	a = 1.29816, d = 0.673863
+[ 8626.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8631.3s] 	a = 0.00749303, d = 0.798486
+[ 8633.4s] perplexity = 113.829
+[ 8633.4s] ETA 48m
+[ 8633.4s] *** ITER 226/300
+[ 8664.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 8664.0s] 	a = 858.279, d = 0.669236
+[ 8664.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8664.5s] 	a = 1.04408, d = 0.649356
+[ 8664.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8664.9s] 	a = 1.28202, d = 0.674351
+[ 8664.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8670.0s] 	a = 0.0165588, d = 0.798488
+[ 8672.1s] perplexity = 113.873
+[ 8672.1s] ETA 47m
+[ 8672.1s] *** ITER 227/300
+[ 8702.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 8702.4s] 	a = 800.422, d = 0.668284
+[ 8702.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8702.9s] 	a = 1.05807, d = 0.650456
+[ 8702.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8703.4s] 	a = 1.29502, d = 0.67384
+[ 8703.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8708.9s] 	a = 0.0143756, d = 0.798262
+[ 8710.9s] perplexity = 113.869
+[ 8710.9s] ETA 47m
+[ 8710.9s] *** ITER 228/300
+[ 8741.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 8741.3s] 	a = 894.252, d = 0.669248
+[ 8741.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8741.8s] 	a = 1.05202, d = 0.65033
+[ 8741.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8742.2s] 	a = 1.29817, d = 0.673671
+[ 8742.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8747.0s] 	a = 0.01389, d = 0.798164
+[ 8749.1s] perplexity = 113.841
+[ 8749.1s] ETA 46m
+[ 8749.1s] *** ITER 229/300
+[ 8779.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 8779.5s] 	a = 882.918, d = 0.667137
+[ 8779.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8780.0s] 	a = 1.05103, d = 0.64947
+[ 8780.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8780.4s] 	a = 1.31073, d = 0.673622
+[ 8780.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8784.6s] 	a = 0.0141848, d = 0.798158
+[ 8786.6s] perplexity = 113.891
+[ 8786.6s] ETA 46m
+[ 8786.6s] *** ITER 230/300
+[ 8817.1s] resamp. CRP::Hyper with 1 CRPs:
+[ 8817.1s] 	a = 906.952, d = 0.667576
+[ 8817.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8817.6s] 	a = 1.0523, d = 0.648102
+[ 8817.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8818.0s] 	a = 1.31382, d = 0.6736
+[ 8818.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8822.4s] 	a = 0.013945, d = 0.798084
+[ 8824.4s] perplexity = 113.88
+[ 8824.4s] ETA 45m
+[ 8824.4s] *** ITER 231/300
+[ 8854.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 8854.9s] 	a = 907.966, d = 0.669382
+[ 8854.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8855.4s] 	a = 1.04613, d = 0.651837
+[ 8855.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8855.8s] 	a = 1.32006, d = 0.674083
+[ 8855.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8861.1s] 	a = 0.0153707, d = 0.797807
+[ 8863.2s] perplexity = 113.871
+[ 8863.2s] ETA 44m
+[ 8863.2s] *** ITER 232/300
+[ 8893.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 8893.6s] 	a = 894.181, d = 0.67064
+[ 8893.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8894.1s] 	a = 1.04428, d = 0.649917
+[ 8894.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8894.5s] 	a = 1.315, d = 0.673609
+[ 8894.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8898.4s] 	a = 0.0130819, d = 0.797753
+[ 8900.5s] perplexity = 113.854
+[ 8900.5s] ETA 44m
+[ 8900.5s] *** ITER 233/300
+[ 8931.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 8931.0s] 	a = 773.257, d = 0.671034
+[ 8931.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8931.5s] 	a = 1.05813, d = 0.64979
+[ 8931.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8932.0s] 	a = 1.3139, d = 0.673649
+[ 8932.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8935.6s] 	a = 0.0140702, d = 0.797773
+[ 8937.7s] perplexity = 113.862
+[ 8937.7s] ETA 43m
+[ 8937.7s] *** ITER 234/300
+[ 8968.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 8968.2s] 	a = 874.95, d = 0.672219
+[ 8968.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8968.7s] 	a = 1.05751, d = 0.649853
+[ 8968.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 8969.2s] 	a = 1.30447, d = 0.673657
+[ 8969.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 8974.2s] 	a = 0.0161517, d = 0.79779
+[ 8976.2s] perplexity = 113.895
+[ 8976.2s] ETA 42m
+[ 8976.2s] *** ITER 235/300
+[ 9006.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 9006.7s] 	a = 861.459, d = 0.672023
+[ 9006.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9007.2s] 	a = 1.05771, d = 0.650195
+[ 9007.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9007.6s] 	a = 1.29146, d = 0.674225
+[ 9007.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9013.4s] 	a = 0.0160348, d = 0.797738
+[ 9015.4s] perplexity = 113.932
+[ 9015.4s] ETA 42m
+[ 9015.4s] *** ITER 236/300
+[ 9045.7s] resamp. CRP::Hyper with 1 CRPs:
+[ 9045.7s] 	a = 874.461, d = 0.670584
+[ 9045.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9046.3s] 	a = 1.05817, d = 0.649332
+[ 9046.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9046.7s] 	a = 1.30545, d = 0.674156
+[ 9046.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9052.4s] 	a = 0.0119999, d = 0.798097
+[ 9054.5s] perplexity = 113.904
+[ 9054.5s] ETA 41m
+[ 9054.5s] *** ITER 237/300
+[ 9084.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 9084.8s] 	a = 718.638, d = 0.675138
+[ 9084.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9085.3s] 	a = 1.02574, d = 0.647903
+[ 9085.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9085.7s] 	a = 1.30614, d = 0.674537
+[ 9085.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9089.9s] 	a = 0.0117974, d = 0.798158
+[ 9091.9s] perplexity = 113.87
+[ 9091.9s] ETA 40m
+[ 9091.9s] *** ITER 238/300
+[ 9122.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 9122.2s] 	a = 784.833, d = 0.676311
+[ 9122.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9122.7s] 	a = 1.02662, d = 0.651886
+[ 9122.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9123.1s] 	a = 1.30121, d = 0.673328
+[ 9123.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9127.8s] 	a = 0.0172551, d = 0.797747
+[ 9129.8s] perplexity = 113.827
+[ 9129.8s] ETA 40m
+[ 9129.8s] *** ITER 239/300
+[ 9160.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 9160.2s] 	a = 773.806, d = 0.677022
+[ 9160.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9160.7s] 	a = 1.05291, d = 0.650821
+[ 9160.7s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9161.2s] 	a = 1.30283, d = 0.673392
+[ 9161.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9165.8s] 	a = 0.017603, d = 0.797308
+[ 9167.8s] perplexity = 113.857
+[ 9167.8s] ETA 39m
+[ 9167.8s] *** ITER 240/300
+[ 9198.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 9198.4s] 	a = 772.484, d = 0.675012
+[ 9198.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9198.9s] 	a = 1.03222, d = 0.649753
+[ 9198.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9199.3s] 	a = 1.30018, d = 0.673552
+[ 9199.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9203.9s] 	a = 0.0154721, d = 0.797393
+[ 9206.0s] perplexity = 113.931
+[ 9206.0s] ETA 39m
+[ 9206.0s] *** ITER 241/300
+[ 9236.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 9236.5s] 	a = 786.233, d = 0.675594
+[ 9236.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9237.0s] 	a = 1.03083, d = 0.649728
+[ 9237.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9237.4s] 	a = 1.27407, d = 0.673585
+[ 9237.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9241.8s] 	a = 0.0158269, d = 0.797386
+[ 9243.9s] perplexity = 113.873
+[ 9243.9s] ETA 38m
+[ 9243.9s] *** ITER 242/300
+[ 9274.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 9274.3s] 	a = 815.812, d = 0.676039
+[ 9274.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9274.8s] 	a = 1.03238, d = 0.650798
+[ 9274.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9275.3s] 	a = 1.27059, d = 0.673408
+[ 9275.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9279.9s] 	a = 0.0128109, d = 0.79791
+[ 9281.9s] perplexity = 113.885
+[ 9281.9s] ETA 37m
+[ 9281.9s] *** ITER 243/300
+[ 9312.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 9312.3s] 	a = 745.166, d = 0.674963
+[ 9312.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9312.8s] 	a = 1.02197, d = 0.650419
+[ 9312.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9313.2s] 	a = 1.2755, d = 0.674338
+[ 9313.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9316.9s] 	a = 0.0171371, d = 0.797726
+[ 9318.9s] perplexity = 113.89
+[ 9318.9s] ETA 37m
+[ 9318.9s] *** ITER 244/300
+[ 9349.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 9349.5s] 	a = 742.374, d = 0.674931
+[ 9349.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9350.0s] 	a = 1.03106, d = 0.650105
+[ 9350.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9350.4s] 	a = 1.29156, d = 0.674149
+[ 9350.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9354.1s] 	a = 0.0152585, d = 0.797822
+[ 9356.1s] perplexity = 113.874
+[ 9356.1s] ETA 36m
+[ 9356.1s] *** ITER 245/300
+[ 9386.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 9386.4s] 	a = 786.481, d = 0.675645
+[ 9386.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9386.9s] 	a = 1.02661, d = 0.649597
+[ 9386.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9387.3s] 	a = 1.32116, d = 0.674649
+[ 9387.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9391.0s] 	a = 0.0155787, d = 0.797872
+[ 9393.0s] perplexity = 113.887
+[ 9393.0s] ETA 35m
+[ 9393.0s] *** ITER 246/300
+[ 9423.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 9423.5s] 	a = 822.342, d = 0.67523
+[ 9423.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9424.0s] 	a = 1.02719, d = 0.649566
+[ 9424.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9424.4s] 	a = 1.3082, d = 0.673423
+[ 9424.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9428.8s] 	a = 0.0117745, d = 0.798018
+[ 9430.9s] perplexity = 113.923
+[ 9430.9s] ETA 35m
+[ 9430.9s] *** ITER 247/300
+[ 9461.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 9461.2s] 	a = 746.375, d = 0.675346
+[ 9461.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9461.8s] 	a = 1.08169, d = 0.648886
+[ 9461.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9462.2s] 	a = 1.33435, d = 0.672978
+[ 9462.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9466.1s] 	a = 0.0157157, d = 0.798103
+[ 9468.2s] perplexity = 113.881
+[ 9468.2s] ETA 34m
+[ 9468.2s] *** ITER 248/300
+[ 9498.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 9498.6s] 	a = 790.354, d = 0.673714
+[ 9498.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9499.1s] 	a = 1.0454, d = 0.64662
+[ 9499.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9499.5s] 	a = 1.29569, d = 0.673419
+[ 9499.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9504.6s] 	a = 0.0152981, d = 0.797824
+[ 9506.6s] perplexity = 113.945
+[ 9506.6s] ETA 33m
+[ 9506.6s] *** ITER 249/300
+[ 9537.0s] resamp. CRP::Hyper with 1 CRPs:
+[ 9537.0s] 	a = 818.555, d = 0.674138
+[ 9537.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9537.6s] 	a = 1.01094, d = 0.647418
+[ 9537.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9538.0s] 	a = 1.31926, d = 0.67359
+[ 9538.0s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9542.1s] 	a = 0.0160472, d = 0.797752
+[ 9544.2s] perplexity = 113.911
+[ 9544.2s] ETA 33m
+[ 9544.2s] *** ITER 250/300
+[ 9574.5s] resamp. CRP::Hyper with 1 CRPs:
+[ 9574.5s] 	a = 849.841, d = 0.67147
+[ 9574.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9575.0s] 	a = 1.00932, d = 0.647443
+[ 9575.0s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9575.5s] 	a = 1.31288, d = 0.673816
+[ 9575.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9580.0s] 	a = 0.0161027, d = 0.797913
+[ 9582.1s] perplexity = 113.889
+[ 9582.1s] ETA 32m
+[ 9582.1s] *** ITER 251/300
+[ 9612.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 9612.4s] 	a = 851.228, d = 0.672899
+[ 9612.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9612.9s] 	a = 1.04021, d = 0.646895
+[ 9612.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9613.3s] 	a = 1.33458, d = 0.673008
+[ 9613.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9617.9s] 	a = 0.012972, d = 0.797855
+[ 9620.0s] perplexity = 113.884
+[ 9620.0s] ETA 32m
+[ 9620.0s] *** ITER 252/300
+[ 9650.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 9650.3s] 	a = 821.808, d = 0.67333
+[ 9650.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9650.8s] 	a = 0.986244, d = 0.648436
+[ 9650.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9651.3s] 	a = 1.29011, d = 0.673355
+[ 9651.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9655.9s] 	a = 0.0135104, d = 0.797904
+[ 9657.9s] perplexity = 113.901
+[ 9657.9s] ETA 31m
+[ 9657.9s] *** ITER 253/300
+[ 9688.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 9688.3s] 	a = 824.701, d = 0.673154
+[ 9688.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9688.8s] 	a = 1.02844, d = 0.648402
+[ 9688.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9689.2s] 	a = 1.29026, d = 0.673512
+[ 9689.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9693.8s] 	a = 0.0123216, d = 0.798259
+[ 9695.9s] perplexity = 113.866
+[ 9695.9s] ETA 30m
+[ 9695.9s] *** ITER 254/300
+[ 9726.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 9726.4s] 	a = 900.052, d = 0.675636
+[ 9726.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9726.8s] 	a = 1.00428, d = 0.648757
+[ 9726.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9727.3s] 	a = 1.28732, d = 0.673753
+[ 9727.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9732.1s] 	a = 0.017052, d = 0.797969
+[ 9734.2s] perplexity = 113.92
+[ 9734.2s] ETA 30m
+[ 9734.2s] *** ITER 255/300
+[ 9764.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 9764.6s] 	a = 839.908, d = 0.675603
+[ 9764.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9765.1s] 	a = 1.03186, d = 0.649259
+[ 9765.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9765.5s] 	a = 1.30345, d = 0.674055
+[ 9765.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9768.7s] 	a = 0.0112276, d = 0.797724
+[ 9770.8s] perplexity = 113.906
+[ 9770.8s] ETA 29m
+[ 9770.8s] *** ITER 256/300
+[ 9801.2s] resamp. CRP::Hyper with 1 CRPs:
+[ 9801.2s] 	a = 791.945, d = 0.67225
+[ 9801.2s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9801.8s] 	a = 1.04419, d = 0.648647
+[ 9801.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9802.2s] 	a = 1.3163, d = 0.674044
+[ 9802.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9806.3s] 	a = 0.0185218, d = 0.797731
+[ 9808.3s] perplexity = 113.879
+[ 9808.3s] ETA 28m
+[ 9808.3s] *** ITER 257/300
+[ 9838.8s] resamp. CRP::Hyper with 1 CRPs:
+[ 9838.8s] 	a = 762.924, d = 0.672823
+[ 9838.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9839.3s] 	a = 1.0557, d = 0.646258
+[ 9839.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9839.7s] 	a = 1.31206, d = 0.674353
+[ 9839.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9843.8s] 	a = 0.0182502, d = 0.797994
+[ 9845.9s] perplexity = 113.883
+[ 9845.9s] ETA 28m
+[ 9845.9s] *** ITER 258/300
+[ 9876.3s] resamp. CRP::Hyper with 1 CRPs:
+[ 9876.3s] 	a = 771.684, d = 0.673125
+[ 9876.3s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9876.8s] 	a = 1.02991, d = 0.647927
+[ 9876.8s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9877.2s] 	a = 1.27454, d = 0.674416
+[ 9877.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9881.4s] 	a = 0.0143998, d = 0.797723
+[ 9883.4s] perplexity = 113.888
+[ 9883.4s] ETA 27m
+[ 9883.4s] *** ITER 259/300
+[ 9913.9s] resamp. CRP::Hyper with 1 CRPs:
+[ 9913.9s] 	a = 770.566, d = 0.673498
+[ 9913.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9914.4s] 	a = 1.03895, d = 0.6484
+[ 9914.4s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9914.8s] 	a = 1.27622, d = 0.674077
+[ 9914.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9919.0s] 	a = 0.0117218, d = 0.798093
+[ 9921.0s] perplexity = 113.908
+[ 9921.0s] ETA 27m
+[ 9921.0s] *** ITER 260/300
+[ 9951.4s] resamp. CRP::Hyper with 1 CRPs:
+[ 9951.5s] 	a = 767.097, d = 0.673307
+[ 9951.5s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9951.9s] 	a = 1.0413, d = 0.64795
+[ 9951.9s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9952.4s] 	a = 1.29695, d = 0.674165
+[ 9952.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9956.1s] 	a = 0.0131548, d = 0.79825
+[ 9958.2s] perplexity = 113.861
+[ 9958.2s] ETA 26m
+[ 9958.2s] *** ITER 261/300
+[ 9988.6s] resamp. CRP::Hyper with 1 CRPs:
+[ 9988.6s] 	a = 804.483, d = 0.672732
+[ 9988.6s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9989.1s] 	a = 1.03831, d = 0.645346
+[ 9989.1s] resamp. CRP::Hyper with 17964 CRPs:
+[ 9989.6s] 	a = 1.30403, d = 0.673316
+[ 9989.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[ 9993.7s] 	a = 0.0120303, d = 0.798047
+[ 9995.8s] perplexity = 113.894
+[ 9995.8s] ETA 25m
+[ 9995.8s] *** ITER 262/300
+[10026.2s] resamp. CRP::Hyper with 1 CRPs:
+[10026.2s] 	a = 904.226, d = 0.671417
+[10026.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10026.8s] 	a = 1.01713, d = 0.647451
+[10026.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10027.2s] 	a = 1.34214, d = 0.673783
+[10027.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[10031.8s] 	a = 0.0173006, d = 0.797857
+[10033.8s] perplexity = 113.9
+[10033.8s] ETA 25m
+[10033.8s] *** ITER 263/300
+[10064.2s] resamp. CRP::Hyper with 1 CRPs:
+[10064.2s] 	a = 844.879, d = 0.671531
+[10064.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10064.7s] 	a = 1.05593, d = 0.648183
+[10064.7s] resamp. CRP::Hyper with 17964 CRPs:
+[10065.2s] 	a = 1.30528, d = 0.6735
+[10065.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[10068.4s] 	a = 0.0154414, d = 0.79771
+[10070.4s] perplexity = 113.9
+[10070.4s] ETA 24m
+[10070.4s] *** ITER 264/300
+[10100.9s] resamp. CRP::Hyper with 1 CRPs:
+[10101.0s] 	a = 840.25, d = 0.67154
+[10101.0s] resamp. CRP::Hyper with 17964 CRPs:
+[10101.4s] 	a = 1.00427, d = 0.649226
+[10101.4s] resamp. CRP::Hyper with 17964 CRPs:
+[10101.9s] 	a = 1.31857, d = 0.673782
+[10101.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[10106.5s] 	a = 0.00914011, d = 0.798064
+[10108.6s] perplexity = 113.874
+[10108.6s] ETA 23m
+[10108.6s] *** ITER 265/300
+[10139.0s] resamp. CRP::Hyper with 1 CRPs:
+[10139.0s] 	a = 850.125, d = 0.671036
+[10139.0s] resamp. CRP::Hyper with 17964 CRPs:
+[10139.5s] 	a = 1.01612, d = 0.649478
+[10139.5s] resamp. CRP::Hyper with 17964 CRPs:
+[10139.9s] 	a = 1.31467, d = 0.673328
+[10139.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[10143.8s] 	a = 0.0118991, d = 0.797706
+[10145.9s] perplexity = 113.888
+[10145.9s] ETA 23m
+[10145.9s] *** ITER 266/300
+[10176.3s] resamp. CRP::Hyper with 1 CRPs:
+[10176.3s] 	a = 827.165, d = 0.670017
+[10176.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10176.8s] 	a = 1.02569, d = 0.650163
+[10176.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10177.2s] 	a = 1.31225, d = 0.673151
+[10177.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[10181.4s] 	a = 0.0126358, d = 0.797819
+[10183.4s] perplexity = 113.866
+[10183.4s] ETA 22m
+[10183.4s] *** ITER 267/300
+[10213.7s] resamp. CRP::Hyper with 1 CRPs:
+[10213.7s] 	a = 792.283, d = 0.672843
+[10213.7s] resamp. CRP::Hyper with 17964 CRPs:
+[10214.2s] 	a = 1.0655, d = 0.649863
+[10214.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10214.7s] 	a = 1.31511, d = 0.673545
+[10214.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[10218.3s] 	a = 0.0113957, d = 0.798216
+[10220.4s] perplexity = 113.926
+[10220.4s] ETA 21m
+[10220.4s] *** ITER 268/300
+[10250.8s] resamp. CRP::Hyper with 1 CRPs:
+[10250.8s] 	a = 878.383, d = 0.671066
+[10250.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10251.3s] 	a = 1.04193, d = 0.64829
+[10251.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10251.7s] 	a = 1.31036, d = 0.673492
+[10251.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[10256.1s] 	a = 0.0137412, d = 0.797958
+[10258.2s] perplexity = 113.856
+[10258.2s] ETA 21m
+[10258.2s] *** ITER 269/300
+[10288.5s] resamp. CRP::Hyper with 1 CRPs:
+[10288.5s] 	a = 804.739, d = 0.671576
+[10288.5s] resamp. CRP::Hyper with 17964 CRPs:
+[10289.0s] 	a = 1.06198, d = 0.647332
+[10289.0s] resamp. CRP::Hyper with 17964 CRPs:
+[10289.4s] 	a = 1.31013, d = 0.673568
+[10289.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[10293.3s] 	a = 0.0155226, d = 0.797845
+[10295.4s] perplexity = 113.877
+[10295.4s] ETA 20m
+[10295.4s] *** ITER 270/300
+[10325.8s] resamp. CRP::Hyper with 1 CRPs:
+[10325.8s] 	a = 772.614, d = 0.670911
+[10325.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10326.3s] 	a = 1.07178, d = 0.649487
+[10326.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10326.8s] 	a = 1.30683, d = 0.673632
+[10326.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[10330.7s] 	a = 0.0155869, d = 0.797855
+[10332.7s] perplexity = 113.83
+[10332.7s] ETA 20m
+[10332.7s] *** ITER 271/300
+[10363.2s] resamp. CRP::Hyper with 1 CRPs:
+[10363.2s] 	a = 857.591, d = 0.671363
+[10363.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10363.7s] 	a = 1.05309, d = 0.649744
+[10363.7s] resamp. CRP::Hyper with 17964 CRPs:
+[10364.1s] 	a = 1.32041, d = 0.6735
+[10364.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[10368.0s] 	a = 0.0132371, d = 0.79778
+[10370.1s] perplexity = 113.896
+[10370.1s] ETA 19m
+[10370.1s] *** ITER 272/300
+[10400.5s] resamp. CRP::Hyper with 1 CRPs:
+[10400.6s] 	a = 805.503, d = 0.672076
+[10400.6s] resamp. CRP::Hyper with 17964 CRPs:
+[10401.0s] 	a = 1.04974, d = 0.650585
+[10401.0s] resamp. CRP::Hyper with 17964 CRPs:
+[10401.5s] 	a = 1.3003, d = 0.67359
+[10401.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[10406.1s] 	a = 0.0161985, d = 0.798022
+[10408.1s] perplexity = 113.903
+[10408.1s] ETA 18m
+[10408.1s] *** ITER 273/300
+[10438.7s] resamp. CRP::Hyper with 1 CRPs:
+[10438.7s] 	a = 837.452, d = 0.670655
+[10438.7s] resamp. CRP::Hyper with 17964 CRPs:
+[10439.2s] 	a = 1.0456, d = 0.648406
+[10439.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10439.6s] 	a = 1.29137, d = 0.6734
+[10439.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[10443.8s] 	a = 0.0122362, d = 0.797989
+[10445.9s] perplexity = 113.85
+[10445.9s] ETA 18m
+[10445.9s] *** ITER 274/300
+[10476.3s] resamp. CRP::Hyper with 1 CRPs:
+[10476.3s] 	a = 790.804, d = 0.670354
+[10476.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10476.8s] 	a = 1.05523, d = 0.648921
+[10476.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10477.2s] 	a = 1.31253, d = 0.67336
+[10477.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[10481.8s] 	a = 0.0149823, d = 0.798361
+[10483.9s] perplexity = 113.9
+[10483.9s] ETA 17m
+[10483.9s] *** ITER 275/300
+[10514.4s] resamp. CRP::Hyper with 1 CRPs:
+[10514.4s] 	a = 829.833, d = 0.671661
+[10514.4s] resamp. CRP::Hyper with 17964 CRPs:
+[10514.9s] 	a = 1.06, d = 0.648107
+[10514.9s] resamp. CRP::Hyper with 17964 CRPs:
+[10515.3s] 	a = 1.31816, d = 0.673664
+[10515.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[10519.7s] 	a = 0.0138539, d = 0.798306
+[10521.8s] perplexity = 113.927
+[10521.8s] ETA 16m
+[10521.8s] *** ITER 276/300
+[10552.3s] resamp. CRP::Hyper with 1 CRPs:
+[10552.3s] 	a = 810.461, d = 0.67107
+[10552.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10552.8s] 	a = 1.0378, d = 0.649127
+[10552.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10553.2s] 	a = 1.31693, d = 0.673152
+[10553.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[10557.4s] 	a = 0.0159595, d = 0.798175
+[10559.4s] perplexity = 113.885
+[10559.4s] ETA 16m
+[10559.4s] *** ITER 277/300
+[10589.9s] resamp. CRP::Hyper with 1 CRPs:
+[10589.9s] 	a = 834.736, d = 0.670234
+[10589.9s] resamp. CRP::Hyper with 17964 CRPs:
+[10590.4s] 	a = 1.0277, d = 0.649562
+[10590.4s] resamp. CRP::Hyper with 17964 CRPs:
+[10590.8s] 	a = 1.32688, d = 0.672893
+[10590.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[10595.2s] 	a = 0.0163299, d = 0.798184
+[10597.3s] perplexity = 113.893
+[10597.3s] ETA 15m
+[10597.3s] *** ITER 278/300
+[10627.9s] resamp. CRP::Hyper with 1 CRPs:
+[10627.9s] 	a = 878.843, d = 0.67023
+[10627.9s] resamp. CRP::Hyper with 17964 CRPs:
+[10628.5s] 	a = 0.950223, d = 0.652384
+[10628.5s] resamp. CRP::Hyper with 17964 CRPs:
+[10628.9s] 	a = 1.32081, d = 0.673161
+[10628.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[10634.2s] 	a = 0.0129304, d = 0.79804
+[10636.2s] perplexity = 113.875
+[10636.2s] ETA 14m
+[10636.2s] *** ITER 279/300
+[10666.7s] resamp. CRP::Hyper with 1 CRPs:
+[10666.7s] 	a = 804.652, d = 0.67185
+[10666.7s] resamp. CRP::Hyper with 17964 CRPs:
+[10667.2s] 	a = 0.964178, d = 0.652787
+[10667.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10667.7s] 	a = 1.32567, d = 0.673206
+[10667.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[10671.3s] 	a = 0.0129185, d = 0.79805
+[10673.3s] perplexity = 113.882
+[10673.3s] ETA 14m
+[10673.3s] *** ITER 280/300
+[10703.8s] resamp. CRP::Hyper with 1 CRPs:
+[10703.8s] 	a = 828.311, d = 0.669307
+[10703.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10704.3s] 	a = 0.951669, d = 0.651895
+[10704.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10704.7s] 	a = 1.29385, d = 0.673228
+[10704.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[10710.1s] 	a = 0.0107075, d = 0.797964
+[10712.1s] perplexity = 113.959
+[10712.1s] ETA 13m
+[10712.1s] *** ITER 281/300
+[10742.6s] resamp. CRP::Hyper with 1 CRPs:
+[10742.6s] 	a = 712.457, d = 0.670698
+[10742.6s] resamp. CRP::Hyper with 17964 CRPs:
+[10743.1s] 	a = 1.0391, d = 0.650975
+[10743.1s] resamp. CRP::Hyper with 17964 CRPs:
+[10743.5s] 	a = 1.31708, d = 0.673076
+[10743.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[10747.4s] 	a = 0.0157286, d = 0.797944
+[10749.5s] perplexity = 113.951
+[10749.5s] ETA 13m
+[10749.5s] *** ITER 282/300
+[10779.9s] resamp. CRP::Hyper with 1 CRPs:
+[10779.9s] 	a = 709.927, d = 0.672993
+[10779.9s] resamp. CRP::Hyper with 17964 CRPs:
+[10780.4s] 	a = 0.998307, d = 0.65035
+[10780.4s] resamp. CRP::Hyper with 17964 CRPs:
+[10780.9s] 	a = 1.31021, d = 0.673284
+[10780.9s] resamp. CRP::Hyper with 1584155 CRPs:
+[10786.0s] 	a = 0.015121, d = 0.797823
+[10788.0s] perplexity = 113.922
+[10788.0s] ETA 12m
+[10788.0s] *** ITER 283/300
+[10818.4s] resamp. CRP::Hyper with 1 CRPs:
+[10818.5s] 	a = 728.702, d = 0.672758
+[10818.5s] resamp. CRP::Hyper with 17964 CRPs:
+[10818.9s] 	a = 1.00273, d = 0.650404
+[10818.9s] resamp. CRP::Hyper with 17964 CRPs:
+[10819.4s] 	a = 1.31666, d = 0.673333
+[10819.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[10824.0s] 	a = 0.0168507, d = 0.797847
+[10826.0s] perplexity = 113.878
+[10826.0s] ETA 11m
+[10826.0s] *** ITER 284/300
+[10856.5s] resamp. CRP::Hyper with 1 CRPs:
+[10856.6s] 	a = 746.842, d = 0.670957
+[10856.6s] resamp. CRP::Hyper with 17964 CRPs:
+[10857.1s] 	a = 1.02034, d = 0.650464
+[10857.1s] resamp. CRP::Hyper with 17964 CRPs:
+[10857.5s] 	a = 1.29941, d = 0.673633
+[10857.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[10862.3s] 	a = 0.0146264, d = 0.797808
+[10864.4s] perplexity = 113.895
+[10864.4s] ETA 11m
+[10864.4s] *** ITER 285/300
+[10894.7s] resamp. CRP::Hyper with 1 CRPs:
+[10894.7s] 	a = 805.569, d = 0.67223
+[10894.7s] resamp. CRP::Hyper with 17964 CRPs:
+[10895.2s] 	a = 1.04617, d = 0.651398
+[10895.2s] resamp. CRP::Hyper with 17964 CRPs:
+[10895.7s] 	a = 1.32174, d = 0.673739
+[10895.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[10900.9s] 	a = 0.0138297, d = 0.798287
+[10903.0s] perplexity = 113.902
+[10903.0s] ETA 10m
+[10903.0s] *** ITER 286/300
+[10933.5s] resamp. CRP::Hyper with 1 CRPs:
+[10933.5s] 	a = 787.093, d = 0.672075
+[10933.5s] resamp. CRP::Hyper with 17964 CRPs:
+[10934.0s] 	a = 1.04103, d = 0.652024
+[10934.0s] resamp. CRP::Hyper with 17964 CRPs:
+[10934.4s] 	a = 1.32422, d = 0.673581
+[10934.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[10938.8s] 	a = 0.0152154, d = 0.798106
+[10940.8s] perplexity = 113.864
+[10940.8s] ETA 9m
+[10940.8s] *** ITER 287/300
+[10971.2s] resamp. CRP::Hyper with 1 CRPs:
+[10971.3s] 	a = 783.768, d = 0.673041
+[10971.3s] resamp. CRP::Hyper with 17964 CRPs:
+[10971.8s] 	a = 1.01872, d = 0.651596
+[10971.8s] resamp. CRP::Hyper with 17964 CRPs:
+[10972.2s] 	a = 1.28851, d = 0.673777
+[10972.2s] resamp. CRP::Hyper with 1584155 CRPs:
+[10976.1s] 	a = 0.0147847, d = 0.798056
+[10978.1s] perplexity = 113.857
+[10978.1s] ETA 9m
+[10978.1s] *** ITER 288/300
+[11008.5s] resamp. CRP::Hyper with 1 CRPs:
+[11008.5s] 	a = 763.447, d = 0.672933
+[11008.5s] resamp. CRP::Hyper with 17964 CRPs:
+[11009.0s] 	a = 1.02001, d = 0.652062
+[11009.0s] resamp. CRP::Hyper with 17964 CRPs:
+[11009.4s] 	a = 1.32375, d = 0.673369
+[11009.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[11014.5s] 	a = 0.0131649, d = 0.798024
+[11016.6s] perplexity = 113.898
+[11016.6s] ETA 8m
+[11016.6s] *** ITER 289/300
+[11047.1s] resamp. CRP::Hyper with 1 CRPs:
+[11047.2s] 	a = 776.993, d = 0.67507
+[11047.2s] resamp. CRP::Hyper with 17964 CRPs:
+[11047.7s] 	a = 1.01383, d = 0.652358
+[11047.7s] resamp. CRP::Hyper with 17964 CRPs:
+[11048.1s] 	a = 1.28405, d = 0.672894
+[11048.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[11054.1s] 	a = 0.0137394, d = 0.797509
+[11056.2s] perplexity = 113.948
+[11056.2s] ETA 7m
+[11056.2s] *** ITER 290/300
+[11086.6s] resamp. CRP::Hyper with 1 CRPs:
+[11086.6s] 	a = 758.458, d = 0.674869
+[11086.6s] resamp. CRP::Hyper with 17964 CRPs:
+[11087.1s] 	a = 1.00609, d = 0.652278
+[11087.1s] resamp. CRP::Hyper with 17964 CRPs:
+[11087.5s] 	a = 1.28671, d = 0.673792
+[11087.5s] resamp. CRP::Hyper with 1584155 CRPs:
+[11092.9s] 	a = 0.0118355, d = 0.798152
+[11094.9s] perplexity = 113.901
+[11094.9s] ETA 7m
+[11094.9s] *** ITER 291/300
+[11125.4s] resamp. CRP::Hyper with 1 CRPs:
+[11125.4s] 	a = 743.538, d = 0.675206
+[11125.4s] resamp. CRP::Hyper with 17964 CRPs:
+[11125.9s] 	a = 1.00627, d = 0.651619
+[11125.9s] resamp. CRP::Hyper with 17964 CRPs:
+[11126.4s] 	a = 1.3052, d = 0.674115
+[11126.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[11131.2s] 	a = 0.0169212, d = 0.797817
+[11133.3s] perplexity = 113.925
+[11133.3s] ETA 6m
+[11133.3s] *** ITER 292/300
+[11163.8s] resamp. CRP::Hyper with 1 CRPs:
+[11163.8s] 	a = 785.767, d = 0.676044
+[11163.8s] resamp. CRP::Hyper with 17964 CRPs:
+[11164.4s] 	a = 1.05064, d = 0.650631
+[11164.4s] resamp. CRP::Hyper with 17964 CRPs:
+[11164.8s] 	a = 1.30186, d = 0.674149
+[11164.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[11168.2s] 	a = 0.0173842, d = 0.797739
+[11170.3s] perplexity = 113.951
+[11170.3s] ETA 6m
+[11170.3s] *** ITER 293/300
+[11200.8s] resamp. CRP::Hyper with 1 CRPs:
+[11200.8s] 	a = 725.28, d = 0.676164
+[11200.8s] resamp. CRP::Hyper with 17964 CRPs:
+[11201.3s] 	a = 1.0352, d = 0.65113
+[11201.3s] resamp. CRP::Hyper with 17964 CRPs:
+[11201.7s] 	a = 1.27952, d = 0.674142
+[11201.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[11205.9s] 	a = 0.0187781, d = 0.797763
+[11207.9s] perplexity = 113.969
+[11207.9s] ETA 5m
+[11207.9s] *** ITER 294/300
+[11238.4s] resamp. CRP::Hyper with 1 CRPs:
+[11238.4s] 	a = 783.951, d = 0.678183
+[11238.4s] resamp. CRP::Hyper with 17964 CRPs:
+[11238.9s] 	a = 1.04719, d = 0.651886
+[11238.9s] resamp. CRP::Hyper with 17964 CRPs:
+[11239.3s] 	a = 1.29956, d = 0.674058
+[11239.3s] resamp. CRP::Hyper with 1584155 CRPs:
+[11243.0s] 	a = 0.0146667, d = 0.797796
+[11245.0s] perplexity = 113.942
+[11245.0s] ETA 4m
+[11245.0s] *** ITER 295/300
+[11275.4s] resamp. CRP::Hyper with 1 CRPs:
+[11275.4s] 	a = 767.217, d = 0.677774
+[11275.4s] resamp. CRP::Hyper with 17964 CRPs:
+[11276.0s] 	a = 1.07346, d = 0.652352
+[11276.0s] resamp. CRP::Hyper with 17964 CRPs:
+[11276.4s] 	a = 1.30206, d = 0.673468
+[11276.4s] resamp. CRP::Hyper with 1584155 CRPs:
+[11280.3s] 	a = 0.017223, d = 0.797763
+[11282.3s] perplexity = 113.926
+[11282.3s] ETA 4m
+[11282.3s] *** ITER 296/300
+[11312.7s] resamp. CRP::Hyper with 1 CRPs:
+[11312.7s] 	a = 807.186, d = 0.676393
+[11312.7s] resamp. CRP::Hyper with 17964 CRPs:
+[11313.2s] 	a = 1.07455, d = 0.652639
+[11313.2s] resamp. CRP::Hyper with 17964 CRPs:
+[11313.6s] 	a = 1.30639, d = 0.673823
+[11313.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[11318.2s] 	a = 0.0127616, d = 0.797797
+[11320.3s] perplexity = 113.938
+[11320.3s] ETA 3m
+[11320.3s] *** ITER 297/300
+[11350.7s] resamp. CRP::Hyper with 1 CRPs:
+[11350.7s] 	a = 836.43, d = 0.676049
+[11350.7s] resamp. CRP::Hyper with 17964 CRPs:
+[11351.2s] 	a = 1.08663, d = 0.649713
+[11351.2s] resamp. CRP::Hyper with 17964 CRPs:
+[11351.6s] 	a = 1.31118, d = 0.673089
+[11351.6s] resamp. CRP::Hyper with 1584155 CRPs:
+[11356.7s] 	a = 0.0119247, d = 0.798134
+[11358.8s] perplexity = 113.886
+[11358.8s] ETA 2m
+[11358.8s] *** ITER 298/300
+[11389.1s] resamp. CRP::Hyper with 1 CRPs:
+[11389.1s] 	a = 738.963, d = 0.675749
+[11389.1s] resamp. CRP::Hyper with 17964 CRPs:
+[11389.6s] 	a = 1.03343, d = 0.650084
+[11389.6s] resamp. CRP::Hyper with 17964 CRPs:
+[11390.1s] 	a = 1.34058, d = 0.673055
+[11390.1s] resamp. CRP::Hyper with 1584155 CRPs:
+[11394.4s] 	a = 0.0091589, d = 0.798083
+[11396.5s] perplexity = 113.944
+[11396.5s] ETA 2m
+[11396.5s] *** ITER 299/300
+[11426.8s] resamp. CRP::Hyper with 1 CRPs:
+[11426.8s] 	a = 800.481, d = 0.675659
+[11426.8s] resamp. CRP::Hyper with 17964 CRPs:
+[11427.3s] 	a = 1.0378, d = 0.651266
+[11427.3s] resamp. CRP::Hyper with 17964 CRPs:
+[11427.7s] 	a = 1.35175, d = 0.673015
+[11427.7s] resamp. CRP::Hyper with 1584155 CRPs:
+[11432.4s] 	a = 0.0103886, d = 0.797949
+[11434.4s] perplexity = 113.946
+[11434.4s] ETA 1m
+[11434.4s] *** ITER 300/300
+[11464.9s] resamp. CRP::Hyper with 1 CRPs:
+[11464.9s] 	a = 733.979, d = 0.676498
+[11464.9s] resamp. CRP::Hyper with 17964 CRPs:
+[11465.4s] 	a = 1.03414, d = 0.652341
+[11465.4s] resamp. CRP::Hyper with 17964 CRPs:
+[11465.8s] 	a = 1.33014, d = 0.673154
+[11465.8s] resamp. CRP::Hyper with 1584155 CRPs:
+[11470.2s] 	a = 0.0121791, d = 0.797948
+[11472.2s] perplexity = 113.912
+[11472.2s] ETA 0m
+[11472.2s] finished testing
+[11472.2s] final perplexity = 113.827
