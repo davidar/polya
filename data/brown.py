@@ -1,3 +1,4 @@
+import nltk
 from nltk.corpus import brown
 
 freq = {}
@@ -24,4 +25,13 @@ f.close()
 f = open('brown.full.txt','w')
 for w in brown.words():
     print>>f, w
+f.close()
+
+f = open('brown.norm.txt','w')
+for s in brown.sents():
+	s = ' '.join(s).lower()
+	s = s.replace('--','&ndash;').replace('-',' - ').replace('&ndash;','--')
+	s = s.replace('? ?','?').replace('; ;',';')
+	s = ' '.join(nltk.word_tokenize(s))
+	print>>f, s
 f.close()

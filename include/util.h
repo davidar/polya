@@ -1,5 +1,7 @@
 #pragma once
 
+#undef NDEBUG
+
 #include <stdio.h>
 #include <limits.h>
 #include <time.h>
@@ -12,8 +14,6 @@ typedef unsigned int N; // natural
 typedef unsigned int X; // datapoint
 
 const N N_INFTY =  UINT_MAX;
-const X X_INVALID = UINT_MAX;
-const X X_NULL = 0;
 
 inline R cputime() {
     static const clock_t start = clock();
@@ -62,7 +62,8 @@ inline R cputime() {
 // FOR_PAIR(k,v,m) = for k,v in m
 #define FOR_PAIR(k,v,m) _FOR_PAIR(k,v,m,UNIQ)
 # define _FOR_PAIR(k,v,m,kv) for(auto &kv : m) \
-    LET(auto &k = kv.first) LET(auto &v = kv.second)
+    LET(auto &k __attribute__((unused)) = kv.first) \
+    LET(auto &v __attribute__((unused)) = kv.second)
 #define FOR_KEY(k,m) FOR_PAIR(k,UNIQ,m)
 #define FOR_VAL(v,m) FOR_PAIR(UNIQ,v,m)
 

@@ -1,0 +1,11 @@
+def make_ext(modname, pyxfilename):
+    from distutils.extension import Extension
+    return Extension(
+        name=modname,
+        sources=[pyxfilename],
+        language='C++',
+        include_dirs=['./include'],
+        extra_compile_args=['-std=c++11', '-Ofast'],
+        extra_link_args=['-lstdc++'],
+        depends=['./include/*.h'],
+    )
