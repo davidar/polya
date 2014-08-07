@@ -1,10 +1,3 @@
-import math
-import time
-import datetime
-
-pos = lambda x: x if x > 0 else 0
-neg = lambda x: pos(-x)
-
 class DynEnum(object):
     def __init__(self):
         self.ident = {} # str -> int
@@ -26,17 +19,6 @@ class DynDict(dict):
     def __init__(self, f):
         dict.__init__(self)
         self.f = f
-    def __getitem__(self, key):
-        if key in self:
-            return dict.__getitem__(self, key)
-        else:
-            val = self.f(key)
-            self[key] = val
-            return val
-
-#class ETA(object):
-#    def __init__(self):
-#        self.start = time.clock()
-#    def __call__(self, i, n=1.0):
-#        s = (n - i) * (time.clock() - self.start) / i
-#        return datetime.timedelta(seconds=int(s))
+    def __missing__(self, key):
+        val = self[key] = self.f(key)
+        return val

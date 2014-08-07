@@ -27,6 +27,7 @@ cdef extern from "Polya.h" nogil:
         cppclass Hyper:
             R a, d
             Hyper()
+            Hyper(string)
             void resample()
         Polya(Hyper&, Exchangeable&)
 

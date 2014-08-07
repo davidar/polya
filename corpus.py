@@ -11,7 +11,7 @@ from logarithmetic import *
 def contexts(text, M, verbose=None):
     if verbose: eta = ETA(len(text))
     for i in range(len(text)):
-        yield tuple(text[pos(i-M):i]), text[i]
+        yield tuple(text[max(0,i-M):i]), text[i]
         if verbose: eta.print_status(i, extra=verbose)
     if verbose: eta.done()
 

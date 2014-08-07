@@ -22,10 +22,6 @@ cdef class Exchangeable:
     def __cinit__(self):
         self.thisptr = NULL
         nodes.append(self)
-    #def __dealloc__(self):
-    #    if self.thisptr is not NULL:
-    #        del self.thisptr
-    #        self.thisptr = NULL
     
     def predict(self, X x):
         return self.thisptr.predict(x)
@@ -62,11 +58,9 @@ coin = Uniform(2)
 
 cdef class PolyaHyper:
     cdef _polya.PolyaHyper *thisptr
-    def __cinit__(self):
-        self.thisptr = new _polya.PolyaHyper()
+    def __cinit__(self, name=''):
+        self.thisptr = new _polya.PolyaHyper(name)
         nodes.append(self)
-    #def __dealloc(self):
-    #    del self.thisptr
     def resample(self):
         self.thisptr.resample()
 
@@ -87,8 +81,6 @@ cdef class OddsTerm:
     def __cinit__(self):
         self.thisptr = new _polya.OddsTerm()
         nodes.append(self)
-    #def __dealloc(self):
-    #    del self.thisptr
     def resample(self):
         self.thisptr.resample()
 

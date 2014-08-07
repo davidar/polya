@@ -50,7 +50,7 @@ class Mixture : public Exchangeable {
     }
 
     void resample() {
-        FOR_PAIR(x,nx, n) FOR(nx) forget(x),observe(x);
+        FOR_PAIR(x,nx, n) FOR(nx) { forget(x); observe(x); }
     }
 
     std::string toString() const {

@@ -15,6 +15,7 @@
 class Polya : public Exchangeable {
     public:
     class Hyper {
+        const std::string name;
         std::vector<const Polya *> deps;
 
         class SampA : public SliceSamp {
@@ -59,12 +60,14 @@ class Polya : public Exchangeable {
         public:
         R a, d; // concentration, discount
 
-        Hyper() : samp_a(SELF), samp_d(SELF), a(1.0), d(0.5) {}
+        Hyper(std::string s)
+            : name(s), samp_a(SELF), samp_d(SELF), a(1.0), d(0.5) {}
+        Hyper() : Hyper("") {}
 
         void registerDep(const Polya *crp) { deps.push_back(crp); }
         void resample() {
+            LOG("'%s' hyper-resample (%u):", name.c_str(), (N) deps.size());
             assert(deps.size() > 0); // unused hyper likely indicates bug
-            LOG("hyper-resample (%u):", (N) deps.size());
             d = samp_d(d); a = samp_a(a);
             LOG("\ta = %g, d = %g", a, d);
         }

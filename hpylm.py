@@ -9,7 +9,7 @@ from logarithmetic import *
 from corpus import *
 
 def hpylm(G0, depth):
-    h = [PolyaHyper() for i in range(depth)]
+    h = [PolyaHyper("HPYLM(%d)" % i) for i in range(depth)]
     G = DynDict(lambda u: Polya(h[len(u)], G[u[1:]]))
     G[()] = Polya(h[0], G0) # context-free distribution
     return G
