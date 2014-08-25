@@ -1,6 +1,7 @@
 import math
 
 def log(x, base=None):
+    if type(x) is not LogR and x == 0: return float('-inf')
     if base is None:
         return x.log if type(x) is LogR else math.log(x)
     else:
@@ -11,17 +12,15 @@ class LogR(object):
     def __init__(self, x=0, isLog=False):
         if isLog:
             self.log = x
-        elif x == 0:
-            self.log = float('-inf')
         else:
             self.log = log(x)
     def __float__(self):
         return math.exp(self.log)
     
     def __mul__(x,y):
-        return LogR(log(x) + log(y), True)
+        return LogR.exp(log(x) + log(y))
     def __div__(x,y):
-        return LogR(log(x) - log(y), True)
+        return LogR.exp(log(x) - log(y))
     
     def __add__(x,y):
         # TODO numpy.logaddexp
@@ -37,8 +36,12 @@ class LogR(object):
         return cmp(log(x), log(y))
     
     @staticmethod
+    def exp(x):
+        return LogR(x, isLog=True)
+    
+    @staticmethod
     def pow(x,y):
-        return LogR(log(x) * y, True)
+        return LogR.exp(log(x) * y)
     def __pow__(x,y):
         return LogR.pow(x,y)
     
@@ -53,7 +56,7 @@ class LogR(object):
     
     @staticmethod
     def gamma(x):
-        return LogR(math.lgamma(x), True)
+        return LogR.exp(math.lgamma(x))
     
     @staticmethod
     def poch(x,n,k=1):
@@ -67,4 +70,4 @@ class LogR(object):
     
     @staticmethod
     def product(seq, init=1):
-        return LogR(sum(map(log,seq),log(init)), True)
+        return LogR.exp(sum(map(log,seq),log(init)))

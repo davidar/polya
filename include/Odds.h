@@ -16,7 +16,7 @@ class Odds : public Exchangeable {
         struct : public SliceSamp {
             std::vector<std::pair<const Odds *, N>> deps;
             LogR f(R t) const {
-                if(t <= 0) return log(0);
+                if(t <= 0) return LogR(0);
                 LogR p(1);
                 FOR_PAIR(odds,i, deps)
                     p *= odds->likelihood(i,t);

@@ -41,3 +41,8 @@ inline R rand_beta(R a, R b) { // Beta(a,b)
     R x = rand_gamma(a,1), y = rand_gamma(b,1);
     return x / (x + y);
 }
+
+inline R sample(R p[], N size, R norm = 1) {
+    SAMPLE(norm) FOR(i,size) WITH_PROB(p[i]) return i;
+    assert(0);
+}

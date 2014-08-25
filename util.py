@@ -1,3 +1,8 @@
+import operator
+
+def prod(xs):
+    return reduce(operator.mul, xs, 1)
+
 class DynEnum(object):
     def __init__(self):
         self.ident = {} # str -> int

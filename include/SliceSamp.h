@@ -7,6 +7,7 @@
 #include "LogR.h"
 
 #define SLICESAMP_MAXSTEPS 32
+#define SLICESAMP_MAXSHRINK 1024
 
 // see RM Neal (2003) "Slice Sampling" doi:10.1214/aos/1056562461
 // also http://web.science.mq.edu.au/~mjohnson/Software.htm
@@ -26,12 +27,15 @@ class SliceSamp {
 
     R shrink(R x0, R y, interval_t I) const { // Neal Fig5
         R l = I.first, r = I.second;
-        while(1) {
+        FOR(SLICESAMP_MAXSHRINK) {
             R x1 = randu(l,r);
             if(y < log(f(x1))) return x1;
             if(x1 < x0) l = x1;
             else        r = x1;
         }
+        LOG("WARNING: SliceSamp::shrink(%g, %g, (%g,%g)) failed",
+            x0, y, I.first, I.second);
+        return x0;
     }
 
     public:

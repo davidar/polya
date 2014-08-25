@@ -26,15 +26,17 @@ def read_data(test_size, corpus=sys.stdin):
     vocab = DynEnum()
     text = read_corpus(vocab, corpus)
     train_size = len(text) - test_size
+    assert train_size > 0
     train = text[:train_size]; test = text[train_size:]
     return vocab, train, test
 
-def run(predict, test_size, n_iter=100, n_burnin=10):
+def run(predict, test_size, n_iter=100, n_burnin=10, resample=None):
     p_tot = LogR(0)
     eta = ETA(n_iter); eta.print_status(0, extra='starting...')
     for i in range(n_iter):
         print polya.timestamp(), "iteration %u/%u" % (i+1, n_iter)
         polya.resample()
+        if resample: resample()
         
         p = predict()
         pplx = float(p ** (-1./test_size))

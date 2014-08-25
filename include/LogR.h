@@ -44,6 +44,7 @@ inline LogR LogR::operator-=(LogR b) DO(SELF = SELF - b)
 
 
 inline LogR lgam(R x) DO(LogR r, r.ln = lgamma(x), r)
+inline LogR lexp(R x) DO(LogR r, r.ln = x, r)
 
 // rising factorial / k-Pochhammer symbol
 inline LogR lpoch(R x, N n)

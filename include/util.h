@@ -15,9 +15,25 @@ typedef unsigned int X; // datapoint
 
 const N N_INFTY =  UINT_MAX;
 
+void init() {
+    // initialisation on module import
+}
+
 inline R cputime() {
     static const clock_t start = clock();
     return (R) (clock() - start) / CLOCKS_PER_SEC;
+}
+
+template <typename A>
+inline void assert2(A a) {
+    if(!a) throw -1;
+    assert(a);
+}
+
+R clip01(R x) {
+    if     (x < 0) return 0;
+    else if(x > 1) return 1;
+    else           return x;
 }
 
 #define SELF (*this)
@@ -87,10 +103,10 @@ inline R cputime() {
 
 // ASSERT(... ,u, ... ,v, ...) prints the value/s between commas on failure
 #define ASSERT(...) OVERLOAD(ASSERT,__VA_ARGS__)
-# define ASSERT3(l,v,r) assert((l v r) || _ASSERT3(l,v,r))
+# define ASSERT3(l,v,r) assert2((l v r) || _ASSERT3(l,v,r))
 #  define _ASSERT3(l,v,r) \
     !DBG("Assertion `%s (%s = %s) %s' failed.", #l, #v, STR(v), #r)
-# define ASSERT5(l,u,m,v,r) assert((l u m v r) || _ASSERT5(l,u,m,v,r))
+# define ASSERT5(l,u,m,v,r) assert2((l u m v r) || _ASSERT5(l,u,m,v,r))
 #  define _ASSERT5(l,u,m,v,r) \
     !DBG("Assertion `%s (%s = %s) %s (%s = %s) %s' failed.", \
             #l, #u, STR(u), #m, #v, STR(v), #r)

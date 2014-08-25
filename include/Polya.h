@@ -15,6 +15,7 @@
 class Polya : public Exchangeable {
     public:
     class Hyper {
+        const R eps = 2e-6; // minimum distance between a and -d
         const std::string name;
         std::vector<const Polya *> deps;
 
@@ -24,7 +25,7 @@ class Polya : public Exchangeable {
             public:
             SampA(const Hyper &par) : h(par) {}
             LogR f(R a) const {
-                if(a <= -h.d) return log(0);
+                if(a + h.d <= h.eps) return LogR(0);
                 return h.posterior(a, h.d, false);
             }
         } samp_a;
@@ -41,9 +42,9 @@ class Polya : public Exchangeable {
                     if(s > 1) m[s] += n;
             }
             LogR f(R d) const {
-                if(d <= 0 || 1 <= d) return log(0);
+                if(d <= 0 || 1 <= d || h.a + d <= h.eps) return LogR(0);
                 // the following is a faster version of
-                //   log(h.posterior(h.a, d, true))
+                //   h.posterior(h.a, d, true)
                 LogR p = h.posterior(h.a, d, false);
                 FOR_PAIR(s,n, m)
                     p *= pow(lpoch(1 - d, s - 1), n);
@@ -66,10 +67,15 @@ class Polya : public Exchangeable {
 
         void registerDep(const Polya *crp) { deps.push_back(crp); }
         void resample() {
+            // TODO: improper posterior when not enough observations
             LOG("'%s' hyper-resample (%u):", name.c_str(), (N) deps.size());
             assert(deps.size() > 0); // unused hyper likely indicates bug
             d = samp_d(d); a = samp_a(a);
             LOG("\ta = %g, d = %g", a, d);
+            if(a + d <= eps) {
+                LOG("WARNING: a + d = %g, readjusting", a+d);
+                a = -d + 2*eps;
+            }
         }
     };
 
@@ -121,8 +127,9 @@ class Polya : public Exchangeable {
         if(c == 0) return par(x);
         R p = (h.a + h.d * t) * par(x);
         IF_FIND(x,rm, rs) p += rm.c - h.d * rm.t;
-        ASSERT(0 <= ,p, && p <= ,h.a + c,);
-        return p / (h.a + c);
+        if(!(0 <= p && p <= h.a + c))
+            LOG("WARNING: %g not in [0,%g+%u]", p, h.a, c);
+        return clip01(p / (h.a + c));
     }
 
     X sample() const {
