@@ -33,7 +33,7 @@ class SliceSamp {
             if(x1 < x0) l = x1;
             else        r = x1;
         }
-        LOG("WARNING: SliceSamp::shrink(%g, %g, (%g,%g)) failed",
+        WARN("SliceSamp::shrink(%g, %g, (%g,%g)) failed",
             x0, y, I.first, I.second);
         return x0;
     }

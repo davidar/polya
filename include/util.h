@@ -40,6 +40,8 @@ R clip01(R x) {
 
 #define LOG(fmt,...) \
     printf("[%7.1fs] " fmt "\n", cputime(), ##__VA_ARGS__) && fflush(stdout)
+#define WARN(fmt,...) \
+    fprintf(stderr, "\nWARNING: " fmt "\n", ##__VA_ARGS__)
 
 #ifndef NDEBUG
 # define DBG(fmt,...) \

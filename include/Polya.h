@@ -69,11 +69,11 @@ class Polya : public Exchangeable {
         void resample() {
             // TODO: improper posterior when not enough observations
             LOG("'%s' hyper-resample (%u):", name.c_str(), (N) deps.size());
-            assert(deps.size() > 0); // unused hyper likely indicates bug
+            if(deps.empty()) WARN("Polya::Hyper '%s' is unused", name.c_str());
             d = samp_d(d); a = samp_a(a);
             LOG("\ta = %g, d = %g", a, d);
             if(a + d <= eps) {
-                LOG("WARNING: a + d = %g, readjusting", a+d);
+                WARN("a + d = %g, readjusting", a+d);
                 a = -d + 2*eps;
             }
         }
@@ -128,7 +128,7 @@ class Polya : public Exchangeable {
         R p = (h.a + h.d * t) * par(x);
         IF_FIND(x,rm, rs) p += rm.c - h.d * rm.t;
         if(!(0 <= p && p <= h.a + c))
-            LOG("WARNING: %g not in [0,%g+%u]", p, h.a, c);
+            WARN("%g not in [0,%g+%u]", p, h.a, c);
         return clip01(p / (h.a + c));
     }
 

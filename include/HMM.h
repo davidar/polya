@@ -8,17 +8,24 @@
 #include "LogR.h"
 #include "DynDict.h"
 
-typedef N S; // state space
-
-class AbstractHMM {
-    protected:
-    virtual void e_observe(N t, S s) = 0; // observe emission
-    virtual void e_forget(N t, S s) = 0; // forget emission
-    virtual R e_predict(N t, S s) = 0;  // predict emission
+class HMM {
+    typedef N S; // state space
+    std::vector<Exchangeable*> emit;
+    typedef DynDict<std::vector<X>,Exchangeable*> T;
+    T transition;
     
-    virtual void t_observe(N t, S s) = 0; // observe transition
-    virtual void t_forget(N t, S s) = 0; // forget transition
-    virtual R t_predict(N t, S s) = 0;  // predict transition
+    void e_observe(N t, S s)  { emit[s]->observe(text[t]); }
+    void e_forget (N t, S s)  { emit[s]->forget (text[t]); }
+    R e_predict   (N t, S s) DO(emit[s]->predict(text[t]))
+    
+    Exchangeable *trans(N t) {
+        N start = (t<M) ? 0 : t-M;
+        std::vector<S> u(states.begin() + start, states.begin() + t);
+        return transition[u];
+    }
+    void t_observe(N t, S s)  { trans(t)->observe(s); }
+    void t_forget (N t, S s)  { trans(t)->forget (s); }
+    R t_predict   (N t, S s) DO(trans(t)->predict(s))
     
     inline N horz(N t) {
         // index of next state independent of the current position t
@@ -46,8 +53,20 @@ class AbstractHMM {
     public:
     const N M, K; // context length, maximum number of states
     std::vector<S> states;
+    std::vector<X> text;
     
-    AbstractHMM(N context_len, N num_states) : M(context_len), K(num_states) {}
+    HMM(N context_len, N num_states, std::vector<X> text,
+        std::vector<Exchangeable*> emit, T::F f, void *user_data)
+        : M(context_len), K(num_states),
+          text(text), emit(emit), transition(f,user_data) {}
+    
+    void train(std::vector<S> ss) {
+        states = ss;
+        FOR(t, text.size()) {
+            t_observe(t,states[t]);
+            e_observe(t,states[t]);
+        }
+    }
     
     R resample() {
         LogR post(1);
@@ -64,39 +83,74 @@ class AbstractHMM {
         }
         return log(post);
     }
-};
-
-class HMM : public AbstractHMM {
-    std::vector<X> text;
-    std::vector<Exchangeable*> emit;
-    typedef DynDict<std::vector<X>,Exchangeable*> T;
-    T transition;
     
-    void e_observe(N t, S s)  { emit[s]->observe(text[t]); }
-    void e_forget (N t, S s)  { emit[s]->forget (text[t]); }
-    R e_predict   (N t, S s) DO(emit[s]->predict(text[t]))
-    
-    Exchangeable *trans(N t) {
-        N start = (t<M) ? 0 : t-M;
-        std::vector<S> u(states.begin() + start, states.begin() + t);
-        return transition[u];
-    }
-    void t_observe(N t, S s)  { trans(t)->observe(s); }
-    void t_forget (N t, S s)  { trans(t)->forget (s); }
-    R t_predict   (N t, S s) DO(trans(t)->predict(s))
-    
-    public:
-    HMM(N context_len, N num_states, std::vector<X> text,
-        std::vector<Exchangeable*> emit, T::F f, void *user_data)
-        : AbstractHMM(context_len, num_states),
-          text(text), emit(emit), transition(f,user_data) {}
-    
-    void train() {
-        FOR(t, text.size()) {
-            S s = rand() % K;
-            states.push_back(s);
-            t_observe(t,s);
-            e_observe(t,s);
+    R resample(std::vector<N> ts) {
+#define FOR_TGRAMS \
+            FOR(i,ts.size()) \
+                LET(N start = (i == 0 || horz(ts[i-1]) <= ts[i]) \
+                    ? ts[i] : horz(ts[i-1])) \
+                FOR(t, start,horz(ts[i]))
+        LogR joint(1);
+        
+        // forget old states
+        for(N t : ts) e_forget(t, states[t]);
+        FOR_TGRAMS t_forget(t, states[t]);
+        
+        // posterior
+        LogR lpost[K]; LogR norm = 0;
+        FOR(s, K) {
+            LogR p = 1;
+            for(N t : ts) {
+                states[t] = s;
+                p *= e_predict(t,s);
+                e_observe(t,s);
+            }
+            FOR_TGRAMS {
+                p *= t_predict(t, states[t]);
+                t_observe(t, states[t]);
+            }
+            norm += lpost[s] = p;
+            
+            // rollback
+            for(N t : ts) e_forget(t, states[t]);
+            FOR_TGRAMS t_forget(t, states[t]);
         }
+        
+        // sample new state
+        R post[K]; FOR(s, K) post[s] = (R)(lpost[s] / norm);
+        S s = sample(post, K);
+        for(N t : ts) {
+            states[t] = s;
+            joint *= post[s];
+        }
+        
+        // update model
+        for(N t : ts) e_observe(t, states[t]);
+        FOR_TGRAMS t_observe(t, states[t]);
+        return log(joint);
+    }
+    
+    R predict(std::vector<X> xs) {
+        assert(M == 2); // TODO: generalise
+        R alpha[2][K][K]; memset(alpha, 0, sizeof alpha);
+        bool b = false;
+        alpha[b][0][0] = 1;
+        LogR prob(1);
+        for(X x : xs) {
+            R px = 0;
+            FOR(k,K) {
+                R p_emit = emit[k]->predict(x);
+                FOR(j,K) {
+                    R p = 0;
+                    FOR(i,K) p += transition[{i,j}]->predict(k) * alpha[b][i][j];
+                    p *= p_emit;
+                    px += alpha[!b][j][k] = p;
+                }
+            }
+            prob *= px;
+            FOR(k,K) FOR(j,K) alpha[!b][j][k] /= px;
+            b = !b; // swap in new alpha array
+        }
+        return log(prob);
     }
 };

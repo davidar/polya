@@ -6,18 +6,26 @@ from eta import ETA
 
 import pyximport; pyximport.install()
 import polya
-from polya import Polya, PolyaHyper, Uniform, HMM
+from polya import Polya, PolyaHyper, Uniform, HMM, LM
 
 from util import *
 from logarithmetic import *
 
 from hpylm import hpylm
 
-def pyphmm(text, nwords, S, M=2):
+def pyphmm(kind, text, words, S, M=2, L=None):
     trans = hpylm(Uniform(S), M+1)
-    Eh = PolyaHyper('HMM-E'); E0 = Uniform(nwords)
-    emit = [Polya(Eh, E0) for i in range(S)]
-    return HMM(text, trans, emit, M, S)
+    Eh = PolyaHyper('HMM-E')
+    Uword = Uniform(len(words)); Uchar = Uniform(0x100)
+    
+    if L is None: # no language model
+        emit = [Polya(Eh, Uword) for _ in range(S)]
+    else:
+        emit = [Polya(Eh, LM(hpylm(Uchar, L+1), L, words)) for _ in range(S)]
+    
+    hmm = HMM(kind, text, trans, emit, M, S)
+    hmm.train()
+    return hmm
 
 def main(n_iter=500):
     random.seed(0); np.random.seed(0)
@@ -28,8 +36,7 @@ def main(n_iter=500):
         text.append(text_vocab(word))
         gold_tags.append(tag_vocab(tag))
     
-    hmm = pyphmm(text, len(text_vocab), len(tag_vocab))
-    hmm.train()
+    hmm = pyphmm(1, text, text_vocab.names, len(tag_vocab), L=1)
     
     eta = ETA(n_iter); eta.print_status(0, extra='starting...')
     for i in range(n_iter):

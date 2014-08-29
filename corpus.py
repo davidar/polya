@@ -30,6 +30,20 @@ def read_data(test_size, corpus=sys.stdin):
     train = text[:train_size]; test = text[train_size:]
     return vocab, train, test
 
+def rankByFreq(xs):
+    d = {}
+    for x in xs: d[x] = d.get(x,0) + 1
+    l = [(n,x) for x,n in d.iteritems()]
+    l.sort(reverse=True)
+    return [x for n,x in l]
+
+def index_words(text):
+    d = {}
+    for i,w in enumerate(text):
+        if w not in d: d[w] = []
+        d[w].append(i)
+    return d
+
 def run(predict, test_size, n_iter=100, n_burnin=10, resample=None):
     p_tot = LogR(0)
     eta = ETA(n_iter); eta.print_status(0, extra='starting...')

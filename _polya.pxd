@@ -52,13 +52,21 @@ cdef extern from "Odds.h" nogil:
 
 ctypedef Odds.Term OddsTerm
 
-ctypedef Exchangeable* (*HMMTF)(vector[unsigned int], void*)
+ctypedef vector[unsigned int] nseq
+ctypedef Exchangeable* (*xseq_cb)(nseq, void*)
+
+cdef extern from "LM.h":
+    cdef cppclass LM(Exchangeable):
+        LM(N, xseq_cb, void*)
+        X add_to_dict(nseq)
+        R predict_log(N)
 
 cdef extern from "HMM.h":
-    cdef cppclass AbstractHMM:
+    cdef cppclass HMM:
         N M, K
-        vector[unsigned int] states
+        nseq states, text
+        HMM(N, N, nseq, vector[Exchangeable*], xseq_cb, void*) except +
+        void train(nseq) except +
         R resample() except +
-    cdef cppclass HMM(AbstractHMM):
-        HMM(N, N, vector[unsigned int], vector[Exchangeable*], HMMTF, void*) except +
-        void train() except +
+        R resample(nseq) except +
+        R predict(nseq) except +

@@ -11,13 +11,13 @@ class DynDict {
     
     private:
     F f;
-    std::map<K,V> m;
+    mutable std::map<K,V> m;
     void *user_data;
     
     public:
     DynDict(F f, void *user_data) : f(f), user_data(user_data) {}
     
-    V &operator[](const K &k) {
+    V &operator[](const K &k) const {
         IF_FIND(k,v, m) return v;
         return m[k] = f(k, user_data);
     }
