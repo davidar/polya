@@ -10,5 +10,5 @@ Example implementations of the [hierarchical Pitman-Yor language model (HPYLM)](
     Perplexity: 169.793801556
     $ ./dhpylm.py 3 data/{sou.norm.test,sou.norm.train,brown.norm}.txt > dhpylm.log
     Perplexity: 159.532152794
-    $ ./pyphmm.py < data/brown.tagged.simp.txt > pyphmm.log                                                            
+    $ ./pyphmm.py < data/brown.tagged.simp.txt > pyphmm.log
     M-1: 81.1001970389
