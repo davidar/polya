@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import sys
 import random
 import numpy as np
@@ -21,13 +22,14 @@ def pyphmm(kind, text, words, S, M=2, L=None):
     if L is None: # no language model
         emit = [Polya(Eh, Uword) for _ in range(S)]
     else:
-        emit = [Polya(Eh, LM(hpylm(Uchar, L+1), L, words)) for _ in range(S)]
+        lms = [LM(hpylm(Uchar, L+1), L, words) for s in range(S)]
+        emit = [Polya(Eh, lms[s]) for s in range(S)]
     
     hmm = HMM(kind, text, trans, emit, M, S)
     hmm.train()
     return hmm
 
-def main(n_iter=500):
+def main(n_iter=50):
     random.seed(0); np.random.seed(0)
     text_vocab = DynEnum(); tag_vocab = DynEnum()
     text = []; gold_tags = []
