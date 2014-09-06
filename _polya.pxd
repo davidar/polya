@@ -70,3 +70,12 @@ cdef extern from "HMM.h":
         R resample() except +
         R resample(nseq) except +
         R predict(nseq) except +
+        R predict(string, vector[Trie*], N) except +
+
+cdef extern from "Trie.h":
+    cdef cppclass Trie:
+        Trie() except +
+        void clear() except +
+        void insert(string, R) except +
+        const Trie *lookup(string) except +
+        R predict(char) except +

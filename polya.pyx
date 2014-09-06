@@ -130,7 +130,7 @@ cdef class HMM:
         for e in emit: es.push_back((<Exchangeable> e).thisptr)
         self.thisptr = new _polya.HMM(M, K, text, es, context_cb, <void*> trans)
         
-        self.kind = kind
+        self.kind = kind # 1 for the 1HMM, 0 for the standard HMM
         self.trans = trans
         if kind == 1: self.text_index = index_words(text)
     
@@ -156,6 +156,11 @@ cdef class HMM:
     def predict(self, xs):
         return LogR.exp(self.thisptr.predict(xs))
     
+    def predict_str(self, text, tries, max_word_len):
+        cdef vector[_polya.Trie*] ts
+        for t in tries: ts.push_back((<Trie> t).thisptr)
+        return LogR.exp(self.thisptr.predict(text, ts, max_word_len))
+    
     def standardise(self, gold):
         # frequency of gold standard tags per cluster
         freq = [{'<NULL>':0} for s in range(self.K)]
@@ -180,3 +185,33 @@ cdef class HMM:
         def __get__(self): return self.thisptr.states
     property text:
         def __get__(self): return self.thisptr.text
+    property kind:
+        def __set__(self, kind): self.kind = kind
+
+cdef class Trie:
+    cdef _polya.Trie *thisptr
+    def __cinit__(self):
+        self.thisptr = new _polya.Trie()
+    
+    def update(self, pairs, clear=True):
+        if clear: self.clear()
+        for word, weight in pairs:
+            self.insert(word, weight)
+    
+    def clear(self):
+        self.thisptr.clear()
+    
+    def insert(self, word, weight):
+        self.thisptr.insert(word, weight)
+    
+    def predict(self, prefix, c='\0'):
+        cdef const _polya.Trie *trie = self.thisptr.lookup(prefix)
+        if trie == NULL: return 0
+        return trie.predict(ord(c))
+    
+    def __getitem__(self, prefix):
+        def f(c='\0'):
+            return self.predict(prefix, c)
+        return f
+    def __call__(self, c='\0'):
+        return self.predict('', c)
