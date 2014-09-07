@@ -177,20 +177,20 @@ class HMM {
                 FOR(r, 1,maxr) {
                     auto start = text.begin() + t - r;
                     if(alpha[r-1][j][k] > 0) {
-                        const Trie *triek = tries[k]->lookup(start, r);
-                        if(triek == NULL) alpha_new[r][j][k] = 0;
+                        const Trie *trie = tries[k]->lookup(start, r);
+                        if(trie == NULL) alpha_new[r][j][k] = 0;
                         else alpha_new[r][j][k] =
-                                alpha[r-1][j][k] * triek->predict(c);
+                                alpha[r-1][j][k] * trie->predict(c);
                         pc += alpha_new[r][j][k];
                     }
                     
-                    const Trie *triej = tries[j]->lookup(start, r);
-                    FOR(i,K) if(alpha[r-1][i][j] > 0 && triej != NULL) {
-                        R a = alpha[r-1][i][j]
-                            * triej->predict()
+                    FOR(i,K) if(alpha[r-1][i][j] > 0) {
+                        const Trie *trie = tries[j]->lookup(start, r);
+                        if(trie != NULL) alpha_new[0][j][k] += 
+                            alpha[r-1][i][j]
+                            * trie->predict()
                             * transition[{i,j}]->predict(k)
                             * tries[k]->predict(c);
-                        alpha_new[0][j][k] += a;
                     }
                 }
                 pc += alpha_new[0][j][k];
