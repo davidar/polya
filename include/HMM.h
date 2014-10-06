@@ -159,7 +159,7 @@ class HMM {
     R predict(std::string text, std::vector<Trie*> tries, const N maxr) {
         assert(M == 2); // TODO: generalise
         LogR prob(1);
-        // alpha[r][i][j] = p(word started at t-r, s_t = j, s_t-1 = i | x_1..t)
+        // alpha[r][i][j] = p(word started at t-r, s_t = j, s_t-r-1 = i | x_1..t)
         R alpha[maxr][K][K]; memset(alpha, 0, sizeof alpha);
         
         char c = text[0];

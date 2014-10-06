@@ -17,6 +17,8 @@ class DynEnum(object):
             return i
     def __getitem__(self, i):
         return self.names[i]
+    def __contains__(self, name):
+        return name in self.ident
     def __len__(self):
         return len(self.names)
 

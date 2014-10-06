@@ -30,6 +30,24 @@ def read_data(test_size, corpus=sys.stdin):
     train = text[:train_size]; test = text[train_size:]
     return vocab, train, test
 
+def read_data_oov(test_size, corpus=sys.stdin):
+    vocab = DynEnum()
+    oov = vocab('<OOV>')
+    text = []
+    for line in corpus: text += line.split()
+    train_size = len(text) - test_size
+    assert train_size > 0
+    
+    train = map(vocab, text[:train_size])
+    test = []
+    for w in text[train_size:]:
+        if w in vocab:
+            test.append(vocab(w))
+        else:
+            test.append(oov)
+    
+    return vocab, train, test, oov
+
 def rankByFreq(xs):
     d = {}
     for x in xs: d[x] = d.get(x,0) + 1

@@ -124,6 +124,7 @@ cdef class HMM:
     cdef _polya.HMM *thisptr
     cdef int kind
     cdef object trans # hold ref to block gc
+    cdef object emit
     cdef dict text_index
     def __cinit__(self, kind, text, trans, emit, N M, N K):
         cdef vector[_polya.Exchangeable*] es
@@ -131,7 +132,7 @@ cdef class HMM:
         self.thisptr = new _polya.HMM(M, K, text, es, context_cb, <void*> trans)
         
         self.kind = kind # 1 for the 1HMM, 0 for the standard HMM
-        self.trans = trans
+        self.trans = trans; self.emit = emit
         if kind == 1: self.text_index = index_words(text)
     
     def train(self):
@@ -185,6 +186,10 @@ cdef class HMM:
         def __get__(self): return self.thisptr.states
     property text:
         def __get__(self): return self.thisptr.text
+    property trans:
+        def __get__(self): return self.trans
+    property emit:
+        def __get__(self): return self.emit
     property kind:
         def __set__(self, kind): self.kind = kind
 
